@@ -1548,6 +1548,7 @@ drawable dot_menu
 drawable facebook
 drawable gmail
 drawable ic_calendar_black_24dp
+drawable ic_cancel
 drawable ic_clear_black_24dp
 drawable ic_dashboard_black_24dp
 drawable ic_edit_black_24dp
@@ -1613,6 +1614,7 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id TextInputEditText
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1688,6 +1690,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id button
 id buttonPanel
 id cache_measures
 id cancel_button
@@ -1756,6 +1759,7 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
+id filledTextField
 id filter_chip
 id fitToContents
 id fixed
@@ -1782,11 +1786,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView2
-id imageView3
-id imageView4
-id imageView5
-id imageView6
 id info
 id invisible
 id italic
@@ -1802,7 +1801,6 @@ id line3
 id linear
 id listMode
 id list_item
-id mail
 id masked
 id message
 id middle
@@ -1984,6 +1982,7 @@ id unlabeled
 id up
 id useLogo
 id username
+id username2
 id view
 id view2
 id view3
@@ -2060,6 +2059,7 @@ layout activity_searchable
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash_screen
+layout activity_user_account
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog

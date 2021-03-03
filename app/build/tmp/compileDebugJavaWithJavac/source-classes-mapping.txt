@@ -4,6 +4,8 @@ com/example/project_2/splashScreen.java
 com/example/project_2/sign_in.java
  com.example.project_2.sign_in
  com.example.project_2.sign_in$1
+com/example/project_2/user_account.java
+ com.example.project_2.user_account
 com/example/project_2/sign_up.java
  com.example.project_2.sign_up
  com.example.project_2.sign_up$1
