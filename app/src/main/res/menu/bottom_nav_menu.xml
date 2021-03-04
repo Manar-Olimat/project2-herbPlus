@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+    <item android:id="@+id/search"
+        android:title="search"
+        android:icon="@drawable/search"
+        app:showAsAction="always">
 
-    <item
-        android:id="@+id/navigation_dashboard"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+    </item>
+    <item android:id="@+id/home"
+    android:icon="@drawable/ic_home_black_24dp"
+    app:showAsAction="always"
+    android:title="home">
+</item>
+    <item android:id="@+id/settings"
+    android:title="settings"
+    android:icon="@drawable/settings"
+    app:showAsAction="always">
 
-    <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
-
+</item>
+    <item android:id="@+id/settings1"
+        android:title="settings"
+        android:icon="@drawable/settings"
+        app:showAsAction="always">
+    </item>
 </menu>
