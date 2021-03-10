@@ -70,7 +70,7 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginBottom="228dp"
-        android:hint="User name"
+        android:hint="email"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
         app:layout_constraintBottom_toTopOf="@+id/checkTerms"
@@ -82,14 +82,14 @@
         tools:ignore="MissingClass">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username2"
+            android:id="@+id/email"
             android:layout_width="350dp"
             android:layout_height="60dp"
+            android:hint="email"
             android:inputType="text"
-            android:textColor="@android:color/background_dark"
 
 
-            />
+            android:textColor="@android:color/background_dark" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -131,10 +131,10 @@
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908" />
+        app:layout_constraintVertical_bias="0.973" />
 
     <TextView
         android:id="@+id/terms"
@@ -146,10 +146,9 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
+        app:layout_constraintVertical_bias="0.88" />
 
     <CheckBox
         android:id="@+id/checkTerms"
@@ -161,21 +160,50 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintVertical_bias="0.784" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:text="Button"
-        app:layout_constraintBottom_toTopOf="@+id/checkTerms"
+    <RadioGroup
+        android:id="@+id/accountRadio"
+        android:layout_width="403dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="@+id/view" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681">
+
+        <RadioButton
+            android:id="@+id/herbalist"
+            android:layout_width="162dp"
+            android:layout_height="50dp"
+            android:text="Herbalist Account"
+            android:textColor="@color/SecondaryShade_10" />
+
+        <RadioButton
+            android:id="@+id/userAccount"
+            android:layout_width="166dp"
+            android:layout_height="34dp"
+            android:text="User Account"
+            android:textColor="@color/SecondaryShade_10" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="308dp"
+        android:layout_height="33dp"
+        android:text="choose your account type"
+        android:textColor="@color/SecondaryShade_10"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.291"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.554" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
