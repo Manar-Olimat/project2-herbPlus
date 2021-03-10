@@ -1,19 +1,19 @@
 com/example/project_2/splashScreen.java
  com.example.project_2.splashScreen
  com.example.project_2.splashScreen$1
-com/example/project_2/searchable.java
- com.example.project_2.searchable
+com/example/project_2/sign_in.java
+ com.example.project_2.sign_in
+ com.example.project_2.sign_in$1
 com/example/project_2/user_account.java
  com.example.project_2.user_account
-com/example/project_2/home.java
- com.example.project_2.home
+com/example/project_2/sign_up.java
+ com.example.project_2.sign_up
+ com.example.project_2.sign_up$1
 com/example/project_2/search.java
  com.example.project_2.search
 com/example/project_2/BuildConfig.java
  com.example.project_2.BuildConfig
-com/example/project_2/sign_in.java
- com.example.project_2.sign_in
- com.example.project_2.sign_in$1
-com/example/project_2/sign_up.java
- com.example.project_2.sign_up
- com.example.project_2.sign_up$1
+com/example/project_2/home.java
+ com.example.project_2.home
+com/example/project_2/searchable.java
+ com.example.project_2.searchable

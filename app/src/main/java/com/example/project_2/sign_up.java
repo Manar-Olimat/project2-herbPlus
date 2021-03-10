@@ -52,7 +52,7 @@ public class sign_up extends AppCompatActivity {
                     Toast t = Toast.makeText(this, getString(R.string.emailToast), Toast.LENGTH_SHORT);
                     t.show();
                 }*/
-                if (isEmail(email) == false)
+                if (!isEmail(email))
                     email.setError("Enter valid email!");
 
                 if(!herbalistradio.isChecked() && !userRadio.isChecked())

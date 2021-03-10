@@ -1669,6 +1669,8 @@ id SYM
 id TOP_END
 id TOP_START
 id TextInputEditText
+id TextInputLayout
+id TextInputLayout1
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
