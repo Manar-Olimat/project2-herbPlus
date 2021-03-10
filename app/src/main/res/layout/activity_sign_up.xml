@@ -78,7 +78,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:startIconDrawable="@drawable/user"
         app:startIconTint="#272626"
-        >
+        tools:ignore="MissingClass">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username2"

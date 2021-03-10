@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".sign_in">
+    tools:context=".sign_in"
+    tools:ignore="MissingClass">
 
     <ImageView
         android:id="@+id/imageView"
@@ -79,7 +80,8 @@
         app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintStart_toStartOf="parent"
         app:startIconDrawable="@drawable/user"
-        app:startIconTint="#272626">
+        app:startIconTint="#272626"
+        tools:ignore="MissingClass">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/username2"
