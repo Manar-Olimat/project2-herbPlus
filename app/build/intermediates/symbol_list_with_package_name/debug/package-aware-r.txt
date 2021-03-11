@@ -1688,9 +1688,11 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable dot_menu
 drawable edit
+drawable exit
 drawable facebook
 drawable gmail
 drawable group_126
+drawable help
 drawable ic_baseline_photo_camera_24
 drawable ic_camera_24
 drawable ic_cancel
@@ -1756,8 +1758,11 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id Help
+id LogOut
 id META
 id NO_DEBUG
+id Notification
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1950,6 +1955,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image1
+id image2
+id image3
 id imageView
 id imvCornerShapeTwo
 id incoming

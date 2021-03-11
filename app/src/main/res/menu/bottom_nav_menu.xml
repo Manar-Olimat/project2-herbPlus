@@ -14,7 +14,7 @@
     android:title="home">
 </item>
     <item android:id="@+id/settings"
-    android:title="settings"
+    android:title="Ptofile"
     android:icon="@drawable/user"
     app:showAsAction="always">
 
