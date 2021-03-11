@@ -42,9 +42,9 @@ public class sign_up extends AppCompatActivity {
             public void onClick(View v) {
 
                 checkDataEntered();
-               /* Intent mainIntent = new Intent(sign_up.this,home.class);
+                Intent mainIntent = new Intent(sign_up.this,user_account.class);
                 sign_up.this.startActivity(mainIntent);
-                sign_up.this.finish();*/
+                sign_up.this.finish();
             }
 
             private void checkDataEntered() {

@@ -1,9 +1,19 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
 
     </style>
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+        <item name="cornerFamily">rounded</item>
 
+    </style>
+    <style name="SpecificCornerRounded">
+        <item name="cornerSizeTopRight">300dp</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeBottomLeft">50dp</item>
+        <item name="cornerFamilyBottomLeft">rounded</item>
+    </style>
 </resources>
