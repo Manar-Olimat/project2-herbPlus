@@ -1708,6 +1708,8 @@ drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
+drawable ic_search
+drawable ic_settings
 drawable lock
 drawable mail
 drawable material_cursor_drawable
@@ -1835,6 +1837,7 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id appBarLayout
 id app_Name
 id asConfigured
 id async
