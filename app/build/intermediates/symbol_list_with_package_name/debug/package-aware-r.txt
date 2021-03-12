@@ -1871,6 +1871,7 @@ id chip1
 id chip2
 id chip3
 id chip_group
+id chpassword
 id chronometer
 id circle_center
 id circular
@@ -2711,6 +2712,7 @@ style CardView
 style CardView_Dark
 style CardView_Light
 style Circular
+style Cut
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
