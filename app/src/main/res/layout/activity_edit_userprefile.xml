@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/cardview_light_background"
     tools:context=".Edit_userprofile">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/Widget.MaterialComponents.AppBarLayout.PrimarySurface"
+        style="@style/Widget.MaterialComponents.ActionBar.Primary"
+        android:background="@color/cardview_light_background"
         android:fitsSystemWindows="true"
         tools:ignore="MissingConstraints">
 
@@ -18,10 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/arrow_back"
-            app:navigationIconColor="#FBFBFB"
+            app:navigationIconColor="@color/PrimaryShade_4"
             app:title="Edit Profile"
-            android:layout_gravity="center"
-            android:elevation="0dp"
+            app:titleTextColor="@color/PrimaryShade_4"
             tools:ignore="ExtraText" >
 
         </com.google.android.material.appbar.MaterialToolbar>

@@ -8,16 +8,20 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\facebook.png"
     },
     {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_arrow_back.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\arrow_back.png"
+    },
+    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_social_login.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\social_login.png"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_photo_camera_24.png.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_photo_camera_24.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_baseline_photo_camera_24.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_baseline_photo_camera_24.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_group_126.png.flat",
@@ -88,6 +92,10 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
     {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_arrow_back.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\arrow_back.png"
+    },
+    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_edit.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\edit.png"
     },
@@ -104,12 +112,12 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_home_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_exit.png.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\exit.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_baseline_photo_camera_24.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_baseline_photo_camera_24.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_exit.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\exit.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_camera_24.png.flat",
@@ -148,32 +156,36 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\menu.png"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_settings.png.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\settings.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_profile.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\profile.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_settings.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\settings.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_cancel.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_cancel.png"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_sign_rose.png.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\sign_rose.png"
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_dashboard_black_24dp.xml.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_sign_rose.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\sign_rose.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_sign_rose.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\sign_rose.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_arrow_back.xml.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\arrow_back.xml"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_back.png.flat",
@@ -204,12 +216,12 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\add.png"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_dashboard_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_background.png.flat",
@@ -220,12 +232,12 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\help.png"
     },
     {
-        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_cancel.png.flat",
-        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cancel.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_camera_24.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_camera_24.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_cancel.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_cancel.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_menu.png.flat",
@@ -464,6 +476,10 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\gmail.png"
     },
     {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_arrow_back.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\arrow_back.png"
+    },
+    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_camera_24.xml.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_camera_24.xml"
     },
@@ -600,6 +616,10 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\help.png"
     },
     {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_arrow_back.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\arrow_back.png"
+    },
+    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_sign_rose.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\sign_rose.png"
     },
@@ -700,6 +720,10 @@
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_splash_screen.xml"
     },
     {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_edit_userprefile.xml.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_edit_userprefile.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_sign_rose.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\sign_rose.png"
     },
@@ -738,6 +762,10 @@
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_dot_menu.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\dot_menu.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_arrow_back.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\arrow_back.png"
     },
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
@@ -818,5 +846,9 @@
     {
         "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_arrow_back.png.flat",
+        "source": "C:\\Users\\HP\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\arrow_back.png"
     }
 ]

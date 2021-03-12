@@ -11,7 +11,7 @@
 9-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:5:5-32:19
+11-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:5:5-33:19
 12        android:allowBackup="true"
 12-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,49 +28,52 @@
 19        android:testOnly="true"
 20        android:theme="@style/Theme.AppCompat.NoActionBar" >
 20-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:11:9-59
-21        <activity android:name="com.example.project_2.user_account" />
-21-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:9-59
-21-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:19-47
-22        <activity android:name="com.example.project_2.home" />
-22-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:9-42
-22-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:19-39
-23        <activity android:name="com.example.project_2.sign_up" />
-23-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:14:9-45
-23-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:14:19-42
-24        <activity android:name="com.example.project_2.sign_in" />
+21        <activity android:name="com.example.project_2.Edit_userprofile" />
+21-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:9-63
+21-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:19-51
+22        <activity android:name="com.example.project_2.user_account" />
+22-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:9-50
+22-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:19-47
+23        <activity android:name="com.example.project_2.home" />
+23-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:14:9-42
+23-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:14:19-39
+24        <activity android:name="com.example.project_2.sign_up" />
 24-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:15:9-45
 24-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:15:19-42
-25        <activity android:name="com.example.project_2.searchable" >
-25-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:16:9-24:20
-25-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:16:19-45
-26            <intent-filter>
-26-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:17:13-19:29
-27                <action android:name="android.intent.action.SEARCH" />
-27-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:18:17-71
-27-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:18:25-68
-28            </intent-filter>
-29
-30            <meta-data
-30-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:21:13-23:66
-31                android:name="android.app.searchable"
-31-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:22:17-54
-32                android:resource="@layout/activity_searchable" />
-32-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:23:17-63
-33        </activity>
-34        <activity android:name="com.example.project_2.splashScreen" >
-34-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:25:9-31:20
-34-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:25:19-47
-35            <intent-filter>
-35-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:26:13-30:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:27:17-69
-36-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:27:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:29:17-77
-38-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:29:27-74
-39            </intent-filter>
-40        </activity>
-41    </application>
-42
-43</manifest>
+25        <activity android:name="com.example.project_2.sign_in" />
+25-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:16:9-45
+25-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:16:19-42
+26        <activity android:name="com.example.project_2.searchable" >
+26-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:17:9-25:20
+26-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:17:19-45
+27            <intent-filter>
+27-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:18:13-20:29
+28                <action android:name="android.intent.action.SEARCH" />
+28-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:19:17-71
+28-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:19:25-68
+29            </intent-filter>
+30
+31            <meta-data
+31-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:22:13-24:66
+32                android:name="android.app.searchable"
+32-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:23:17-54
+33                android:resource="@layout/activity_searchable" />
+33-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:24:17-63
+34        </activity>
+35        <activity android:name="com.example.project_2.splashScreen" >
+35-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:26:9-32:20
+35-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:26:19-47
+36            <intent-filter>
+36-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:27:13-31:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:28:17-69
+37-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:28:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:30:17-77
+39-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:30:27-74
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>
