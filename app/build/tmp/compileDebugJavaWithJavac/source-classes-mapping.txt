@@ -9,6 +9,8 @@ com/example/project_2/user_account.java
  com.example.project_2.user_account
  com.example.project_2.user_account$1
  com.example.project_2.user_account$2
+com/example/project_2/add_plant.java
+ com.example.project_2.add_plant
 com/example/project_2/home.java
  com.example.project_2.home
 com/example/project_2/search.java

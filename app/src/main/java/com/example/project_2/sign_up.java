@@ -18,7 +18,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class sign_up extends AppCompatActivity {
     Button sign_up;
-    TextInputEditText gg;
+    TextInputEditText username;
     EditText email;
     EditText password;
     RadioButton herbalistradio;
@@ -29,7 +29,7 @@ public class sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
         sign_up=findViewById(R.id.sign_up);
-       gg=findViewById(R.id.TextInputEditText);
+        username=findViewById(R.id.username);
        email=findViewById(R.id.email);
        password=findViewById(R.id.password);
         terms=findViewById(R.id.checkTerms);
@@ -42,12 +42,15 @@ public class sign_up extends AppCompatActivity {
             public void onClick(View v) {
 
                 checkDataEntered();
-                Intent mainIntent = new Intent(sign_up.this,user_account.class);
+               /* Intent mainIntent = new Intent(sign_up.this,user_account.class);
                 sign_up.this.startActivity(mainIntent);
-                sign_up.this.finish();
+                sign_up.this.finish();*/
             }
 
             private void checkDataEntered() {
+                if (isEmpty(username)) {
+                    username.setError("Empty username");
+                }
                 if (isEmpty(password)) {
                    password.setError("Empty password");
                 }
