@@ -220,7 +220,6 @@
             android:id="@+id/userAccount"
             android:layout_width="166dp"
             android:layout_height="34dp"
-            android:checked="true"
             android:text="User Account"
             android:textColor="@color/SecondaryShade_10"
             android:textSize="16dp"

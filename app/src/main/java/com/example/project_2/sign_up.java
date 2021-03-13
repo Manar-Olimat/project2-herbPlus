@@ -48,10 +48,9 @@ public class sign_up extends AppCompatActivity {
             }
 
             private void checkDataEntered() {
-             /*   if (isEmpty(email)) {
-                    Toast t = Toast.makeText(this, getString(R.string.emailToast), Toast.LENGTH_SHORT);
-                    t.show();
-                }*/
+                if (isEmpty(password)) {
+                   password.setError("Empty password");
+                }
                 if (!isEmail(email))
                     email.setError("Enter valid email!");
 
