@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145"
+        app:layout_constraintVertical_bias="0.134"
         app:shapeAppearanceOverlay="@style/Circular"
         app:srcCompat="@drawable/sprout"
         app:strokeColor="#4CAF50"
@@ -54,9 +54,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_marginTop="144dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginRight="136dp"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginRight="144dp"
         android:scaleType="center"
         android:tint="#FFFFFF"
         app:backgroundTint="#4CAF50"
@@ -72,12 +72,12 @@
 
     <View
         android:id="@+id/view4"
-        android:layout_width="394dp"
+        android:layout_width="382dp"
         android:layout_height="439dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:background="@color/cardview_light_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
@@ -85,12 +85,12 @@
         android:id="@+id/textView11"
         android:layout_width="205dp"
         android:layout_height="29dp"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="108dp"
         android:text="Symptoms treated by the plant"
         android:textColor="@android:color/black"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.16"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
@@ -117,21 +117,21 @@
         android:textColor="@android:color/black"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <EditText
         android:id="@+id/plantname"
-        android:layout_width="308dp"
-        android:layout_height="44dp"
+        android:layout_width="317dp"
+        android:layout_height="45dp"
         android:layout_marginTop="56dp"
         android:background="@drawable/boarder"
         android:ems="10"
         android:inputType="textPersonName"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
 
@@ -139,33 +139,33 @@
         android:id="@+id/textView10"
         android:layout_width="88dp"
         android:layout_height="27dp"
-        android:layout_marginTop="108dp"
+        android:layout_marginTop="204dp"
         android:text="Description"
-        android:textSize="14dp"
         android:textColor="@android:color/black"
+        android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintHorizontal_bias="0.105"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <MultiAutoCompleteTextView
         android:id="@+id/multiAutoCompleteTextView"
-        android:layout_width="327dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="317dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="240dp"
         android:background="@drawable/boarder"
         android:textColor="@android:color/black"
         app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintHorizontal_bias="0.307"
         app:layout_constraintStart_toStartOf="@+id/view4"
         app:layout_constraintTop_toTopOf="@+id/view4"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/symptoms"
-        android:layout_width="323dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="100dp"
+        android:layout_width="317dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="248dp"
         android:background="@drawable/boarder"
         android:drawableEnd="@drawable/arrow_drop_down"
         android:drawableTint="@color/PrimaryShade_10"
@@ -175,7 +175,7 @@
         android:textColorHint="#555353"
         app:layout_constraintBottom_toBottomOf="@+id/view4"
         app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintHorizontal_bias="0.292"
         app:layout_constraintStart_toStartOf="@+id/view4"
         tools:ignore="RtlCompat" />
 

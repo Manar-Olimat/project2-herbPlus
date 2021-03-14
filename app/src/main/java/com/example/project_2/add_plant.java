@@ -26,9 +26,15 @@ public class add_plant extends AppCompatActivity {
         setContentView(R.layout.activity_add_plant);
         symptoms = findViewById(R.id.symptoms);
         selectedsymptoms = new boolean[symptomsArray.length];
+
         symptoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                for(int i=0;i<selectedsymptoms.length;i++)
+                    selectedsymptoms[i]=false;
+                    symptomsList.clear();
+                    symptoms.setText("");
+
                 AlertDialog.Builder builder = new AlertDialog.Builder(add_plant.this);
                 builder.setTitle("Selected Symptoms");
                 builder.setCancelable(false);
@@ -39,8 +45,6 @@ public class add_plant extends AppCompatActivity {
                             symptomsList.add(which);
                             Collections.sort(symptomsList);
 
-                        } else {
-                            symptomsList.remove(which);
                         }
                     }
                 });
@@ -65,16 +69,7 @@ public class add_plant extends AppCompatActivity {
 
                     }
                 });
-                builder.setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        for(int i=0;i<selectedsymptoms.length;i++){
-                            selectedsymptoms[i]=false;
-                            symptomsList.clear();
-                            symptoms.setText("");
-                        }
-                    }
-                });
+
                 builder.show();
             }
         });
