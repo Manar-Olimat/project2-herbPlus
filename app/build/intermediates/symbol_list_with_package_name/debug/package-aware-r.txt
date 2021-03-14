@@ -1685,10 +1685,12 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable add
 drawable arrow_back
+drawable arrow_drop_down
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
 drawable background
+drawable boarder
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1784,11 +1786,13 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notifications
 drawable notify_panel_notification_icon_bg
+drawable plant
 drawable profile
 drawable search
 drawable settings
 drawable sign_rose
 drawable social_login
+drawable sprout
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -2079,6 +2083,7 @@ id mtrl_picker_text_input_range_end
 id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
+id multiAutoCompleteTextView
 id multiply
 id nav_controller_view_tag
 id nav_host_fragment_container
@@ -2110,6 +2115,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id plantname
 id position
 id postLayout
 id profile_image
@@ -2184,6 +2190,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id symptoms
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2206,12 +2213,15 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView10
+id textView11
 id textView2
 id textView3
 id textView4
 id textView5
 id textView6
 id textView7
+id textView8
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2249,6 +2259,7 @@ id username
 id view
 id view2
 id view3
+id view4
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag

@@ -21,12 +21,163 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/arrow_back"
-            app:navigationIconColor="@color/PrimaryShade_4"
+            app:navigationIconColor="@color/PrimaryShade_10"
             app:title="Add Plant"
-            app:titleTextColor="@color/PrimaryShade_4"
+            app:titleTextColor="@color/PrimaryShade_10"
             tools:ignore="ExtraText">
 
         </com.google.android.material.appbar.MaterialToolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="37dp"
+        android:background="@color/cardview_light_background"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.145"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:srcCompat="@drawable/sprout"
+        app:strokeColor="#4CAF50"
+        app:strokeWidth="2dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginRight="136dp"
+        android:scaleType="center"
+        android:tint="#FFFFFF"
+        app:backgroundTint="#4CAF50"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+        app:tint="@color/cardview_light_background"
+        tools:ignore="MissingConstraints,VectorDrawableCompat">
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="394dp"
+        android:layout_height="439dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/cardview_light_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="205dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="260dp"
+        android:text="Symptoms treated by the plant"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <Button
+        android:id="@+id/sign_up"
+        android:layout_width="285dp"
+        android:layout_height="41dp"
+        android:background="#4CAF50"
+        android:text="Add"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="88dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:text="Plant Name"
+        android:textColor="@android:color/black"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <EditText
+        android:id="@+id/plantname"
+        android:layout_width="308dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/boarder"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="88dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="108dp"
+        android:text="Description"
+        android:textSize="14dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view4" />
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/multiAutoCompleteTextView"
+        android:layout_width="327dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/boarder"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        app:layout_constraintTop_toTopOf="@+id/view4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/symptoms"
+        android:layout_width="323dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/boarder"
+        android:drawableEnd="@drawable/arrow_drop_down"
+        android:drawableTint="@color/PrimaryShade_10"
+        android:hint="Select Symptoms"
+        android:padding="12dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#555353"
+        app:layout_constraintBottom_toBottomOf="@+id/view4"
+        app:layout_constraintEnd_toEndOf="@+id/view4"
+        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintStart_toStartOf="@+id/view4"
+        tools:ignore="RtlCompat" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

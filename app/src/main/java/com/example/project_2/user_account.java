@@ -30,7 +30,7 @@ public class user_account extends AppCompatActivity {
         edit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mainIntent = new Intent(user_account.this,Edit_userprofile.class);
+                Intent mainIntent = new Intent(user_account.this,add_plant.class);
                 user_account.this.startActivity(mainIntent);
             }
         });
