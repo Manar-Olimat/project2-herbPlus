@@ -5,108 +5,93 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:13" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b20675c-1d66-4d4e-9ccc-2a05fcef7a84" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-=======
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project_2/user_account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_user_account.xml" afterDir="false" />
+    <list default="true" id="c4e44908-b13d-4676-a755-92f45d6d7469" name="Default Changelist" comment="test ro'a">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.5/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/project_2/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/com/example/project_2/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/tmp/debug/zip-cache/androidResources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/debug.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/merged_res_blame_folder/debug/out/multi-v2/values.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/processed_res/debug/out/resources-debug.ap_" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/compileDebugJavaWithJavac/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project_2/add_plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project_2/add_plant.java" afterDir="false" />
     </list>
->>>>>>> 66bc293ad932a94f18b37497aa12d5c9a93e4bf7
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_26" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
   </component>
-  <component name="ExternalProjectsManager">
-    <system id="GRADLE">
-      <state>
-        <projects_view>
-          <tree_state>
-            <expand />
-            <select />
-          </tree_state>
-        </projects_view>
-      </state>
-    </system>
-  </component>
-<<<<<<< HEAD
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
-=======
->>>>>>> 66bc293ad932a94f18b37497aa12d5c9a93e4bf7
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1oR4jX8sDifFmwRyV817ESE8ap9" />
+  <component name="ProjectId" id="1pnJe8CKJD9NmdQEhtG25bTD2w6" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="emulator" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="android.template.-916461885">
-      <recent name="com.example.project_2" />
-    </key>
-    <key name="android.template.1590647980">
-      <recent name="com.example.project_2" />
-    </key>
-    <key name="android.template.-2124524661">
+    <key name="android.template.-1586466695">
       <recent name="com.example.project_2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\LITOO\OneDrive\Desktop\graduating project_2\project_2\app\src\main\res\mipmap-xhdpi" />
+      <recent name="C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\res\drawable" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\LITOO\OneDrive\Desktop\graduating project_2\project_2\app\src\main\res\drawable" />
-    </key>
-    <key name="android.template.1046024943">
-      <recent name="com.example.project_2" />
-    </key>
-    <key name="android.template.1092808634">
-      <recent name="com.example.project_2" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -116,13 +101,14 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
-      <module name="project_2.app" />
+    <configuration name="project2-herbPlus.project_2.app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="project2-herbPlus.project_2.app" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
       <option name="DEPLOY_AS_INSTANT" value="false" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ALL_USERS" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -158,11 +144,16 @@
       </Native>
       <Profilers>
         <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+        <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
+        <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
+      <option name="SEARCH_ACTIVITY_IN_GLOBAL_SCOPE" value="false" />
+      <option name="SKIP_ACTIVITY_VALIDATION" value="false" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
@@ -173,16 +164,51 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0b20675c-1d66-4d4e-9ccc-2a05fcef7a84" name="Default Changelist" comment="" />
-      <created>1613236204122</created>
+      <changelist id="c4e44908-b13d-4676-a755-92f45d6d7469" name="Default Changelist" comment="" />
+      <created>1615673406848</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1613236204122</updated>
+      <updated>1615673406848</updated>
     </task>
+    <task id="LOCAL-00001" summary="test ro'a">
+      <created>1615674740129</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1615674740129</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test ro'a">
+      <created>1615731052348</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615731052348</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test ro'a">
+      <created>1615731307790</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1615731307790</updated>
+    </task>
+    <task id="LOCAL-00004" summary="test ro'a">
+      <created>1615750298714</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1615750298714</updated>
+    </task>
+    <task id="LOCAL-00005" summary="test ro'a">
+      <created>1615755560972</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1615755560972</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
-<<<<<<< HEAD
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -192,61 +218,28 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
-=======
-    <option name="oldMeFiltersMigrated" value="true" />
->>>>>>> 66bc293ad932a94f18b37497aa12d5c9a93e4bf7
+    <MESSAGE value="test ro'a" />
+    <option name="LAST_COMMIT_MESSAGE" value="test ro'a" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Notifications" timestamp="1614272249072">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1614272249072" />
-    <state x="439" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1613666082450">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="439" y="128" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1613666082450" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613679553635">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613679553635" />
-    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog" timestamp="1613475692878">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="167" key="AndroidCreateResourceDirectoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1613475692878" />
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog" timestamp="1613475234776">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="349" y="167" key="AndroidCreateResourceFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1613475234776" />
-    <state x="627" y="225" key="AndroidCreateXmlResourceDialog" timestamp="1613841872181">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="627" y="225" key="AndroidCreateXmlResourceDialog/0.0.1536.824@0.0.1536.824" timestamp="1613841872181" />
-    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1614327541031">
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom" timestamp="1615815916560">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1614327541031" />
-    <state x="449" y="167" key="Downloadable.Font.Dialog.Size" timestamp="1613476299847">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1306" height="176" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1615815916560" />
+    <state width="1306" height="176" key="GridCell.Tab.0.center" timestamp="1615815916560">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="449" y="167" key="Downloadable.Font.Dialog.Size/0.0.1536.824@0.0.1536.824" timestamp="1613476299847" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1614273448152">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1306" height="176" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1615815916560" />
+    <state width="1306" height="176" key="GridCell.Tab.0.left" timestamp="1615815916560">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614273448152" />
-    <state x="591" y="328" key="Github.CreateGistDialog" timestamp="1614272231453">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state width="1306" height="176" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1615815916560" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right" timestamp="1615815916560">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="591" y="328" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1614272231453" />
-    <state x="277" y="55" key="SettingsEditor" timestamp="1614273343632">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="277" y="55" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1614273343632" />
-    <state x="457" y="259" width="705" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1613241315914">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="457" y="259" width="705" height="306" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1613241315914" />
+    <state width="1306" height="176" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1615815916560" />
   </component>
 </project>

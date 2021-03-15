@@ -30,10 +30,11 @@ public class add_plant extends AppCompatActivity {
         symptoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                for(int i=0;i<selectedsymptoms.length;i++)
+               /* for(int i=0;i<selectedsymptoms.length;i++)
                     selectedsymptoms[i]=false;
                     symptomsList.clear();
-                    symptoms.setText("");
+                    symptoms.setText("");*/
+
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(add_plant.this);
                 builder.setTitle("Selected Symptoms");
@@ -46,9 +47,11 @@ public class add_plant extends AppCompatActivity {
                             Collections.sort(symptomsList);
 
                         }
+                        else if(symptomsList.contains(which)){
+                            symptomsList.remove(Integer.valueOf(which));
+                        }
                     }
-                });
-                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                }).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         StringBuilder stringBuilder = new StringBuilder();
@@ -61,15 +64,23 @@ public class add_plant extends AppCompatActivity {
                         symptoms.setText(stringBuilder.toString());
 
                     }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
 
                     }
                 });
-
+                builder.setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        for(int i=0;i<selectedsymptoms.length;i++){
+                            selectedsymptoms[i]=false;
+                            symptomsList.clear();
+                            symptoms.setText("");
+                        }
+                    }
+                });
                 builder.show();
             }
         });
