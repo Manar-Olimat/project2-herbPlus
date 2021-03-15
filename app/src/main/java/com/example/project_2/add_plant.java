@@ -30,12 +30,6 @@ public class add_plant extends AppCompatActivity {
         symptoms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               /* for(int i=0;i<selectedsymptoms.length;i++)
-                    selectedsymptoms[i]=false;
-                    symptomsList.clear();
-                    symptoms.setText("");*/
-
-
                 AlertDialog.Builder builder = new AlertDialog.Builder(add_plant.this);
                 builder.setTitle("Selected Symptoms");
                 builder.setCancelable(false);
@@ -45,7 +39,6 @@ public class add_plant extends AppCompatActivity {
                         if (isChecked) {
                             symptomsList.add(which);
                             Collections.sort(symptomsList);
-
                         }
                         else if(symptomsList.contains(which)){
                             symptomsList.remove(Integer.valueOf(which));
@@ -70,8 +63,7 @@ public class add_plant extends AppCompatActivity {
                         dialog.dismiss();
 
                     }
-                });
-                builder.setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
+                }).setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         for(int i=0;i<selectedsymptoms.length;i++){
@@ -80,8 +72,7 @@ public class add_plant extends AppCompatActivity {
                             symptoms.setText("");
                         }
                     }
-                });
-                builder.show();
+                }).show();
             }
         });
 
