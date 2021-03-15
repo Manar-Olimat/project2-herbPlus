@@ -1,26 +1,89 @@
 package com.example.project_2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class sign_in extends AppCompatActivity {
 TextView sign_up;
+TextView username;
+TextView password;
+Button signIn;
+FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         sign_up=findViewById(R.id.signUp);
-         sign_up.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 Intent mainIntent = new Intent(sign_in.this,sign_up.class);
-                 sign_in.this.startActivity(mainIntent);
-                 sign_in.this.finish();
+        username=findViewById(R.id.username);
+        password=findViewById(R.id.password);
+        signIn=findViewById(R.id.sign_in);
+        mAuth=FirebaseAuth.getInstance();
+
+
+    }
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.signUp:
+                Intent mainIntent = new Intent(sign_in.this,sign_up.class);
+                sign_in.this.startActivity(mainIntent);
+                sign_in.this.finish();
+                break;
+            case R.id.sign_in :
+                userLogin();
+                break;
+               
+        }
+    }
+
+    private void userLogin() {
+        String usernameValue=username.getText().toString().trim();
+        String passwordValue=password.getText().toString().trim();
+
+        if(usernameValue.isEmpty()){
+            username.setError(" email required!");
+        username.requestFocus();
+        return;
+        }
+        if(!Patterns.EMAIL_ADDRESS.matcher(usernameValue).matches()){
+            username.setError("Enter valid email!");
+            username.requestFocus();
+            return;
+        }
+        if(passwordValue.isEmpty()){
+            password.setError("password required");
+        password.requestFocus();
+        return;
+        }
+
+    mAuth.signInWithEmailAndPassword(usernameValue,passwordValue)
+            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+        @Override
+        public void onComplete(@NonNull Task<AuthResult> task) {
+
+             if(task.isSuccessful()){
+
+                 startActivity(new Intent(sign_in.this,home.class));
              }
-         });
+             else
+             {
+                 Toast.makeText(com.example.project_2.sign_in.this,"sign in faild",Toast.LENGTH_LONG).show();
+
+             }
+        }
+    });
+
     }
 }

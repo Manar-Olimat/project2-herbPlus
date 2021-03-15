@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\7c07e5a7fa6d974b3595f7f2f9a9eba1\\jetified-play-services-base-17.0.0\\res\\values-bg\\values.xml",
+                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\16ee7d535d5bcfc42734367bac6d128f\\jetified-play-services-base-17.1.0\\res\\values-bg\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\a52bfb92d2b276c79d11db281b8aa668\\jetified-play-services-basement-17.0.0\\res\\values-bg\\values.xml",
+                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\13b3b458aebef33ef9d3c324bbf6ff64\\jetified-play-services-basement-17.1.0\\res\\values-bg\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

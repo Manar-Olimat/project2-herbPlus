@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\7c07e5a7fa6d974b3595f7f2f9a9eba1\\jetified-play-services-base-17.0.0\\res\\values-zh-rHK\\values.xml",
+                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\16ee7d535d5bcfc42734367bac6d128f\\jetified-play-services-base-17.1.0\\res\\values-zh-rHK\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -52,6 +52,23 @@
                         "startOffsets": "3150,3253,3413,3530,3634,3800,3918,4050,4339,4508,4611,4771,4888,5054,5192,5277,5364",
                         "endColumns": "102,159,116,103,165,117,131,121,168,102,159,116,165,137,84,86,100",
                         "endOffsets": "3248,3408,3525,3629,3795,3913,4045,4167,4503,4606,4766,4883,5049,5187,5272,5359,5460"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\13b3b458aebef33ef9d3c324bbf6ff64\\jetified-play-services-basement-17.1.0\\res\\values-zh-rHK\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "166",
+                        "endOffsets": "417"
+                    },
+                    "to": {
+                        "startLines": "45",
+                        "startColumns": "4",
+                        "startOffsets": "4172",
+                        "endColumns": "166",
+                        "endOffsets": "4334"
                     }
                 },
                 {
@@ -88,23 +105,6 @@
                         "startOffsets": "9139",
                         "endColumns": "100",
                         "endOffsets": "9235"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LITOO\\.gradle\\caches\\transforms-2\\files-2.1\\a52bfb92d2b276c79d11db281b8aa668\\jetified-play-services-basement-17.0.0\\res\\values-zh-rHK\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "166",
-                        "endOffsets": "417"
-                    },
-                    "to": {
-                        "startLines": "45",
-                        "startColumns": "4",
-                        "startOffsets": "4172",
-                        "endColumns": "166",
-                        "endOffsets": "4334"
                     }
                 }
             ]
