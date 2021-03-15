@@ -33,15 +33,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4e44908-b13d-4676-a755-92f45d6d7469" name="Default Changelist" comment="test ro'a">
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/project_2/add_plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/project_2/add_plant.java" afterDir="false" />
-    </list>
+    <list default="true" id="c4e44908-b13d-4676-a755-92f45d6d7469" name="Default Changelist" comment="test ro'a" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[Pixel_XL_API_29]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
