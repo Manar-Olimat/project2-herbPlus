@@ -27,8 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class sign_up extends AppCompatActivity {
     Button sign_up;
     TextInputEditText username;
-    EditText email;
-    EditText password;
+    TextInputEditText email;
+    TextInputEditText password;
     RadioButton herbalistradio;
     RadioButton userRadio;
     CheckBox terms;
@@ -80,7 +80,7 @@ sign_up.setOnClickListener(new View.OnClickListener() {
                             sign_up.this.finish();
                         }
                         else {
-                            Toast.makeText(com.example.project_2.sign_up.this,"sign up faild",Toast.LENGTH_LONG).show();
+                            Toast.makeText(com.example.project_2.sign_up.this,"sign uo failed",Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -148,11 +148,11 @@ sign_up.setOnClickListener(new View.OnClickListener() {
             herbalistradio.setError("choose your account type");
 
     }
-    boolean isEmail(EditText text) {
+    boolean isEmail(TextInputEditText text) {
         CharSequence email = text.getText().toString();
         return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
     }
-    boolean isEmpty(EditText text) {
+    boolean isEmpty( TextInputEditText text) {
         CharSequence str = text.getText().toString();
         return TextUtils.isEmpty(str);
     }

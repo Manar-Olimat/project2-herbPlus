@@ -1815,7 +1815,6 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
-id TextInputEditText
 id TextInputLayout
 id TextInputLayout1
 id accelerate
@@ -1964,6 +1963,7 @@ id easeOut
 id edit
 id edit_query
 id email
+id email1
 id end
 id enterAlways
 id enterAlwaysCollapsed
@@ -1976,7 +1976,6 @@ id fill
 id fill_horizontal
 id fill_vertical
 id filled
-id filledTextField
 id fitToContents
 id fixed
 id flip
@@ -2109,6 +2108,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id password
+id password1
 id password_toggle
 id path
 id pathRelative
@@ -2256,6 +2256,7 @@ id up
 id useLogo
 id userAccount
 id username
+id username1
 id view
 id view2
 id view3
