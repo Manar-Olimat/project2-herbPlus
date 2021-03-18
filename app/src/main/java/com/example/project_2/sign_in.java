@@ -33,52 +33,52 @@ public class sign_in extends AppCompatActivity {
         password=findViewById(R.id.password);
         signIn=findViewById(R.id.sign_in);
         mAuth=FirebaseAuth.getInstance();
-       sign_up.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               Intent mainIntent = new Intent(sign_in.this,sign_up.class);
-               sign_in.this.startActivity(mainIntent);
-               sign_in.this.finish();
-           }
-       });
-       signIn.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
-               String usernameValue = username.getText().toString();
-               String passwordValue = password.getText().toString();
 
-               if (usernameValue.isEmpty()) {
-                   username.setError(" email required!");
-                   username.requestFocus();
-                   return;
-               }
-               if (!Patterns.EMAIL_ADDRESS.matcher(usernameValue).matches()) {
-                   username.setError("Enter valid email!");
-                   username.requestFocus();
-                   return;
-               }
-               if (passwordValue.isEmpty()) {
-                   password.setError("password required");
-                   password.requestFocus();
-                   return;
-               }
 
-               mAuth.signInWithEmailAndPassword(usernameValue, passwordValue)
-                       .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                           @Override
-                           public void onComplete(@NonNull Task<AuthResult> task) {
-
-                               if (task.isSuccessful()) {
-
-                                   startActivity(new Intent(sign_in.this, home.class));
-                               } else {
-                                   Toast.makeText(com.example.project_2.sign_in.this, "sign in faild", Toast.LENGTH_LONG).show();
-
-                               }
-                           }
-                       });
-
-           }
-       });
        }
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.signUp:
+                Intent mainIntent = new Intent(sign_in.this,sign_up.class);
+                sign_in.this.startActivity(mainIntent);
+                sign_in.this.finish();
+                break;
+            case R.id.sign_in:
+                String usernameValue = username.getText().toString();
+                String passwordValue = password.getText().toString();
+
+                if (usernameValue.isEmpty()) {
+                    username.setError(" email required!");
+                    username.requestFocus();
+                    return;
+                }
+                if (!Patterns.EMAIL_ADDRESS.matcher(usernameValue).matches()) {
+                    username.setError("Enter valid email!");
+                    username.requestFocus();
+                    return;
+                }
+                if (passwordValue.isEmpty()) {
+                    password.setError("password required");
+                    password.requestFocus();
+                    return;
+                }
+
+                mAuth.signInWithEmailAndPassword(usernameValue, passwordValue)
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                if (task.isSuccessful()) {
+
+                                    startActivity(new Intent(sign_in.this, home.class));
+                                } else {
+                                    Toast.makeText(com.example.project_2.sign_in.this, "sign in faild", Toast.LENGTH_LONG).show();
+
+                                }
+                            }
+                        });
+
+                break;
+        }
+        }
     }
