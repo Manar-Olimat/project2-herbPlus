@@ -150,7 +150,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/sign_up"
+        android:id="@+id/updateProfile"
         android:layout_width="347dp"
         android:layout_height="54dp"
         android:background="#00A79B"

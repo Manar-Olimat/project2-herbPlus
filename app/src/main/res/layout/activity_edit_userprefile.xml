@@ -31,7 +31,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/profile_image2"
         android:layout_width="125dp"
         android:layout_height="125dp"
         android:layout_marginBottom="37dp"
@@ -49,7 +49,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/edit"
+        android:id="@+id/editProfilePhoto1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
@@ -71,7 +71,7 @@
 
 
     <Button
-        android:id="@+id/sign_up"
+        android:id="@+id/updateProfile2"
         android:layout_width="347dp"
         android:layout_height="54dp"
         android:background="#00A79B"
@@ -116,7 +116,7 @@
         tools:ignore="MissingClass,MissingConstraints">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username"
+            android:id="@+id/newUsername1"
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:inputType="text"
@@ -139,14 +139,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image2"
         app:layout_constraintVertical_bias="0.316"
         app:startIconDrawable="@drawable/mail"
         app:startIconTint="#272626"
         tools:ignore="MissingClass">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/email"
+            android:id="@+id/newEmail1"
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:hint="email"
@@ -166,7 +166,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/profile_image2"
         app:layout_constraintVertical_bias="0.554"
         tools:ignore="MissingConstraints">
 
@@ -189,6 +189,7 @@
             tools:ignore="UseAppTint" />
 
         <TextView
+            android:id="@+id/blank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"

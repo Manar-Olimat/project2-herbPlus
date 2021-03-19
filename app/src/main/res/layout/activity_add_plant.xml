@@ -31,7 +31,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/profile_image"
+        android:id="@+id/profile_image2"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginBottom="37dp"
@@ -50,7 +50,7 @@
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/edit"
+        android:id="@+id/edit_userProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
@@ -79,7 +79,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image2" />
 
     <TextView
         android:id="@+id/textView11"
@@ -95,7 +95,7 @@
         app:layout_constraintTop_toTopOf="@+id/view4" />
 
     <Button
-        android:id="@+id/sign_up"
+        android:id="@+id/updateProfile2"
         android:layout_width="285dp"
         android:layout_height="41dp"
         android:background="#4CAF50"
@@ -133,7 +133,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.351"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image2" />
 
     <TextView
         android:id="@+id/textView10"

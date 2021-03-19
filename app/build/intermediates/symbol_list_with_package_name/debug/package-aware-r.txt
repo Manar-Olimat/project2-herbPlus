@@ -1894,6 +1894,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bidirectional
+id blank
 id blocking
 id bottom
 id bottom_navigation
@@ -1960,8 +1961,9 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
-id edit
+id editProfilePhoto1
 id edit_query
+id edit_userProfile
 id email
 id email1
 id end
@@ -2091,6 +2093,8 @@ id navigation_header_container
 id navigation_home
 id navigation_notifications
 id never
+id newEmail1
+id newUsername1
 id noScroll
 id none
 id normal
@@ -2109,6 +2113,7 @@ id parentRelative
 id parent_matrix
 id password
 id password1
+id password_signIn
 id password_toggle
 id path
 id pathRelative
@@ -2118,7 +2123,7 @@ id pin
 id plantname
 id position
 id postLayout
-id profile_image
+id profile_image2
 id progress_circular
 id progress_horizontal
 id ptofile
@@ -2162,7 +2167,6 @@ id showHome
 id showTitle
 id signUp
 id sign_in
-id sign_up
 id sin
 id skipCollapsed
 id slide
@@ -2220,7 +2224,6 @@ id textView3
 id textView4
 id textView5
 id textView6
-id textView7
 id textView8
 id text_input_end_icon
 id text_input_error_icon
@@ -2253,10 +2256,14 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id updateProfile
+id updateProfile2
 id useLogo
 id userAccount
 id username
 id username1
+id username_signIn
+id username_viewProfile1
 id view
 id view2
 id view3

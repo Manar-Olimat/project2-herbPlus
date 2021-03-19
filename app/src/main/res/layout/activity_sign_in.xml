@@ -84,7 +84,7 @@
         tools:ignore="MissingClass">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/username"
+            android:id="@+id/username_signIn"
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:inputType="text"
@@ -111,7 +111,7 @@
         app:startIconTint="#272626"
         tools:ignore="MissingConstraints">
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/password"
+            android:id="@+id/password_signIn"
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:inputType="textPassword"

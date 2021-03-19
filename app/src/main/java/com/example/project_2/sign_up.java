@@ -10,14 +10,12 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,10 +37,10 @@ public class sign_up extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-        sign_up=findViewById(R.id.sign_up);
+        sign_up=findViewById(R.id.updateProfile2);
         username=findViewById(R.id.username);
        email=findViewById(R.id.email);
-       password=findViewById(R.id.password);
+       password=findViewById(R.id.password_signIn);
         terms=findViewById(R.id.checkTerms);
         herbalistradio=findViewById(R.id.herbalist);
         userRadio=findViewById(R.id.userAccount);
@@ -73,7 +71,7 @@ sign_up.setOnClickListener(new View.OnClickListener() {
                         if(task.isSuccessful()){
                             FirebaseUser user = mAuth.getCurrentUser();
 
-                            FirebaseDatabase.getInstance().getReference().child(user.getUid())
+                            FirebaseDatabase.getInstance().getReference( ).child(user.getUid())
                                     .setValue(db);
                             Intent mainIntent = new Intent(sign_up.this,user_account.class);
                             sign_up.this.startActivity(mainIntent);
