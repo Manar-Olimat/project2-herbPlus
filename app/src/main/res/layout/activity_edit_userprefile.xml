@@ -146,7 +146,7 @@
         tools:ignore="MissingClass">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/newEmail1"
+            android:id="@+id/email_editProfile"
             android:layout_width="350dp"
             android:layout_height="60dp"
             android:hint="email"
@@ -164,10 +164,10 @@
         android:background="#E8EAF6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image2"
-        app:layout_constraintVertical_bias="0.554"
+        app:layout_constraintVertical_bias="0.792"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -209,5 +209,46 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/accountRadio_edit"
+        android:layout_width="244dp"
+        android:layout_height="76dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754">
+
+        <RadioButton
+            android:id="@+id/herbalist_edit"
+            android:layout_width="162dp"
+            android:layout_height="50dp"
+            android:text="Herbalist Account"
+            android:textColor="@color/SecondaryShade_10"
+            android:textSize="16dp" />
+
+        <RadioButton
+            android:id="@+id/userAccount_edit"
+            android:layout_width="166dp"
+            android:layout_height="34dp"
+            android:text="User Account"
+            android:textColor="@color/SecondaryShade_10"
+            android:textSize="16dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Account Type"
+        android:textColor="@color/SecondaryShade_10"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="417dp"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

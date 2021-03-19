@@ -1729,11 +1729,13 @@ drawable dot_menu
 drawable edit
 drawable exit
 drawable facebook
+drawable forgetpass
 drawable gmail
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable group_126
 drawable help
+drawable herb
 drawable ic_baseline_photo_camera_24
 drawable ic_camera_24
 drawable ic_cancel
@@ -1750,6 +1752,7 @@ drawable ic_mtrl_chip_close_circle
 drawable ic_notifications_black_24dp
 drawable ic_search
 drawable ic_settings
+drawable idintify_herb
 drawable lock
 drawable mail
 drawable material_cursor_drawable
@@ -1763,6 +1766,7 @@ drawable material_ic_keyboard_arrow_right_black_24dp
 drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
+drawable messeg
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1798,6 +1802,8 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable twitter
 drawable user
+drawable varification_messeg
+drawable varify_text
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1852,6 +1858,7 @@ id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
 id accountRadio
+id accountRadio_edit
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1888,7 +1895,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
-id back
+id back11
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1966,13 +1973,14 @@ id edit_query
 id edit_userProfile
 id email
 id email1
+id email_editProfile
+id email_forgetPass
 id end
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
-id facebook
 id fade
 id fill
 id fill_horizontal
@@ -1984,10 +1992,10 @@ id flip
 id floating
 id floating_action_button
 id forever
+id forgetPASS
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
-id gmail
 id gone
 id graph
 id graph_wrap
@@ -1997,6 +2005,7 @@ id groups
 id guideline
 id header_title
 id herbalist
+id herbalist_edit
 id hideable
 id home
 id homeAsUp
@@ -2012,6 +2021,7 @@ id image1
 id image2
 id image3
 id imageView
+id imageView2
 id imvCornerShapeTwo
 id incoming
 id info
@@ -2093,7 +2103,7 @@ id navigation_header_container
 id navigation_home
 id navigation_notifications
 id never
-id newEmail1
+id newPass_forgetPass
 id newUsername1
 id noScroll
 id none
@@ -2130,6 +2140,7 @@ id ptofile
 id radio
 id ratio
 id rectangles
+id register_forgetPass
 id reverseSawtooth
 id right
 id right_icon
@@ -2225,6 +2236,7 @@ id textView4
 id textView5
 id textView6
 id textView8
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2251,7 +2263,6 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id twitter
 id unchecked
 id uniform
 id unlabeled
@@ -2260,6 +2271,7 @@ id updateProfile
 id updateProfile2
 id useLogo
 id userAccount
+id userAccount_edit
 id username
 id username1
 id username_signIn
@@ -2268,6 +2280,7 @@ id view
 id view2
 id view3
 id view4
+id view5
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2341,6 +2354,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_plant
 layout activity_edit_userprefile
+layout activity_forget_password
 layout activity_home
 layout activity_searchable
 layout activity_sign_in

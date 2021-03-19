@@ -17,8 +17,9 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class sign_in extends AppCompatActivity {
+public class sign_in extends AppCompatActivity implements View.OnClickListener {
     TextView sign_up;
+    TextView forgetPassword;
     TextInputEditText username;
     TextInputEditText password;
     Button signIn;
@@ -28,64 +29,28 @@ public class sign_in extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
         sign_up=findViewById(R.id.signUp);
-        username=findViewById(R.id.username);
+        username=findViewById(R.id.username_signIn);
         password=findViewById(R.id.password_signIn);
         signIn=findViewById(R.id.sign_in);
+        forgetPassword=(TextView) findViewById(R.id.forgetPASS);
+        forgetPassword.setOnClickListener( this);
         mAuth=FirebaseAuth.getInstance();
-        sign_up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(sign_in.this, sign_up.class));
 
-            }
-        });
-signIn.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        String usernameValue = username.getText().toString();
-        String passwordValue = password.getText().toString();
-
-        if (usernameValue.isEmpty()) {
-            username.setError(" email required!");
-            username.requestFocus();
-            return;
-        }
-        if (!Patterns.EMAIL_ADDRESS.matcher(usernameValue).matches()) {
-            username.setError("Enter valid email!");
-            username.requestFocus();
-            return;
-        }
-        if (passwordValue.isEmpty()) {
-            password.setError("password required");
-            password.requestFocus();
-            return;
-        }
-
-        mAuth.signInWithEmailAndPassword(usernameValue, passwordValue)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-
-                        if (task.isSuccessful()) {
-
-                            startActivity(new Intent(sign_in.this, home.class));
-                        } else {
-                            Toast.makeText(com.example.project_2.sign_in.this, "sign in faild", Toast.LENGTH_LONG).show();
-
-                        }
-                    }
-                });
-
-    }
-});
+         sign_up.setOnClickListener(this);
+         signIn.setOnClickListener(this);
 
        }
-  /*  public void onClick(View v) {
-        switch (v.getId()) {
+
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.forgetPASS:
+                startActivity(new Intent(sign_in.this, forget_password.class));
+                break;
             case R.id.signUp:
-                Intent mainIntent = new Intent(sign_in.this,sign_up.class);
-                sign_in.this.startActivity(mainIntent);
-                sign_in.this.finish();
+                startActivity(new Intent(sign_in.this, sign_up.class));
+
                 break;
             case R.id.sign_in:
                 String usernameValue = username.getText().toString();
@@ -114,7 +79,7 @@ signIn.setOnClickListener(new View.OnClickListener() {
 
                                 if (task.isSuccessful()) {
 
-                                    startActivity(new Intent(sign_in.this, home.class));
+                                    startActivity(new Intent(sign_in.this, user_account.class));
                                 } else {
                                     Toast.makeText(com.example.project_2.sign_in.this, "sign in faild", Toast.LENGTH_LONG).show();
 
@@ -123,6 +88,7 @@ signIn.setOnClickListener(new View.OnClickListener() {
                         });
 
                 break;
+
         }
-        }*/
+    }
     }
