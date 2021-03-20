@@ -2,9 +2,11 @@ package com.example.project_2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -12,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,26 +26,29 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class user_account extends AppCompatActivity implements View.OnClickListener {
-   RelativeLayout Notification;
-    RelativeLayout logout;
+    CardView Notification;
+    CardView logout;
     FloatingActionButton edit;
     TextView username;
-   ShapeableImageView userPhoto;
-   private FirebaseUser user;
+    ShapeableImageView userPhoto;
+    private FirebaseUser user;
     private DatabaseReference reference;
     private  String userID;
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
-       Notification = findViewById(R.id.Notification);
-     username=findViewById(R.id.username_viewProfile1);
-      userPhoto=findViewById(R.id.profile_image2);
-      edit=findViewById(R.id.edit_userProfile);
-      edit.setOnClickListener(this);
-      logout=findViewById(R.id.LogOut);
-      logout.setOnClickListener(this);
+        Notification = findViewById(R.id.Notification);
+
+        username=findViewById(R.id.username_viewProfile1);
+        userPhoto=findViewById(R.id.profile_image2);
+        edit=findViewById(R.id.edit_userProfile);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        edit.setOnClickListener(this);
+        logout=findViewById(R.id.LogOut);
+        logout.setOnClickListener(this);
 
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference= FirebaseDatabase.getInstance().getReference("users");
@@ -69,6 +75,24 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
 
             }
         });
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.home:
+                        Intent intent1 = new Intent(user_account.this, home.class);
+                        startActivity(intent1);
+                        break;
+                    case R.id.ptofile:
+                        Intent intent2 = new Intent(user_account.this, user_account.class);
+                        startActivity(intent2);
+                        break;
+
+
+                }
+                return true;
+            }
+        });
     }
 
     @Override
@@ -83,6 +107,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(user_account.this, sign_in.class));
 
                 break;
+
         }
     }
 }

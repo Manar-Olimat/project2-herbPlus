@@ -90,7 +90,7 @@
         android:id="@+id/view3"
         android:layout_width="411dp"
         android:layout_height="338dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -164,10 +164,10 @@
         android:background="#E8EAF6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image2"
-        app:layout_constraintVertical_bias="0.792"
+        app:layout_constraintVertical_bias="0.779"
         tools:ignore="MissingConstraints">
 
         <ImageView
@@ -217,10 +217,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
+        app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754">
+        app:layout_constraintVertical_bias="0.758">
 
         <RadioButton
             android:id="@+id/herbalist_edit"
@@ -233,7 +233,7 @@
         <RadioButton
             android:id="@+id/userAccount_edit"
             android:layout_width="166dp"
-            android:layout_height="34dp"
+            android:layout_height="wrap_content"
             android:text="User Account"
             android:textColor="@color/SecondaryShade_10"
             android:textSize="16dp" />
@@ -243,12 +243,15 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
         android:text="Account Type"
         android:textColor="@color/SecondaryShade_10"
         android:textSize="17dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="417dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintStart_toStartOf="@+id/view3"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

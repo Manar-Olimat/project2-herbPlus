@@ -1809,7 +1809,6 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
-id Help
 id LogOut
 id META
 id NO_DEBUG
@@ -2004,6 +2003,7 @@ id grouping
 id groups
 id guideline
 id header_title
+id help
 id herbalist
 id herbalist_edit
 id hideable
@@ -2018,10 +2018,12 @@ id ignore
 id ignoreRequest
 id image
 id image1
-id image2
-id image3
 id imageView
 id imageView2
+id image_view11
+id image_view12
+id image_view21
+id image_view22
 id imvCornerShapeTwo
 id incoming
 id info
@@ -2039,6 +2041,8 @@ id light
 id line1
 id line3
 id linear
+id linearLayout
+id linearLayout2
 id listMode
 id list_item
 id masked
@@ -2230,7 +2234,10 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
 id textView2
+id textView21
+id textView22
 id textView3
 id textView4
 id textView5
