@@ -55,13 +55,11 @@ public class add_plant extends AppCompatActivity {
                             }
                         }
                         symptoms.setText(stringBuilder.toString());
-
                     }
                 }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         dialog.dismiss();
-
                     }
                 }).setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
                     @Override
