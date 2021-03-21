@@ -72,8 +72,6 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
 
             }
         });
-
-
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

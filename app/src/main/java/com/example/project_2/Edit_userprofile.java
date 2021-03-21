@@ -2,6 +2,7 @@ package com.example.project_2;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,7 +32,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
     RadioButton herbalistradio;
     RadioButton userRadio;
     TextInputEditText email;
-    RelativeLayout changePassword;
+    CardView changePassword;
     private FirebaseUser user;
     private DatabaseReference reference;
     private  String userID;
@@ -39,42 +40,43 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_userprefile);
-username=findViewById(R.id.newUsername1);
-email=findViewById(R.id.email_editProfile);
-changePassword=findViewById(R.id.chpassword);
-changePassword.setOnClickListener(this);
+        username=findViewById(R.id.newUsername1);
+        email=findViewById(R.id.email_editProfile);
+        changePassword=findViewById(R.id.chpassword);
+        changePassword.setOnClickListener(this);
         herbalistradio=findViewById(R.id.herbalist_edit);
         userRadio=findViewById(R.id.userAccount_edit);
-updateProfile=findViewById(R.id.updateProfile2);
-updateProfile.setOnClickListener(this);
-editUserPhoto=findViewById(R.id.editProfilePhoto1);
-editUserPhoto.setOnClickListener(this);
-back=findViewById(R.id.topAppBar);
-back.setOnClickListener(this);
+        updateProfile=findViewById(R.id.updateProfile2);
+        updateProfile.setOnClickListener(this);
+        editUserPhoto=findViewById(R.id.editProfilePhoto1);
+        editUserPhoto.setOnClickListener(this);
+        back=findViewById(R.id.topAppBar);
+        back.setOnClickListener(this);
 
-user= FirebaseAuth.getInstance().getCurrentUser();
-reference= FirebaseDatabase.getInstance().getReference("users");
-userID=user.getUid();
-reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
-    @Override
-    public void onDataChange(@NonNull DataSnapshot snapshot) {
-        userDB userProfile  =snapshot.getValue(userDB.class);
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        reference= FirebaseDatabase.getInstance().getReference("users");
+        userID=user.getUid();
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+        public void onDataChange(@NonNull DataSnapshot snapshot) {
+            userDB userProfile=snapshot.getValue(userDB.class);
 
-        if (userProfile !=null){
+            if (userProfile !=null){
 
-            final String usernameValue= userProfile.username;
-            final String emailValue= userProfile.email;
-            //final String passwordValue=password.getText().toString();
-            String accountTypeValue= userProfile.accountType;
+                final String usernameValue= userProfile.getUsername();
+                final String emailValue= userProfile.getEmail();
+                //final String passwordValue=password.getText().toString();
+                String accountTypeValue= userProfile.getAccountType();
 
-            username.setText(usernameValue);
-            email.setText(emailValue);
-            if (accountTypeValue=="Herbalist Account")
-                herbalistradio.setChecked(true);
-                else if (accountTypeValue=="User Account")
-                    userRadio.setChecked(true);
+                username.setText(usernameValue);
+                email.setText(emailValue);
+                if (accountTypeValue.equals("Herbalist Account"))
+                    herbalistradio.setChecked(true);
+                else if (accountTypeValue.equals("User Account"))
+                        userRadio.setChecked(true);
 
-        }
+
+            }
     }
 
     @Override
@@ -124,9 +126,10 @@ reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() 
                     email.requestFocus();
                     return;
                 }
-                reference.child("users").child(userID).child("username").setValue(usernameValue);
-                reference.child("users").child(userID).child("email").setValue(emailValue);
-                reference.child("users").child(userID).child("accountType").setValue(accountTypeValue);
+
+                reference.child(userID).child("username").setValue(usernameValue);
+                reference.child(userID).child("email").setValue(emailValue);
+                reference.child(userID).child("accountType").setValue(accountTypeValue);
 
                 break;
             case R.id.editProfilePhoto1:

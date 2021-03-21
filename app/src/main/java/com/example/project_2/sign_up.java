@@ -62,7 +62,7 @@ public class sign_up extends AppCompatActivity {
                 final String emailValue=email.getText().toString();
                 final String passwordValue=password.getText().toString();
                 String accountTypeValue=userRadio.getText().toString();
-                ;
+
                 if(userRadio.isChecked())
                     accountTypeValue=userRadio.getText().toString();
                 else if (herbalistradio.isChecked())

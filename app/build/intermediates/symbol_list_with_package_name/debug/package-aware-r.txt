@@ -1900,7 +1900,6 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id bidirectional
-id blank
 id blocking
 id bottom
 id bottom_navigation
@@ -2017,7 +2016,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image1
 id imageView
 id imageView2
 id image_view11
