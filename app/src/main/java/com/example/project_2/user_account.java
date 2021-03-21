@@ -1,11 +1,13 @@
 package com.example.project_2;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,11 +16,15 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -45,36 +51,29 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
         username=findViewById(R.id.username_viewProfile1);
         userPhoto=findViewById(R.id.profile_image2);
         edit=findViewById(R.id.edit_userProfile);
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         edit.setOnClickListener(this);
         logout=findViewById(R.id.LogOut);
         logout.setOnClickListener(this);
 
         user= FirebaseAuth.getInstance().getCurrentUser();
-        reference= FirebaseDatabase.getInstance().getReference("users");
         userID=user.getUid();
-        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+        reference= FirebaseDatabase.getInstance().getReference("users");
+        reference.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDB userProfile=snapshot.getValue(userDB.class);
-
-                if (userProfile!=null){
-
-                    final String usernameValue=userProfile.username;
-
-
-                    username.setText(usernameValue);
-
-
-                }
+                username.setText(userProfile.getUsername());
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(com.example.project_2.user_account.this, " Something wrong happened!",Toast.LENGTH_LONG).show();
 
             }
         });
+
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
