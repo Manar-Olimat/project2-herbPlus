@@ -121,7 +121,7 @@ ADDED from C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidMa
 	android:name
 		ADDED from C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:19-50
 activity#com.example.project_2.add_plant
-ADDED from C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:9-47
+ADDED from C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:9-46
 	android:name
 		ADDED from C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:19-44
 activity#com.example.project_2.Edit_userprofile
