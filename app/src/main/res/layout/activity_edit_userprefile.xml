@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_light_background"
+    android:background="@color/PrimaryTint_9"
     tools:context=".Edit_userprofile">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -90,10 +90,10 @@
         android:id="@+id/view3"
         android:layout_width="373dp"
         android:layout_height="353dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginBottom="80dp"
+        android:background="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -160,6 +160,7 @@
         android:layout_height="wrap_content"
         android:gravity="center|left"
         android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         android:weightSum="1"
         android:layout_marginLeft="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -223,22 +224,24 @@
 
     <RadioGroup
         android:id="@+id/accountRadio_edit"
-        android:layout_width="244dp"
-        android:layout_height="76dp"
+        android:layout_width="245dp"
+        android:layout_height="58dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.179"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.737">
+        app:layout_constraintVertical_bias="0.708">
 
         <RadioButton
             android:id="@+id/herbalist_edit"
             android:layout_width="162dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:text="Herbalist Account"
             android:textColor="@color/SecondaryShade_10"
+            android:buttonTint="#00A79B"
+
             android:textSize="16dp" />
 
         <RadioButton
@@ -247,6 +250,7 @@
             android:layout_height="wrap_content"
             android:text="User Account"
             android:textColor="@color/SecondaryShade_10"
+            android:buttonTint="#00A79B"
             android:textSize="16dp" />
     </RadioGroup>
 
@@ -254,14 +258,14 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="132dp"
+        android:layout_marginBottom="152dp"
         android:text="Account Type"
         android:textColor="@color/SecondaryShade_10"
         android:textSize="17dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="@+id/view3"
         tools:ignore="MissingConstraints" />
 
