@@ -34,6 +34,9 @@ public class home extends AppCompatActivity {
                         Intent intent2 = new Intent(home.this, user_account.class);
                         startActivity(intent2);
                         break;
+                    case R.id.search:
+                        startActivity(new Intent(home.this, add_plant.class));
+                        break;
 
                 }
                 return true;

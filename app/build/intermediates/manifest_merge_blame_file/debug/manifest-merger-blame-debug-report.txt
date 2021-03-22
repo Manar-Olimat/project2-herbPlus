@@ -41,7 +41,7 @@
 26-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:9-62
 26-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:12:19-50
 27        <activity android:name="com.example.project_2.add_plant" />
-27-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:9-47
+27-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:9-46
 27-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:13:19-44
 28        <activity android:name="com.example.project_2.Edit_userprofile" />
 28-->C:\Users\HP\Documents\GitHub\project2-herbPlus\app\src\main\AndroidManifest.xml:14:9-54

@@ -63,6 +63,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
         reference.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+
                 userDB userProfile=snapshot.getValue(userDB.class);
                 username.setText(userProfile.getUsername());
             }
@@ -84,6 +85,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                         Intent intent2 = new Intent(user_account.this, user_account.class);
                         startActivity(intent2);
                         break;
+
 
 
                 }

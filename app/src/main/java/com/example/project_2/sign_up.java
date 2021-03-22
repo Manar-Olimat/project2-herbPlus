@@ -55,49 +55,53 @@ public class sign_up extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 checkDataEntered();
-                root=FirebaseDatabase.getInstance();
-                reference=root.getReference( "users");
-                // get values
-                final String usernameValue=username.getText().toString();
-                final String emailValue=email.getText().toString();
-                final String passwordValue=password.getText().toString();
-                String accountTypeValue=userRadio.getText().toString();
+                if (!username.getText().toString().isEmpty() && !email.getText().toString().isEmpty() &&
+                        !password.getText().toString().isEmpty() &&(userRadio.isChecked()|| herbalistradio.isChecked())) {
+                    root = FirebaseDatabase.getInstance();
+                    reference = root.getReference("users");
+                    // get values
+                    final String usernameValue = username.getText().toString();
+                    final String emailValue = email.getText().toString();
+                    final String passwordValue = password.getText().toString();
+                    String accountTypeValue = userRadio.getText().toString();
+                    userRadio.setError(null);
+                    herbalistradio.setError(null);
 
-                if(userRadio.isChecked())
-                    accountTypeValue=userRadio.getText().toString();
-                else if (herbalistradio.isChecked())
-                    accountTypeValue=herbalistradio.getText().toString();
-                final userDB db=new userDB(usernameValue,emailValue,passwordValue,accountTypeValue);
-                db.setUsername(usernameValue);
-                db.setPassword(passwordValue);
-                db.setEmail(emailValue);
-                db.setAccountType(accountTypeValue);
+                    if (userRadio.isChecked())
+                        accountTypeValue = userRadio.getText().toString();
+                    else if (herbalistradio.isChecked())
+                        accountTypeValue = herbalistradio.getText().toString();
+                    final userDB db = new userDB(usernameValue, emailValue, passwordValue, accountTypeValue);
+                    db.setUsername(usernameValue);
+                    db.setPassword(passwordValue);
+                    db.setEmail(emailValue);
+                    db.setAccountType(accountTypeValue);
 
 
-                final String finalAccountTypeValue = accountTypeValue;
-                mAuth.createUserWithEmailAndPassword(emailValue,passwordValue)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    FirebaseUser user = mAuth.getCurrentUser();
+                    final String finalAccountTypeValue = accountTypeValue;
+                    mAuth.createUserWithEmailAndPassword(emailValue, passwordValue)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        FirebaseUser user = mAuth.getCurrentUser();
 
-                                    reference=root.getReference("users").child(user.getUid());
+                                        reference = root.getReference("users").child(user.getUid());
 
-                                    reference.child("username").setValue(usernameValue);
-                                    reference.child("email").setValue(emailValue);
-                                    reference.child("password").setValue(passwordValue);
-                                    reference.child("accountType").setValue(finalAccountTypeValue);
+                                        reference.child("username").setValue(usernameValue);
+                                        reference.child("email").setValue(emailValue);
+                                        reference.child("password").setValue(passwordValue);
+                                        reference.child("accountType").setValue(finalAccountTypeValue);
 
-                                    Intent mainIntent = new Intent(sign_up.this,home.class);
-                                    sign_up.this.startActivity(mainIntent);
-                                    sign_up.this.finish();
+                                        Intent mainIntent = new Intent(sign_up.this, home.class);
+                                        sign_up.this.startActivity(mainIntent);
+                                        sign_up.this.finish();
+                                    } else {
+                                        Toast.makeText(com.example.project_2.sign_up.this, "sign up failed", Toast.LENGTH_LONG).show();
+                                    }
                                 }
-                                else {
-                                    Toast.makeText(com.example.project_2.sign_up.this,"sign up failed",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
+                            });
+                }
             }
         });
 
@@ -106,48 +110,7 @@ public class sign_up extends AppCompatActivity {
 
 
         }
-   /* public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.sign_up:
-                checkDataEntered();
-                root=FirebaseDatabase.getInstance();
-                reference=root.getReference( "users");
-                // get values
-                final String usernameValue=username.getText().toString();
-                final String emailValue=email.getText().toString();
-                final String passwordValue=password.getText().toString();
-                 String accountTypeValue=userRadio.getText().toString();
-                ;
-                if(userRadio.isChecked())
-                    accountTypeValue=userRadio.getText().toString();
-                else if (herbalistradio.isChecked())
-                    accountTypeValue=herbalistradio.getText().toString();
-                final userDB db=new userDB(usernameValue,emailValue,passwordValue,accountTypeValue);
 
-
-                mAuth.createUserWithEmailAndPassword(emailValue,passwordValue)
-                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(@NonNull Task<AuthResult> task) {
-                                if(task.isSuccessful()){
-                                    FirebaseUser user = mAuth.getCurrentUser();
-
-                                    FirebaseDatabase.getInstance().getReference().child(user.getUid())
-                                            .setValue(db);
-                                    Intent mainIntent = new Intent(sign_up.this,user_account.class);
-                                    sign_up.this.startActivity(mainIntent);
-                                    sign_up.this.finish();
-                                }
-                                else {
-                                    Toast.makeText(com.example.project_2.sign_up.this,"sign up faild",Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
-
-                break;
-        }
-
-    }*/
     private void checkDataEntered() {
         if (isEmpty(username)) {
             username.setError("Empty username");
