@@ -35,5 +35,76 @@
         app:backgroundTint="@color/PrimaryTint_6"
         />
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="497dp"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#91ABC9"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="322dp"
+                    android:layout_height="402dp"
+                    android:background="#ffff"
+                    android:baselineAligned="false"
+                    app:layout_anchor="@+id/linearLayout3"
+                    app:layout_anchorGravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image13"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/plant" />
+                </View>
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="322dp"
+                    android:layout_height="402dp"
+                    android:background="#ffff"
+                    android:baselineAligned="false"
+                    app:layout_anchor="@+id/linearLayout3"
+                    app:layout_anchorGravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/facebook" />
+                </View>
+
+                <View
+                    android:id="@+id/view9"
+                    android:layout_width="322dp"
+                    android:layout_height="402dp"
+                    android:background="#ffff"
+                    android:baselineAligned="false"
+                    app:layout_anchor="@+id/linearLayout3"
+                    app:layout_anchorGravity="center">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/image11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/herb" />
+
+                </View>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

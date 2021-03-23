@@ -2020,6 +2020,9 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id image11
+id image12
+id image13
 id imageView
 id imageView2
 id image_view11
@@ -2045,6 +2048,7 @@ id line3
 id linear
 id linearLayout
 id linearLayout2
+id linearLayout3
 id listMode
 id list_item
 id masked
@@ -2289,6 +2293,9 @@ id view2
 id view3
 id view4
 id view5
+id view7
+id view8
+id view9
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
