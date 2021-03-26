@@ -10,21 +10,24 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\LITOO\.g
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\994d5787a0c5e3a9050593b6e3088631\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\54fb852e5096b279f5f014a17dcea39d\jetified-circleimageview-3.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d7b34cee353deadfb156adcfd673b719\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64f2c313a06f7f84db688f4461fcf8f2\jetified-glide-4.11.0\AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e4f7094beb6f5370b9fdcf59c66c5fd3\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e9ce49bbb246328ed9fbef97d6aa62b4\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-fragment:2.2.2] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\c12c67ce0bfe447c30260a3352c8807c\navigation-fragment-2.2.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\1e0ac948e1574d9a61fd93a1af702d27\jetified-lifecycle-livedata-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\1385980f4dab0a0e933b3abe362c2ed5\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64586309a9c174e8202610efe122327c\jetified-firebase-database-19.7.0\AndroidManifest.xml:15:1-38:12
+MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\4ef5e34e68ec1b218496018feadc7b0c\recyclerview-selection-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\fcf5af611bc33846b591cd77e4d0a38c\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\06bdd8e905652ff2ad1e1ea1ee0aa01a\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e15d67cf88966cd070b49db599666628\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\59708e4c89685822c69df7ac6667b1ed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:17:1-83:12
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\6115e061c96511d50753812d4de24f21\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-common:19.5.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\9b2ec3a49389295e09fe37e42c5e30ad\jetified-firebase-common-19.5.0\AndroidManifest.xml:15:1-49:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\c7f8487a83fb70bc0fe95934361948bc\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\b5b347edaaec9d51dce7fb65634d8751\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e15d67cf88966cd070b49db599666628\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\8dcd5551e8c8c2631db5646cd07087de\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\69a36d9bffe1ead383bcaebc78127d3d\transition-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\fcf5af611bc33846b591cd77e4d0a38c\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\5aad1647ae4e889abdeaab4ab07a3603\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\bfa0536cc071dedf48eaf1db42803845\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-safetynet:17.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\6754113431c8f40305fea67c580b0d20\jetified-play-services-safetynet-17.0.0\AndroidManifest.xml:17:1-24:12
@@ -33,7 +36,6 @@ MERGED from [com.google.android.gms:play-services-base:17.1.0] C:\Users\LITOO\.g
 MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d7928ebec4ec285586ace04711a60335\jetified-play-services-tasks-17.0.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\74483de84094d0d661b0d354666c2c5a\jetified-play-services-basement-17.1.0\AndroidManifest.xml:17:1-28:12
 MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\77c1656fd6659de665ea29268968dea6\fragment-1.2.4\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\06bdd8e905652ff2ad1e1ea1ee0aa01a\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\860a7cb661f0f6b1bb67f57d27715b94\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\024d0659a3246560f1b743f7b8f5313c\customview-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\db889ea64d16a07318448041b39e1285\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
@@ -45,6 +47,8 @@ MERGED from [androidx.core:core:1.3.1] C:\Users\LITOO\.gradle\caches\transforms-
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\8bbfa7597f1b8f7b6012b7db2dfae2bd\versionedparcelable-1.1.0\AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\7068ed399d21002b3af01917e1bc9a21\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d0b6337f8ded1d5baa7ee5a05283f93a\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f650d8a7b38295903d2f45f7fcb0105b\jetified-gifdecoder-4.11.0\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f6c88b0a3ddf6df8293f03115fc9af5d\exifinterface-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\2c57ca5c5cb33722ba8060cd1e094990\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-components:16.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\c36aa81c7706cd842cc31c762a39c361\jetified-firebase-components-16.1.0\AndroidManifest.xml:15:1-23:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\a5ff18c5cc9b30774e8a197dc12d7cbf\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -82,6 +86,8 @@ MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\LITOO\.g
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\1b47bb01ecc6aa52d262badcce0bb4ed\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\54fb852e5096b279f5f014a17dcea39d\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\54fb852e5096b279f5f014a17dcea39d\jetified-circleimageview-3.1.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64f2c313a06f7f84db688f4461fcf8f2\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64f2c313a06f7f84db688f4461fcf8f2\jetified-glide-4.11.0\AndroidManifest.xml:10:5-20
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64586309a9c174e8202610efe122327c\jetified-firebase-database-19.7.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64586309a9c174e8202610efe122327c\jetified-firebase-database-19.7.0\AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\59708e4c89685822c69df7ac6667b1ed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:26:5-81:19
@@ -102,6 +108,8 @@ MERGED from [androidx.core:core:1.3.1] C:\Users\LITOO\.gradle\caches\transforms-
 MERGED from [androidx.core:core:1.3.1] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f3d364c4591b4da0386e5d8846d9d728\core-1.3.1\AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\8bbfa7597f1b8f7b6012b7db2dfae2bd\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\8bbfa7597f1b8f7b6012b7db2dfae2bd\versionedparcelable-1.1.0\AndroidManifest.xml:24:5-25:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f650d8a7b38295903d2f45f7fcb0105b\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f650d8a7b38295903d2f45f7fcb0105b\jetified-gifdecoder-4.11.0\AndroidManifest.xml:9:5-20
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.1] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f3d364c4591b4da0386e5d8846d9d728\core-1.3.1\AndroidManifest.xml:24:18-86
 	android:supportsRtl
@@ -190,6 +198,8 @@ MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\LITOO\.gradle\caches\t
 MERGED from [de.hdodenhof:circleimageview:3.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\54fb852e5096b279f5f014a17dcea39d\jetified-circleimageview-3.1.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d7b34cee353deadfb156adcfd673b719\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d7b34cee353deadfb156adcfd673b719\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64f2c313a06f7f84db688f4461fcf8f2\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64f2c313a06f7f84db688f4461fcf8f2\jetified-glide-4.11.0\AndroidManifest.xml:6:5-8:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e4f7094beb6f5370b9fdcf59c66c5fd3\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e4f7094beb6f5370b9fdcf59c66c5fd3\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e9ce49bbb246328ed9fbef97d6aa62b4\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -202,6 +212,14 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\LITOO\.g
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\1385980f4dab0a0e933b3abe362c2ed5\jetified-lifecycle-viewmodel-ktx-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64586309a9c174e8202610efe122327c\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:19.7.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\64586309a9c174e8202610efe122327c\jetified-firebase-database-19.7.0\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\4ef5e34e68ec1b218496018feadc7b0c\recyclerview-selection-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview-selection:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\4ef5e34e68ec1b218496018feadc7b0c\recyclerview-selection-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\fcf5af611bc33846b591cd77e4d0a38c\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\fcf5af611bc33846b591cd77e4d0a38c\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\06bdd8e905652ff2ad1e1ea1ee0aa01a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\06bdd8e905652ff2ad1e1ea1ee0aa01a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e15d67cf88966cd070b49db599666628\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e15d67cf88966cd070b49db599666628\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\59708e4c89685822c69df7ac6667b1ed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth:20.0.3] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\59708e4c89685822c69df7ac6667b1ed\jetified-firebase-auth-20.0.3\AndroidManifest.xml:21:5-44
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\6115e061c96511d50753812d4de24f21\jetified-firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
@@ -212,14 +230,10 @@ MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LITOO\.gradle\
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\c7f8487a83fb70bc0fe95934361948bc\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\b5b347edaaec9d51dce7fb65634d8751\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\b5b347edaaec9d51dce7fb65634d8751\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e15d67cf88966cd070b49db599666628\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\e15d67cf88966cd070b49db599666628\cardview-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\8dcd5551e8c8c2631db5646cd07087de\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\8dcd5551e8c8c2631db5646cd07087de\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\69a36d9bffe1ead383bcaebc78127d3d\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.transition:transition:1.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\69a36d9bffe1ead383bcaebc78127d3d\transition-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\fcf5af611bc33846b591cd77e4d0a38c\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\fcf5af611bc33846b591cd77e4d0a38c\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\5aad1647ae4e889abdeaab4ab07a3603\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\5aad1647ae4e889abdeaab4ab07a3603\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\bfa0536cc071dedf48eaf1db42803845\jetified-play-services-auth-api-phone-17.4.0\AndroidManifest.xml:5:5-44
@@ -236,8 +250,6 @@ MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\LITO
 MERGED from [com.google.android.gms:play-services-basement:17.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\74483de84094d0d661b0d354666c2c5a\jetified-play-services-basement-17.1.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\77c1656fd6659de665ea29268968dea6\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.4] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\77c1656fd6659de665ea29268968dea6\fragment-1.2.4\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\06bdd8e905652ff2ad1e1ea1ee0aa01a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\06bdd8e905652ff2ad1e1ea1ee0aa01a\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\860a7cb661f0f6b1bb67f57d27715b94\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\860a7cb661f0f6b1bb67f57d27715b94\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\024d0659a3246560f1b743f7b8f5313c\customview-1.0.0\AndroidManifest.xml:20:5-44
@@ -260,6 +272,10 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\L
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\7068ed399d21002b3af01917e1bc9a21\jetified-lifecycle-viewmodel-savedstate-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d0b6337f8ded1d5baa7ee5a05283f93a\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\d0b6337f8ded1d5baa7ee5a05283f93a\lifecycle-viewmodel-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f650d8a7b38295903d2f45f7fcb0105b\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.11.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f650d8a7b38295903d2f45f7fcb0105b\jetified-gifdecoder-4.11.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f6c88b0a3ddf6df8293f03115fc9af5d\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\f6c88b0a3ddf6df8293f03115fc9af5d\exifinterface-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\2c57ca5c5cb33722ba8060cd1e094990\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\2c57ca5c5cb33722ba8060cd1e094990\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-components:16.1.0] C:\Users\LITOO\.gradle\caches\transforms-2\files-2.1\c36aa81c7706cd842cc31c762a39c361\jetified-firebase-components-16.1.0\AndroidManifest.xml:19:5-21:41

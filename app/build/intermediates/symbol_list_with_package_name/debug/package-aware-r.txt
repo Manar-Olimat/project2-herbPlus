@@ -1699,6 +1699,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable catnip
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1731,6 +1732,7 @@ drawable exit
 drawable facebook
 drawable favorite
 drawable forgetpass
+drawable gingko
 drawable gmail
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -1756,6 +1758,7 @@ drawable ic_settings
 drawable idintify_herb
 drawable lock
 drawable mail
+drawable mariegold
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1768,6 +1771,7 @@ drawable material_ic_menu_arrow_down_black_24dp
 drawable material_ic_menu_arrow_up_black_24dp
 drawable menu
 drawable messeg
+drawable moonflower
 drawable mtrl_dialog_background
 drawable mtrl_dropdown_arrow
 drawable mtrl_ic_arrow_drop_down
@@ -1794,6 +1798,7 @@ drawable notify_panel_notification_icon_bg
 drawable plant
 drawable profile
 drawable search
+drawable selection_band_overlay
 drawable settings
 drawable sign_rose
 drawable social_login
@@ -1801,6 +1806,7 @@ drawable sprout
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable turmeric
 drawable twitter
 drawable user
 drawable varification_messeg
@@ -1998,6 +2004,7 @@ id forgetPASS
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -2020,9 +2027,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id image11
-id image12
-id image13
 id imageView
 id imageView2
 id image_view11
@@ -2048,7 +2052,6 @@ id line3
 id linear
 id linearLayout
 id linearLayout2
-id linearLayout3
 id listMode
 id list_item
 id masked
@@ -2139,6 +2142,8 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id plantInfo
+id plant_info_img
 id plantname
 id position
 id postLayout
@@ -2149,6 +2154,7 @@ id ptofile
 id radio
 id ratio
 id rectangles
+id recyclerView
 id register_forgetPass
 id reverseSawtooth
 id right
@@ -2293,9 +2299,6 @@ id view2
 id view3
 id view4
 id view5
-id view7
-id view8
-id view9
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2440,6 +2443,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout plan_info_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2463,6 +2467,11 @@ mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation
 plurals mtrl_badge_content_description
+string Catnip
+string Gingko
+string Marigold
+string Moonflowers
+string Turmeric
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description

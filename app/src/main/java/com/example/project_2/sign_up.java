@@ -6,29 +6,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.project_2.Models.userDB;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-public class sign_up extends AppCompatActivity {
+public class sign_up extends AppCompatActivity implements View.OnClickListener {
     Button sign_up;
     TextInputEditText username;
     TextInputEditText email;
@@ -51,9 +46,41 @@ public class sign_up extends AppCompatActivity {
         herbalistradio=findViewById(R.id.herbalist);
         userRadio=findViewById(R.id.userAccount);
         mAuth = FirebaseAuth.getInstance();
-        sign_up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        sign_up.setOnClickListener(this);
+
+
+
+
+        }
+
+    private void checkDataEntered() {
+        if (isEmpty(username)) {
+            username.setError("Empty username");
+        }
+        if (isEmpty(password)) {
+            password.setError("Empty password");
+        }
+        if (!isEmail(email))
+            email.setError("Enter valid email!");
+
+        if(!herbalistradio.isChecked() && !userRadio.isChecked())
+            herbalistradio.setError("choose your account type");
+
+    }
+    boolean isEmail(TextInputEditText text) {
+        CharSequence email = text.getText().toString();
+        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
+    }
+    boolean isEmpty( TextInputEditText text) {
+        CharSequence str = text.getText().toString();
+        return TextUtils.isEmpty(str);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.updateProfile:
                 checkDataEntered();
                 if (!username.getText().toString().isEmpty() && !email.getText().toString().isEmpty() &&
                         !password.getText().toString().isEmpty() &&(userRadio.isChecked()|| herbalistradio.isChecked())) {
@@ -102,36 +129,9 @@ public class sign_up extends AppCompatActivity {
                                 }
                             });
                 }
-            }
-        });
-
-
-
-
-
+                break;
+            case R.id.back11:
+                startActivity(new Intent(com.example.project_2.sign_up.this,sign_in.class) );
         }
-
-    private void checkDataEntered() {
-        if (isEmpty(username)) {
-            username.setError("Empty username");
-        }
-        if (isEmpty(password)) {
-            password.setError("Empty password");
-        }
-        if (!isEmail(email))
-            email.setError("Enter valid email!");
-
-        if(!herbalistradio.isChecked() && !userRadio.isChecked())
-            herbalistradio.setError("choose your account type");
-
     }
-    boolean isEmail(TextInputEditText text) {
-        CharSequence email = text.getText().toString();
-        return (!TextUtils.isEmpty(email) && Patterns.EMAIL_ADDRESS.matcher(email).matches());
-    }
-    boolean isEmpty( TextInputEditText text) {
-        CharSequence str = text.getText().toString();
-        return TextUtils.isEmpty(str);
-    }
-
-    }
+}

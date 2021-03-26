@@ -10,9 +10,9 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.example.project_2.Models.userDB;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.textfield.TextInputEditText;

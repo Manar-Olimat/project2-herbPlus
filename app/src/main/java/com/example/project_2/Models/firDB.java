@@ -1,12 +1,15 @@
-package com.example.project_2;
+package com.example.project_2.Models;
 
-public class userDB {
+import com.google.firebase.auth.EmailAuthCredential;
+
+public class firDB {
+
     String username,email,password,accountType;
 
-    public userDB() {
+    public firDB() {
     }
 
-    public userDB(String username, String email, String password, String accountType) {
+    public firDB(String username, String email, String password, String accountType) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -44,4 +47,7 @@ public class userDB {
     public void setAccountType(String accountType) {
         this.accountType = accountType;
     }
+
+
+
 }

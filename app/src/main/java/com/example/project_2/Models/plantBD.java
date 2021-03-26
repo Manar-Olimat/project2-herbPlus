@@ -1,4 +1,4 @@
-package com.example.project_2;
+package com.example.project_2.Models;
 
 public class plantBD {
     String name;

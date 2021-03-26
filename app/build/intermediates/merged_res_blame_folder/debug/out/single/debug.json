@@ -4,20 +4,24 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
     },
     {
-        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_settings.png.flat",
-        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_settings.png"
-    },
-    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_favorite.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\favorite.png"
     },
     {
-        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_notifications.png.flat",
-        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\notifications.png"
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_settings.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_settings.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_mariegold.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\mariegold.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_menu.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_notifications.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\notifications.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_home_black_24dp.png.flat",
@@ -72,16 +76,16 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_group_126.png.flat",
-        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\group_126.png"
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_edit.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\edit.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_varification_messeg.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\varification_messeg.png"
     },
     {
-        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_edit.png.flat",
-        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\edit.png"
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_group_126.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\group_126.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_facebook.png.flat",
@@ -106,6 +110,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_user_account.xml.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_user_account.xml"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_moonflower.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\moonflower.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_profile.png.flat",
@@ -144,6 +152,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\edit.xml"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_catnip.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\catnip.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_varify_text.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\varify_text.png"
     },
@@ -158,6 +170,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_forgetpass.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\forgetpass.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_plan_info_list.xml.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\layout\\plan_info_list.xml"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_twitter.png.flat",
@@ -190,6 +206,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_messeg.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\messeg.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_turmeric.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\turmeric.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_notifications.png.flat",
@@ -238,6 +258,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_settings.xml.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_settings.xml"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_gingko.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\gingko.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_varify_text.png.flat",
@@ -332,6 +356,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_notifications_black_24dp.xml"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_mariegold.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\mariegold.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_idintify_herb.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\idintify_herb.png"
     },
@@ -416,8 +444,16 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\settings.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_gingko.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\gingko.jpg"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_arrow_drop_down.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\arrow_drop_down.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_moonflower.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\moonflower.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_add.png.flat",
@@ -464,6 +500,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_dashboard_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_gingko.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\gingko.jpg"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_back.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\back.png"
     },
@@ -484,6 +524,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\messeg.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_gingko.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\gingko.jpg"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
     },
@@ -492,8 +536,16 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\idintify_herb.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_turmeric.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\turmeric.jpg"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_sign_up.xml.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_mariegold.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\mariegold.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_settings.png.flat",
@@ -506,6 +558,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_gingko.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\gingko.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_forgetpass.png.flat",
@@ -534,6 +590,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_mariegold.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\mariegold.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_camera_24.png.flat",
@@ -578,6 +638,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_mail.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\mail.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_moonflower.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\moonflower.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_facebook.png.flat",
@@ -652,6 +716,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_notifications_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_turmeric.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\turmeric.jpg"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_baseline_photo_camera_24.xml.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_baseline_photo_camera_24.xml"
     },
@@ -670,6 +738,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_lock.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\lock.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_turmeric.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\turmeric.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_copy.png.flat",
@@ -720,12 +792,12 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\sign_rose.png"
     },
     {
-        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_lock.png.flat",
-        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\lock.png"
-    },
-    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_back.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_lock.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\lock.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_home_black_24dp.png.flat",
@@ -764,6 +836,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\social_login.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_mariegold.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\mariegold.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_exit.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\exit.png"
     },
@@ -796,8 +872,16 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\copy.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_turmeric.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\turmeric.jpg"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_search.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_search.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_gingko.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\gingko.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
@@ -864,6 +948,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\social_login.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_catnip.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\catnip.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_idintify_herb.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\idintify_herb.png"
     },
@@ -922,6 +1010,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_twitter.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\twitter.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_moonflower.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\moonflower.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_add_plant.xml.flat",
@@ -1012,6 +1104,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\background.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_catnip.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\catnip.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sprout.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable\\sprout.png"
     },
@@ -1022,6 +1118,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_back.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\back.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_moonflower.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxxhdpi\\moonflower.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_copy.png.flat",
@@ -1048,6 +1148,10 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\varify_text.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_catnip.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\catnip.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_add.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\add.png"
     },
@@ -1058,6 +1162,10 @@
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_help.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\help.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_mariegold.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\mariegold.png"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_facebook.png.flat",
@@ -1120,8 +1228,24 @@
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\mail.png"
     },
     {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_catnip.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\catnip.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_turmeric.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\turmeric.jpg"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_catnip.png.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\catnip.png"
+    },
+    {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_arrow_back.png.flat",
         "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\arrow_back.png"
+    },
+    {
+        "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_moonflower.jpg.flat",
+        "source": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\moonflower.jpg"
     },
     {
         "merged": "C:\\Users\\LITOO\\OneDrive\\Documents\\GitHub\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_exit.png.flat",
