@@ -93,7 +93,7 @@ public class sign_up extends AppCompatActivity {
                                         reference.child("password").setValue(passwordValue);
                                         reference.child("accountType").setValue(finalAccountTypeValue);
 
-                                        Intent mainIntent = new Intent(sign_up.this, home.class);
+                                        Intent mainIntent = new Intent(sign_up.this, Verification.class);
                                         sign_up.this.startActivity(mainIntent);
                                         sign_up.this.finish();
                                     } else {

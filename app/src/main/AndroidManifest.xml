@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".forget_password"></activity>
-        <activity android:name=".add_plant"/>
+        <activity android:name=".Verification"></activity>
+        <activity android:name=".forget_password" />
+        <activity android:name=".add_plant" />
         <activity android:name=".Edit_userprofile" />
         <activity android:name=".user_account" />
         <activity android:name=".home" />
