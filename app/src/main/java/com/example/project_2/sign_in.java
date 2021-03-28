@@ -79,7 +79,7 @@ public class sign_in extends AppCompatActivity implements View.OnClickListener {
 
                                 if (task.isSuccessful()) {
 
-                                    startActivity(new Intent(sign_in.this, home.class));
+                                    startActivity(new Intent(sign_in.this, Edit_userprofile.class));
                                 } else {
                                     Toast.makeText(com.example.project_2.sign_in.this, "sign in faild", Toast.LENGTH_LONG).show();
 

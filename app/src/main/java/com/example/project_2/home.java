@@ -1,7 +1,10 @@
 package com.example.project_2;
 
+import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -12,11 +15,19 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
+import com.example.project_2.Models.plantInfoModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class home extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
+   // recycler view var
+   RecyclerView recyclerViewTest;
+    plantInfoRecyclerAdapter recyclerAdapter;
+    List<plantInfoModel> modelList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +65,25 @@ public class home extends AppCompatActivity {
         // Assumes current activity is the searchable activity
       //  searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
       //  searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
+
+        // ******* recycler view
+        recyclerViewTest=findViewById(R.id.recyclerView);
+
+        //add data to model
+        modelList=new ArrayList<>();
+        modelList.add(new plantInfoModel(getString(R.string.Turmeric),R.drawable.turmeric));
+        modelList.add(new plantInfoModel(getString(R.string.Catnip),R.drawable.catnip));
+        modelList.add(new plantInfoModel(getString(R.string.Marigold),R.drawable.mariegold));
+        modelList.add(new plantInfoModel(getString(R.string.Moonflowers),R.drawable.moonflower));
+        modelList.add(new plantInfoModel(getString(R.string.Gingko),R.drawable.gingko));
+        setRecyclerViewTest(modelList);
+    }
+
+    private void setRecyclerViewTest(List<plantInfoModel> modelList) {
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewTest.setLayoutManager(layoutManager);
+        recyclerAdapter=new plantInfoRecyclerAdapter(this,modelList);
+        recyclerViewTest.setAdapter(recyclerAdapter);
 
 
     }
