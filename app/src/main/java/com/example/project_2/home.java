@@ -17,6 +17,7 @@ import android.widget.SearchView;
 
 import com.example.project_2.Models.plantInfoModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,15 +25,16 @@ import java.util.List;
 public class home extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-   // recycler view var
-   RecyclerView recyclerViewTest;
+    RecyclerView recyclerViewTest;
     plantInfoRecyclerAdapter recyclerAdapter;
     List<plantInfoModel> modelList;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -46,6 +48,9 @@ public class home extends AppCompatActivity {
                         startActivity(intent2);
                         break;
                     case R.id.search:
+                        startActivity(new Intent(home.this, search.class));
+                        break;
+                    case R.id.favorites:
                         startActivity(new Intent(home.this, add_plant.class));
                         break;
 

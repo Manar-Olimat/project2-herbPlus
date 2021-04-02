@@ -1194,6 +1194,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color notification_material_background_media_default_color
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -1588,6 +1589,10 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen subtitle_corner_radius
+dimen subtitle_outline_width
+dimen subtitle_shadow_offset
+dimen subtitle_shadow_radius
 dimen test_mtrl_calendar_day_cornerSize
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
@@ -1686,6 +1691,7 @@ drawable abc_vector_test
 drawable add
 drawable arrow_back
 drawable arrow_drop_down
+drawable arrows_previuos_icon
 drawable avd_hide_password
 drawable avd_show_password
 drawable back
@@ -1732,6 +1738,8 @@ drawable exit
 drawable facebook
 drawable favorite
 drawable forgetpass
+drawable frame1
+drawable frame2
 drawable gingko
 drawable gmail
 drawable googleg_disabled_color_18
@@ -1797,6 +1805,7 @@ drawable notifications
 drawable notify_panel_notification_icon_bg
 drawable plant
 drawable profile
+drawable purple_flowers
 drawable search
 drawable selection_band_overlay
 drawable settings
@@ -1811,6 +1820,7 @@ drawable twitter
 drawable user
 drawable varification_messeg
 drawable varify_text
+drawable verf_button
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1865,6 +1875,7 @@ id accessibility_custom_action_8
 id accessibility_custom_action_9
 id accountRadio
 id accountRadio_edit
+id action0
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1896,6 +1907,7 @@ id animateToEnd
 id animateToStart
 id appBarLayout
 id app_Name
+id appbar
 id asConfigured
 id async
 id auto
@@ -1914,6 +1926,7 @@ id bottom_navigation
 id bounce
 id buttonPanel
 id cache_measures
+id cancel_action
 id cancel_button
 id center
 id center_horizontal
@@ -1983,6 +1996,7 @@ id email1
 id email_editProfile
 id email_forgetPass
 id end
+id end_padder
 id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
@@ -2029,10 +2043,12 @@ id ignoreRequest
 id image
 id imageView
 id imageView2
+id imageView3
 id image_view11
 id image_view12
 id image_view21
 id image_view22
+id img1
 id imvCornerShapeTwo
 id incoming
 id info
@@ -2074,6 +2090,7 @@ id material_timepicker_mode_button
 id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
+id media_actions
 id message
 id middle
 id mini
@@ -2108,6 +2125,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
+id nametext
 id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation_dashboard
@@ -2156,6 +2175,7 @@ id ratio
 id rectangles
 id recyclerView
 id register_forgetPass
+id relat
 id reverseSawtooth
 id right
 id right_icon
@@ -2216,11 +2236,14 @@ id startHorizontal
 id startVertical
 id staticLayout
 id staticPostLayout
+id status_bar_latest_event_content
 id stop
 id stretch
 id submenuarrow
 id submit_area
+id symptom
 id symptoms
+id tabLayout
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2269,6 +2292,7 @@ id title
 id titleDividerNoCustom
 id title_template
 id toggle
+id toolbar
 id top
 id topAppBar
 id topPanel
@@ -2299,6 +2323,7 @@ id view2
 id view3
 id view4
 id view5
+id view6
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
@@ -2374,11 +2399,14 @@ layout activity_add_plant
 layout activity_edit_userprefile
 layout activity_forget_password
 layout activity_home
+layout activity_search
 layout activity_searchable
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash_screen
 layout activity_user_account
+layout activity_verification
+layout activity_view_plant
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2439,11 +2467,21 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout notification_action
 layout notification_action_tombstone
+layout notification_media_action
+layout notification_media_cancel_action
+layout notification_template_big_media
+layout notification_template_big_media_custom
+layout notification_template_big_media_narrow
+layout notification_template_big_media_narrow_custom
 layout notification_template_custom_big
 layout notification_template_icon_group
+layout notification_template_lines_media
+layout notification_template_media
+layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 layout plan_info_list
+layout search_item
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2966,9 +3004,14 @@ style TextAppearance_AppCompat_Widget_Switch
 style TextAppearance_AppCompat_Widget_TextView_SpinnerItem
 style TextAppearance_Compat_Notification
 style TextAppearance_Compat_Notification_Info
+style TextAppearance_Compat_Notification_Info_Media
 style TextAppearance_Compat_Notification_Line2
+style TextAppearance_Compat_Notification_Line2_Media
+style TextAppearance_Compat_Notification_Media
 style TextAppearance_Compat_Notification_Time
+style TextAppearance_Compat_Notification_Time_Media
 style TextAppearance_Compat_Notification_Title
+style TextAppearance_Compat_Notification_Title_Media
 style TextAppearance_Design_CollapsingToolbar_Expanded
 style TextAppearance_Design_Counter
 style TextAppearance_Design_Counter_Overflow
