@@ -4,24 +4,24 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\menu.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_photo_camera_24.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_photo_camera_24.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_arrow_back.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\arrow_back.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_photo_camera_24.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_photo_camera_24.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_search.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\search.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_favorite.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\favorite.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_favorite.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\favorite.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_favorite.xml.flat",
