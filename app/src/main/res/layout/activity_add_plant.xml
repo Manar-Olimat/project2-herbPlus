@@ -30,23 +30,25 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:id="@+id/profile_image2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="350dp"
+        android:layout_height="150dp"
         android:layout_marginBottom="37dp"
+        android:adjustViewBounds="true"
         android:background="@color/cardview_light_background"
-        app:civ_border_width="2dp"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134"
+        app:layout_constraintVertical_bias="0.171"
         app:shapeAppearanceOverlay="@style/Circular"
-        app:srcCompat="@drawable/sprout"
+        app:srcCompat="@drawable/plant"
         app:strokeColor="#4CAF50"
         app:strokeWidth="2dp"
+
         tools:ignore="MissingConstraints" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -54,15 +56,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="144dp"
-        android:layout_marginRight="144dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="129dp"
         android:scaleType="center"
         android:tint="#FFFFFF"
         app:backgroundTint="#4CAF50"
         app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_baseline_photo_camera_24"
         app:tint="@color/cardview_light_background"
         tools:ignore="MissingConstraints,VectorDrawableCompat">
@@ -70,114 +75,134 @@
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-    <View
-        android:id="@+id/view4"
-        android:layout_width="382dp"
-        android:layout_height="439dp"
-        android:layout_marginTop="4dp"
-        android:background="@color/cardview_light_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image2" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="205dp"
-        android:layout_height="29dp"
-        android:layout_marginTop="108dp"
-        android:text="Symptoms treated by the plant"
-        android:textColor="@android:color/black"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.16"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view4" />
-
-    <Button
-        android:id="@+id/addplant"
-        android:layout_width="285dp"
-        android:layout_height="41dp"
-        android:background="#4CAF50"
-        android:text="Add"
-        android:textColor="#ffffff"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="88dp"
-        android:layout_height="27dp"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="350dp"
+        android:layout_height="465dp"
         android:layout_marginTop="16dp"
-        android:text="Plant Name"
-        android:textColor="@android:color/black"
-        android:textSize="14dp"
+        android:fillViewport="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view4" />
+        app:layout_constraintTop_toBottomOf="@+id/profile_image2">
 
-    <EditText
-        android:id="@+id/plantname"
-        android:layout_width="317dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="56dp"
-        android:background="@drawable/boarder"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.351"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/profile_image2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_light_background"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="88dp"
-        android:layout_height="27dp"
-        android:layout_marginTop="204dp"
-        android:text="Description"
-        android:textColor="@android:color/black"
-        android:textSize="14dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.105"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/view4" />
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="88dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:text="Plant Name"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
 
-    <MultiAutoCompleteTextView
-        android:id="@+id/description"
-        android:layout_width="317dp"
-        android:layout_height="139dp"
-        android:layout_marginTop="240dp"
-        android:background="@drawable/boarder"
-        android:textColor="@android:color/black"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintHorizontal_bias="0.307"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        app:layout_constraintTop_toTopOf="@+id/view4"
-        tools:ignore="LabelFor,MissingConstraints" />
+            <EditText
+                android:id="@+id/plantname"
+                android:layout_width="317dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/boarder"
+                android:ems="10"
 
-    <TextView
-        android:id="@+id/symptoms"
-        android:layout_width="317dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="248dp"
-        android:background="@drawable/boarder"
-        android:drawableEnd="@drawable/arrow_drop_down"
-        android:drawableTint="@color/PrimaryShade_10"
-        android:hint="Select Symptoms"
-        android:padding="12dp"
-        android:textColor="@android:color/black"
-        android:textColorHint="#555353"
-        app:layout_constraintBottom_toBottomOf="@+id/view4"
-        app:layout_constraintEnd_toEndOf="@+id/view4"
-        app:layout_constraintHorizontal_bias="0.292"
-        app:layout_constraintStart_toStartOf="@+id/view4"
-        tools:ignore="RtlCompat" />
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="205dp"
+                android:layout_height="29dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:text="Symptoms treated by the plant"
+                android:fontFamily="sans-serif-black"
+
+                android:textColor="@android:color/black"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/symptoms"
+                android:layout_width="317dp"
+                android:layout_height="45dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/boarder"
+                android:drawableEnd="@drawable/arrow_drop_down"
+                android:drawableTint="@color/PrimaryShade_10"
+                android:hint="Select Symptoms"
+
+                android:padding="12dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="#555353"
+                tools:ignore="RtlCompat" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="88dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:text="Description"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-black"
+
+                android:textSize="14dp" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/description"
+                android:layout_width="317dp"
+                android:layout_height="139dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/boarder"
+                android:textColor="@android:color/black"
+
+                tools:ignore="LabelFor,MissingConstraints" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="200dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="16dp"
+                android:text="Did you know"
+                android:textColor="@android:color/black"
+                android:fontFamily="sans-serif-black"
+
+                android:textSize="14dp" />
+
+            <MultiAutoCompleteTextView
+                android:id="@+id/information"
+                android:layout_width="317dp"
+                android:layout_height="139dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/boarder"
+                android:textColor="@android:color/black"
+
+                tools:ignore="LabelFor,MissingConstraints" />
+
+            <Button
+                android:id="@+id/addplant"
+                android:layout_width="285dp"
+                android:layout_height="41dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="70dp"
+                android:background="#4CAF50"
+                android:text="Add"
+                android:textColor="#ffffff"
+
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

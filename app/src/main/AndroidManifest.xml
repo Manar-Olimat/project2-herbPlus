@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.project_2">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".view_plant"></activity>
+        <activity android:name=".ViewConfirm"></activity>
+        <activity android:name=".confirm_list" />
+        <activity android:name=".view_plant" />
         <activity android:name=".search" />
         <activity android:name=".Verification" />
         <activity android:name=".forget_password" />
@@ -36,5 +40,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

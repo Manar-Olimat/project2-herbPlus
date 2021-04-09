@@ -1822,6 +1822,7 @@ drawable varification_messeg
 drawable varify_text
 drawable verf_button
 id ALT
+id Accept
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
@@ -1830,6 +1831,7 @@ id LogOut
 id META
 id NO_DEBUG
 id Notification
+id Reject
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1906,6 +1908,7 @@ id always
 id animateToEnd
 id animateToStart
 id appBarLayout
+id appSearchBar
 id app_Name
 id appbar
 id asConfigured
@@ -1955,10 +1958,12 @@ id content
 id contentPanel
 id coordinator
 id cos
+id crelat
 id custom
 id customPanel
 id cut
 id dark
+id date
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2049,9 +2054,11 @@ id image_view12
 id image_view21
 id image_view22
 id img1
+id img_confirm
 id imvCornerShapeTwo
 id incoming
 id info
+id information
 id invisible
 id italic
 id item_touch_helper_previous_elevation
@@ -2126,6 +2133,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
+id nameherbalist
 id nametext
 id nav_controller_view_tag
 id nav_host_fragment_container
@@ -2163,6 +2171,7 @@ id percent
 id pin
 id plantInfo
 id plant_info_img
+id plant_name
 id plantname
 id position
 id postLayout
@@ -2174,6 +2183,7 @@ id radio
 id ratio
 id rectangles
 id recyclerView
+id recyclerView1
 id register_forgetPass
 id relat
 id reverseSawtooth
@@ -2321,7 +2331,6 @@ id username_viewProfile1
 id view
 id view2
 id view3
-id view4
 id view5
 id view6
 id view_offset_helper
@@ -2396,6 +2405,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_plant
+layout activity_confirm_list
 layout activity_edit_userprefile
 layout activity_forget_password
 layout activity_home
@@ -2406,7 +2416,9 @@ layout activity_sign_up
 layout activity_splash_screen
 layout activity_user_account
 layout activity_verification
+layout activity_view_confirm
 layout activity_view_plant
+layout confirm_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2501,6 +2513,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_nav_menu
+menu searchmenu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation mobile_navigation

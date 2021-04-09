@@ -72,14 +72,14 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginBottom="24dp"
-        android:hint="User name"
+        android:hint="Email"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
         app:layout_constraintBottom_toTopOf="@+id/password1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.393"
         app:layout_constraintStart_toStartOf="parent"
-        app:startIconDrawable="@drawable/user"
+        app:startIconDrawable="@drawable/mail"
         app:startIconTint="#272626"
         tools:ignore="MissingClass">
 
@@ -87,7 +87,7 @@
             android:id="@+id/username_signIn"
             android:layout_width="350dp"
             android:layout_height="60dp"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:textColor="@android:color/background_dark"
 
 

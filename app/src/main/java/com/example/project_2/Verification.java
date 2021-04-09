@@ -1,7 +1,6 @@
 package com.example.project_2;
 
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +11,7 @@ public class Verification extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
 
-        try {
+       /* try {
             GMailSender sender = new GMailSender("Project.herb2@gmail.com", "1234");
             sender.sendMail("test",
                     "This is test code",
@@ -20,7 +19,7 @@ public class Verification extends AppCompatActivity {
                     "Project.herb2@gmail.com");
         } catch (Exception e) {
             Log.e("SendMail", e.getMessage(), e);
-        }
+        }*/
 
     }
 }

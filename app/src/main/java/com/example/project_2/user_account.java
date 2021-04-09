@@ -1,14 +1,16 @@
 package com.example.project_2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.project_2.Models.userDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -24,15 +26,17 @@ import com.google.firebase.database.ValueEventListener;
 
 public class user_account extends AppCompatActivity implements View.OnClickListener {
     CardView Notification;
-    CardView logout;
+    CardView logout, help;
     FloatingActionButton edit;
     TextView username;
     ShapeableImageView userPhoto;
     private FirebaseUser user;
     private DatabaseReference reference;
     private  String userID;
+    String typeaccount;
     BottomNavigationView bottomNavigationView;
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,12 +46,12 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
         username=findViewById(R.id.username_viewProfile1);
         userPhoto=findViewById(R.id.profile_image2);
         edit=findViewById(R.id.edit_userProfile);
-
+        help=findViewById(R.id.help);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         edit.setOnClickListener(this);
         logout=findViewById(R.id.LogOut);
         logout.setOnClickListener(this);
-
+        help.setOnClickListener(this);
         user= FirebaseAuth.getInstance().getCurrentUser();
         userID=user.getUid();
         reference= FirebaseDatabase.getInstance().getReference("users");
@@ -56,7 +60,8 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 userDB userProfile=snapshot.getValue(userDB.class);
-                username.setText(userProfile.getUsername());
+                typeaccount=userProfile.getAccountType();
+                username.setText(userProfile.getUsername()+" "+typeaccount);
             }
 
             @Override
@@ -96,6 +101,11 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(user_account.this, sign_in.class));
 
+                break;
+            case R.id.help:
+                if(typeaccount.equals("Admin Account")) {
+                    startActivity(new Intent(user_account.this, confirm_list.class));
+                }
                 break;
 
         }

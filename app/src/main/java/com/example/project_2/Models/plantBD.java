@@ -4,14 +4,16 @@ public class plantBD {
     String name;
     String Symptoms;
     String description;
+    String information;
 
     public plantBD() {
     }
 
-    public plantBD(String name, String symptoms, String description) {
+    public plantBD(String name, String symptoms, String description,String information) {
         this.name = name;
         this.Symptoms = symptoms;
         this.description = description;
+        this.information=information;
     }
 
 
@@ -36,6 +38,14 @@ public class plantBD {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getInformation() {
+        return information;
+    }
+
+    public void setInformation(String information) {
+        this.information = information;
     }
 
 }

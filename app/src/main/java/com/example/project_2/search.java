@@ -59,6 +59,7 @@ public class search extends AppCompatActivity {
                 if(snapshot.exists()){
                     modelList=new ArrayList<>();
                     for(DataSnapshot ds:snapshot.getChildren()){
+                        System.out.println(ds.getValue(plantBD.class).getName());
                         modelList.add(ds.getValue(plantBD.class));
                     }
 

@@ -1,7 +1,6 @@
 package com.example.project_2;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
@@ -10,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,15 +17,13 @@ import com.example.project_2.Models.plantBD;
 
 import java.util.ArrayList;
 
-import de.hdodenhof.circleimageview.CircleImageView;
-
 import static android.content.Context.MODE_PRIVATE;
 
 public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViweHolder> {
     ArrayList<plantBD> list;
     Context context;
 
-    public Myadapter(ArrayList<plantBD> list,Context context) {
+    public Myadapter(ArrayList<plantBD> list, Context context) {
         this.list = list;
         this.context=context;
 
