@@ -10,7 +10,7 @@ public class Verification extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification);
-
+        
        /* try {
             GMailSender sender = new GMailSender("Project.herb2@gmail.com", "1234");
             sender.sendMail("test",

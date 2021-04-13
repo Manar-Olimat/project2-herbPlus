@@ -54,10 +54,7 @@ dependencies {
 }
 dependencies {
 
-    implementation 'com.android.support:multidex:1.0.3'
-    implementation files('libs\\activation.jar')
-    implementation files('libs\\additionnal.jar')
-    implementation files('libs\\mail.jar')
+    implementation 'androidx.multidex:multidex:2.0.1'
     // Import the BoM for the Firebase platform
     implementation platform('com.google.firebase:firebase-bom:26.7.0')
     implementation "androidx.recyclerview:recyclerview:1.1.0"
