@@ -24,15 +24,15 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="430dp"
-        android:layout_height="412dp"
+        android:layout_width="410dp"
+        android:layout_height="411dp"
         android:background="#EFF4F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.995">
 
 
     </View>
@@ -55,30 +55,30 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="cursive"
         android:text="welcome"
         android:textColor="#FFFFFF"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.138"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.298" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text"
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="30dp"
         android:hint="Email"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
-        app:layout_constraintBottom_toTopOf="@+id/password1"
+        android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
         app:startIconDrawable="@drawable/mail"
         app:startIconTint="#272626"
         tools:ignore="MissingClass">
@@ -100,13 +100,16 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginBottom="12dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
         android:hint="Password"
         app:endIconMode="password_toggle"
         app:endIconTint="#272626"
-        app:layout_constraintBottom_toTopOf="@+id/sign_in"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintVertical_bias="0.481"
         app:startIconDrawable="@drawable/lock"
         app:startIconTint="#272626"
         tools:ignore="MissingConstraints">
@@ -136,8 +139,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.453"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintTop_toBottomOf="@+id/password1"
+        app:layout_constraintVertical_bias="0.145" />
 
     <TextView
         android:id="@+id/forgetPASS"
