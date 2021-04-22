@@ -1,9 +1,5 @@
 package com.example.project_2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -11,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project_2.Models.userDB;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -32,7 +31,6 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
     RadioButton herbalistradio;
     RadioButton userRadio;
     TextInputEditText email;
-    CardView changePassword;
     private FirebaseUser user;
     private DatabaseReference reference;
     private  String userID;
@@ -42,8 +40,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_edit_userprefile);
         username=findViewById(R.id.newUsername1);
         email=findViewById(R.id.email_editProfile);
-        changePassword=findViewById(R.id.chpassword);
-        changePassword.setOnClickListener(this);
+
         herbalistradio=findViewById(R.id.herbalist_edit);
         userRadio=findViewById(R.id.userAccount_edit);
         updateProfile=findViewById(R.id.updateProfile2);
@@ -92,12 +89,8 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
 
         switch (v.getId()){
             case R.id.topAppBar:
-                startActivity(new Intent(Edit_userprofile.this, user_account.class));
+                startActivity(new Intent(Edit_userprofile.this, settings.class));
                break;
-            case R.id.chpassword:
-                startActivity(new Intent(Edit_userprofile.this, forget_password.class));
-
-                break;
             case R.id.updateProfile2:
                 final String usernameValue=username.getText().toString().trim();
                 final String emailValue=email.getText().toString().trim();

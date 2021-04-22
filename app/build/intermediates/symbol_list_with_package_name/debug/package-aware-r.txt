@@ -1691,6 +1691,7 @@ drawable abc_vector_test
 drawable add
 drawable arrow_back
 drawable arrow_drop_down
+drawable arrow_forward
 drawable arrows_previuos_icon
 drawable avd_hide_password
 drawable avd_show_password
@@ -1765,6 +1766,7 @@ drawable ic_search
 drawable ic_settings
 drawable idintify_herb
 drawable lock
+drawable lock_open
 drawable mail
 drawable mariegold
 drawable material_cursor_drawable
@@ -1841,6 +1843,7 @@ id TOP_END
 id TOP_START
 id TextInputLayout
 id TextInputLayout1
+id about
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1875,6 +1878,7 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id account
 id accountRadio
 id accountRadio_edit
 id action0
@@ -1929,6 +1933,7 @@ id bottom_navigation
 id bounce
 id buttonPanel
 id cache_measures
+id cancel
 id cancel_action
 id cancel_button
 id center
@@ -1936,6 +1941,9 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id change
+id change_button
+id change_image
 id checkTerms
 id checkbox
 id checked
@@ -1944,7 +1952,6 @@ id chip1
 id chip2
 id chip3
 id chip_group
-id chpassword
 id chronometer
 id circle_center
 id circular
@@ -1952,6 +1959,7 @@ id clear_text
 id clip_horizontal
 id clip_vertical
 id collapseActionView
+id con_password
 id confirm_button
 id container
 id content
@@ -1959,6 +1967,7 @@ id contentPanel
 id coordinator
 id cos
 id crelat
+id cur_password
 id custom
 id customPanel
 id cut
@@ -1994,6 +2003,7 @@ id easeIn
 id easeInOut
 id easeOut
 id editProfilePhoto1
+id edit_image
 id edit_query
 id edit_userProfile
 id email
@@ -2049,10 +2059,13 @@ id image
 id imageView
 id imageView2
 id imageView3
+id imageView4
 id image_view11
 id image_view12
 id image_view21
 id image_view22
+id image_view31
+id image_view41
 id img1
 id img_confirm
 id imvCornerShapeTwo
@@ -2074,7 +2087,10 @@ id line1
 id line3
 id linear
 id linearLayout
+id linearLayout1
 id linearLayout2
+id linearLayout3
+id linearLayout4
 id listMode
 id list_item
 id masked
@@ -2144,6 +2160,7 @@ id navigation_notifications
 id never
 id newPass_forgetPass
 id newUsername1
+id new_password
 id noScroll
 id none
 id normal
@@ -2162,6 +2179,8 @@ id parentRelative
 id parent_matrix
 id password
 id password1
+id password2
+id password3
 id password_signIn
 id password_toggle
 id path
@@ -2175,6 +2194,7 @@ id plant_name
 id plantname
 id position
 id postLayout
+id privacy
 id profile_image2
 id progress_circular
 id progress_horizontal
@@ -2279,13 +2299,17 @@ id textView
 id textView10
 id textView11
 id textView12
+id textView13
 id textView2
 id textView21
 id textView22
 id textView3
+id textView31
 id textView4
+id textView41
 id textView5
 id textView6
+id textView7
 id textView8
 id textView9
 id text_input_end_icon
@@ -2405,12 +2429,14 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add_plant
+layout activity_change_password
 layout activity_confirm_list
 layout activity_edit_userprefile
 layout activity_forget_password
 layout activity_home
 layout activity_search
 layout activity_searchable
+layout activity_settings
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash_screen

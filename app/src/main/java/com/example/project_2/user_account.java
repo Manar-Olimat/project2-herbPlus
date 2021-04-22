@@ -61,7 +61,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
 
                 userDB userProfile=snapshot.getValue(userDB.class);
                 typeaccount=userProfile.getAccountType();
-                username.setText(userProfile.getUsername()+" "+typeaccount);
+                username.setText(userProfile.getUsername()+" "+user.getEmail());
             }
 
             @Override

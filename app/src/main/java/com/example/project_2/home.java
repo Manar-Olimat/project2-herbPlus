@@ -49,7 +49,7 @@ public class home extends AppCompatActivity {
                         startActivity(new Intent(home.this, search.class));
                         break;
                     case R.id.favorites:
-                        startActivity(new Intent(home.this, add_plant.class));
+                        startActivity(new Intent(home.this, settings.class));
                         break;
 
                 }

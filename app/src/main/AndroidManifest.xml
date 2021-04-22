@@ -11,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".ViewConfirm"></activity>
+        <activity android:name=".change_password"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            ></activity>
+        <activity android:name=".settings"/>
+        <activity android:name=".ViewConfirm" />
         <activity android:name=".confirm_list" />
         <activity android:name=".view_plant" />
         <activity android:name=".search" />
