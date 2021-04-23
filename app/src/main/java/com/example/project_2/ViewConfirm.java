@@ -36,7 +36,7 @@ public class ViewConfirm extends AppCompatActivity {
         name=findViewById(R.id.name);
         symptom=findViewById(R.id.symptom);
         description=findViewById(R.id.description);
-        info=findViewById(R.id.info);
+        info=findViewById(R.id.information);
         date=findViewById(R.id.date);
         SharedPreferences prefs = getSharedPreferences("viewplant", MODE_PRIVATE);
         String name1 = prefs.getString("name", "No name defined");

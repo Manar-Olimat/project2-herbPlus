@@ -47,6 +47,8 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViweHolder> {
                 editor.putString("name", list.get(position).getName());
                 editor.putString("Symptoms", list.get(position).getSymptoms());
                 editor.putString("description", list.get(position).getDescription());
+                editor.putString("information", list.get(position).getInformation());
+
                 editor.apply();
                 Intent intent = new Intent(context, view_plant.class);
 

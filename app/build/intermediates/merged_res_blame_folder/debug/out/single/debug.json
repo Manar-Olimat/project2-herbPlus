@@ -4,12 +4,12 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\menu.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_photo_camera_24.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_photo_camera_24.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_arrow_back.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\arrow_back.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_baseline_photo_camera_24.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_baseline_photo_camera_24.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_search.png.flat",
