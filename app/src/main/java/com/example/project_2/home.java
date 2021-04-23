@@ -48,9 +48,6 @@ public class home extends AppCompatActivity {
                     case R.id.search:
                         startActivity(new Intent(home.this, search.class));
                         break;
-                    case R.id.favorites:
-                        startActivity(new Intent(home.this, settings.class));
-                        break;
 
                 }
                 return true;

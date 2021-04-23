@@ -1,8 +1,5 @@
 package com.example.project_2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -11,7 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.project_2.Models.userDB;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -31,6 +32,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
     RadioButton herbalistradio;
     RadioButton userRadio;
     CheckBox terms;
+    TextView terms_con,back11;
     FirebaseDatabase root;
     FirebaseAuth mAuth;
     DatabaseReference reference;
@@ -47,7 +49,10 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         userRadio=findViewById(R.id.userAccount);
         mAuth = FirebaseAuth.getInstance();
         sign_up.setOnClickListener(this);
-
+        back11=findViewById(R.id.back11);
+        back11.setOnClickListener(this);
+        terms_con=findViewById(R.id.terms_con);
+        terms_con.setOnClickListener(this);
 
 
 
@@ -83,7 +88,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
             case R.id.updateProfile:
                 checkDataEntered();
                 if (!username.getText().toString().isEmpty() && !email.getText().toString().isEmpty() &&
-                        !password.getText().toString().isEmpty() &&(userRadio.isChecked()|| herbalistradio.isChecked())) {
+                        !password.getText().toString().isEmpty() &&(userRadio.isChecked()|| herbalistradio.isChecked())&&terms.isChecked()) {
                     root = FirebaseDatabase.getInstance();
                     reference = root.getReference("users");
                     // get values
@@ -131,7 +136,13 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
                 }
                 break;
             case R.id.back11:
-                startActivity(new Intent(com.example.project_2.sign_up.this,sign_in.class) );
+                startActivity(new Intent(sign_up.this,sign_in.class) );
+                break;
+            case R.id.terms_con:
+                Intent intent=new Intent(sign_up.this,Terms_Condition.class);
+                intent.putExtra("sign_up",true);
+                startActivity(intent);
+                break;
         }
     }
 }

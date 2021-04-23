@@ -180,9 +180,7 @@ public class search extends AppCompatActivity {
                     case R.id.search:
                         startActivity(new Intent(search.this, search.class));
                         break;
-                    case R.id.favorites:
-                        startActivity(new Intent(search.this, add_plant.class));
-                        break;
+
 
                 }
                 return true;

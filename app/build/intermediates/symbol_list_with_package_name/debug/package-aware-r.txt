@@ -1833,6 +1833,7 @@ id LogOut
 id META
 id NO_DEBUG
 id Notification
+id Privacy_image
 id Reject
 id SHIFT
 id SHOW_ALL
@@ -2018,7 +2019,6 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
-id favorites
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2064,8 +2064,6 @@ id image_view11
 id image_view12
 id image_view21
 id image_view22
-id image_view31
-id image_view41
 id img1
 id img_confirm
 id imvCornerShapeTwo
@@ -2284,6 +2282,8 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id terms
+id terms_con
+id terms_image
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2291,6 +2291,7 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textInputLayout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -2434,12 +2435,14 @@ layout activity_confirm_list
 layout activity_edit_userprefile
 layout activity_forget_password
 layout activity_home
+layout activity_privacy_policy
 layout activity_search
 layout activity_searchable
 layout activity_settings
 layout activity_sign_in
 layout activity_sign_up
 layout activity_splash_screen
+layout activity_terms__condition
 layout activity_user_account
 layout activity_verification
 layout activity_view_confirm
@@ -2675,9 +2678,11 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string plant_plus
+string privacypolicy
 string project_id
 string search_menu_title
 string status_bar_notification_info_overflow
+string terms_conditions
 string title_activity_main
 string title_dashboard
 string title_home

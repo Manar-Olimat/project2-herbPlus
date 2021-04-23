@@ -280,6 +280,10 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\edit.png"
     },
     {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_terms__condition.xml.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_terms__condition.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_frame2.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\frame2.png"
     },
@@ -886,6 +890,10 @@
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_lock_open.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\lock_open.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_privacy_policy.xml.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_privacy_policy.xml"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_add.png.flat",

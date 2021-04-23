@@ -11,8 +11,8 @@
         android:id="@+id/imageView"
         android:layout_width="467dp"
         android:layout_height="428dp"
-        android:layout_marginStart="72dp"
-        android:layout_marginLeft="72dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginLeft="156dp"
         android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="@+id/view2"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,8 +22,8 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="429dp"
-        android:layout_height="519dp"
+        android:layout_width="410dp"
+        android:layout_height="521dp"
         android:background="#EFF4F4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,14 +40,14 @@
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="296dp"
+        android:layout_marginTop="12dp"
         android:hint="User name"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
-        app:layout_constraintBottom_toTopOf="@+id/checkTerms"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
         app:startIconDrawable="@drawable/user"
         app:startIconTint="#272626"
         tools:ignore="MissingClass,MissingConstraints">
@@ -98,14 +98,14 @@
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="228dp"
+        android:layout_marginTop="12dp"
         android:hint="email"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
-        app:layout_constraintBottom_toTopOf="@+id/checkTerms"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.442"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/username1"
         app:startIconDrawable="@drawable/mail"
         app:startIconTint="#272626"
         tools:ignore="MissingClass">
@@ -126,14 +126,14 @@
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="156dp"
+        android:layout_marginTop="16dp"
         android:hint="Password"
         app:endIconMode="password_toggle"
         app:endIconTint="#272626"
-        app:layout_constraintBottom_toTopOf="@+id/checkTerms"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email1"
         app:startIconDrawable="@drawable/lock"
         app:startIconTint="#272626"
         tools:ignore="MissingConstraints">
@@ -157,27 +157,27 @@
         android:text="Sign UP"
         android:textColor="#ffffff"
         android:textSize="25dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.973" />
+        app:layout_constraintTop_toBottomOf="@+id/terms_con"
+        app:layout_constraintVertical_bias="0.529" />
 
     <TextView
-        android:id="@+id/terms"
+        android:id="@+id/terms_con"
         android:layout_width="151dp"
         android:layout_height="33dp"
         android:fontFamily="sans-serif"
         android:text="Terms and Condition"
         android:textColor="#00B4AC"
         android:textSize="16dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.861" />
+        app:layout_constraintTop_toBottomOf="@+id/checkTerms"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/checkTerms"
@@ -187,13 +187,12 @@
         android:text="I have accepted the"
         android:textColor="@android:color/background_dark"
         android:textSize="16dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.81"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/accountRadio"
+        app:layout_constraintVertical_bias="0.193" />
 
     <RadioGroup
         android:id="@+id/accountRadio"
@@ -204,8 +203,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.179"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.689">
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.0">
 
         <RadioButton
             android:id="@+id/herbalist"
@@ -213,8 +212,7 @@
             android:layout_height="50dp"
             android:text="Herbalist Account"
             android:textColor="@color/SecondaryShade_10"
-            android:textSize="16dp"
-             />
+            android:textSize="16dp" />
 
         <RadioButton
             android:id="@+id/userAccount"
@@ -222,8 +220,7 @@
             android:layout_height="34dp"
             android:text="User Account"
             android:textColor="@color/SecondaryShade_10"
-            android:textSize="16dp"
-            />
+            android:textSize="16dp" />
     </RadioGroup>
 
     <TextView
@@ -237,8 +234,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.591" />
+        app:layout_constraintTop_toBottomOf="@+id/password1"
+        app:layout_constraintVertical_bias="0.04" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

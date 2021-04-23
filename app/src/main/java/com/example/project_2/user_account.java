@@ -26,7 +26,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class user_account extends AppCompatActivity implements View.OnClickListener {
     CardView Notification;
-    CardView logout, help;
+    CardView logout, help,setting;
     FloatingActionButton edit;
     TextView username;
     ShapeableImageView userPhoto;
@@ -47,7 +47,9 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
         userPhoto=findViewById(R.id.profile_image2);
         edit=findViewById(R.id.edit_userProfile);
         help=findViewById(R.id.help);
+        setting=findViewById(R.id.settings);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
+        setting.setOnClickListener(this);
         edit.setOnClickListener(this);
         logout=findViewById(R.id.LogOut);
         logout.setOnClickListener(this);
@@ -107,6 +109,11 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                     startActivity(new Intent(user_account.this, confirm_list.class));
                 }
                 break;
+            case R.id.settings:
+                startActivity(new Intent(user_account.this, settings.class));
+
+                break;
+
 
         }
     }
