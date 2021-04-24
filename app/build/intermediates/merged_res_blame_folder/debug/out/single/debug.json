@@ -684,6 +684,10 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_home_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_update_plant.xml.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_update_plant.xml"
+    },
+    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_cancel.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_cancel.png"
     },

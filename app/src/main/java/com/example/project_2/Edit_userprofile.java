@@ -123,6 +123,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
                 reference.child(userID).child("username").setValue(usernameValue);
                 reference.child(userID).child("email").setValue(emailValue);
                 reference.child(userID).child("accountType").setValue(accountTypeValue);
+                startActivity(new Intent(Edit_userprofile.this, user_account.class));
 
                 break;
             case R.id.editProfilePhoto1:

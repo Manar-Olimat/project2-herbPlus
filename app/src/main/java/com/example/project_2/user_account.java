@@ -33,7 +33,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
     private FirebaseUser user;
     private DatabaseReference reference;
     private  String userID;
-    String typeaccount;
+    String type_account;
     BottomNavigationView bottomNavigationView;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
@@ -62,7 +62,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
                 userDB userProfile=snapshot.getValue(userDB.class);
-                typeaccount=userProfile.getAccountType();
+                type_account =userProfile.getAccountType();
                 username.setText(userProfile.getUsername()+" "+user.getEmail());
             }
 
@@ -83,7 +83,9 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                         Intent intent2 = new Intent(user_account.this, user_account.class);
                         startActivity(intent2);
                         break;
-
+                    case R.id.search:
+                        startActivity(new Intent(user_account.this, search.class));
+                        break;
 
 
                 }
@@ -105,7 +107,7 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
 
                 break;
             case R.id.help:
-                if(typeaccount.equals("Admin Account")) {
+                if(type_account.equals("Admin Account")) {
                     startActivity(new Intent(user_account.this, confirm_list.class));
                 }
                 break;

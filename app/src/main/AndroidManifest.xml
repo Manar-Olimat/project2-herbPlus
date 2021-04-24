@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Terms_Condition"></activity>
+        <activity android:name=".update_plant"></activity>
+        <activity android:name=".Terms_Condition" />
         <activity android:name=".privacy_policy" />
         <activity
             android:name=".change_password"

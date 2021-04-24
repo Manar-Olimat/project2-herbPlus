@@ -1922,6 +1922,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id back
 id back11
 id barrier
 id baseline
@@ -1979,6 +1980,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delete
 id deltaRelative
 id dependency_ordering
 id description
@@ -2344,8 +2346,10 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id update
 id updateProfile
 id updateProfile2
+id updateplant
 id useLogo
 id userAccount
 id userAccount_edit
@@ -2443,6 +2447,7 @@ layout activity_sign_in
 layout activity_sign_up
 layout activity_splash_screen
 layout activity_terms__condition
+layout activity_update_plant
 layout activity_user_account
 layout activity_verification
 layout activity_view_confirm
