@@ -5,15 +5,17 @@ public class plantBD {
     String Symptoms;
     String description;
     String information;
+    String plant_image;
 
     public plantBD() {
     }
 
-    public plantBD(String name, String symptoms, String description,String information) {
+    public plantBD(String name, String symptoms, String description,String information ,String plant_image) {
         this.name = name;
         this.Symptoms = symptoms;
         this.description = description;
         this.information=information;
+        this.plant_image=plant_image;
     }
 
 
@@ -46,6 +48,14 @@ public class plantBD {
 
     public void setInformation(String information) {
         this.information = information;
+    }
+
+    public String getPlant_image() {
+        return plant_image;
+    }
+
+    public void setPlant_image(String plant_image) {
+        this.plant_image = plant_image;
     }
 
 }

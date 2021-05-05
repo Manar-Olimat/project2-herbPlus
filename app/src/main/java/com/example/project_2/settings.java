@@ -3,15 +3,15 @@ package com.example.project_2;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.google.android.material.appbar.MaterialToolbar;
 
-public class settings extends AppCompatActivity {
+public class settings extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView change_image,edit_image,Privacy_image,terms_image;
+    CardView change_image,edit_image,Privacy_image,terms_image;
     MaterialToolbar back;
 
     @Override
@@ -22,37 +22,33 @@ public class settings extends AppCompatActivity {
         edit_image=findViewById(R.id.edit_image);
         Privacy_image=findViewById(R.id.Privacy_image);
         terms_image=findViewById(R.id.terms_image);
-        change_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(settings.this, change_password.class));
-            }
-        });
-        edit_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(settings.this, Edit_userprofile.class));
-            }
-        });
-        Privacy_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(settings.this, privacy_policy.class));
-            }
-        });
-        terms_image.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(settings.this, Terms_Condition.class));
-            }
-        });
         back=findViewById(R.id.topAppBar);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(settings.this, user_account.class));
 
-            }
-        });
+        change_image.setOnClickListener(this);
+        edit_image.setOnClickListener(this);
+        Privacy_image.setOnClickListener(this);
+        terms_image.setOnClickListener(this);
+        back.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.back:
+                startActivity(new Intent(settings.this, user_account.class));
+                break;
+            case R.id.change_image:
+                startActivity(new Intent(settings.this, change_password.class));
+                break;
+            case R.id.edit_image:
+                startActivity(new Intent(settings.this, Edit_userprofile.class));
+                break;
+            case R.id.Privacy_image:
+                startActivity(new Intent(settings.this, privacy_policy.class));
+                break;
+            case R.id.terms_image:
+                startActivity(new Intent(settings.this, Terms_Condition.class));
+                break;
+        }
     }
 }

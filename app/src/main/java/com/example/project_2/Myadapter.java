@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.project_2.Models.plantBD;
 
 import java.util.ArrayList;
@@ -40,6 +42,8 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViweHolder> {
     @Override
     public void onBindViewHolder(@NonNull MyViweHolder holder, int position) {
         holder.name.setText(list.get(position).getName());
+        Glide.with(context).load(list.get(position).getPlant_image()).apply(new RequestOptions().centerCrop().centerInside().placeholder(R.drawable.plant)).into(holder.img);
+
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +52,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViweHolder> {
                 editor.putString("Symptoms", list.get(position).getSymptoms());
                 editor.putString("description", list.get(position).getDescription());
                 editor.putString("information", list.get(position).getInformation());
+                editor.putString("plant_image",list.get(position).getPlant_image());
 
                 editor.apply();
                 Intent intent = new Intent(context, view_plant.class);

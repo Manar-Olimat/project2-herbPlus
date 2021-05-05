@@ -1,16 +1,21 @@
 package com.example.project_2.Models;
 
 public class userDB {
-    String username,email,password,accountType;
+    String username;
+    String email;
+    String password;
+    String accountType;
+    String profile_image;
 
     public userDB() {
     }
 
-    public userDB(String username, String email, String password, String accountType) {
+    public userDB(String username, String email, String password, String accountType,String profile_image) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.accountType = accountType;
+        this.profile_image =profile_image;
     }
 
     public String getUsername() {
@@ -43,5 +48,13 @@ public class userDB {
 
     public void setAccountType(String accountType) {
         this.accountType = accountType;
+    }
+
+    public String getProfile_image() {
+        return profile_image;
+    }
+
+    public void setProfile_image(String profile_image) {
+        this.profile_image = profile_image;
     }
 }

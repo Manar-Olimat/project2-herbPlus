@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,10 +13,10 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.project_2.Models.userDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.imageview.ShapeableImageView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,14 +28,13 @@ import com.google.firebase.database.ValueEventListener;
 public class user_account extends AppCompatActivity implements View.OnClickListener {
     CardView Notification;
     CardView logout, help,setting;
-    FloatingActionButton edit;
     TextView username;
-    ShapeableImageView userPhoto;
-    private FirebaseUser user;
+    FirebaseUser user;
     private DatabaseReference reference;
     private  String userID;
     String type_account;
     BottomNavigationView bottomNavigationView;
+    ImageView profile_image;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
@@ -42,15 +42,12 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
         Notification = findViewById(R.id.Notification);
-
+        profile_image=findViewById(R.id.profile_image2);
         username=findViewById(R.id.username_viewProfile1);
-        userPhoto=findViewById(R.id.profile_image2);
-        edit=findViewById(R.id.edit_userProfile);
         help=findViewById(R.id.help);
         setting=findViewById(R.id.settings);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         setting.setOnClickListener(this);
-        edit.setOnClickListener(this);
         logout=findViewById(R.id.LogOut);
         logout.setOnClickListener(this);
         help.setOnClickListener(this);
@@ -63,7 +60,10 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
 
                 userDB userProfile=snapshot.getValue(userDB.class);
                 type_account =userProfile.getAccountType();
-                username.setText(userProfile.getUsername()+" "+user.getEmail());
+                username.setText(userProfile.getUsername());
+                Glide.with(user_account.this).load(userProfile.getProfile_image()).apply(new RequestOptions().centerCrop().placeholder(R.drawable.user)).into(profile_image);
+
+
             }
 
             @Override
@@ -97,10 +97,6 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.edit_userProfile :
-                startActivity(new Intent(user_account.this, Edit_userprofile.class));
-
-                break;
             case R.id.LogOut:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(user_account.this, sign_in.class));

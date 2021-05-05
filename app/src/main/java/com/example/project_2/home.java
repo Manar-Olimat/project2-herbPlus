@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -37,7 +38,7 @@ public class home extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.home:
-                        Intent intent1 = new Intent(home.this, home.class);
+                        Intent intent1 = new Intent(home.this, add_plant.class);
                         startActivity(intent1);
                         break;
                     case R.id.ptofile:
@@ -80,11 +81,36 @@ public class home extends AppCompatActivity {
     }
 
     private void setRecyclerViewTest(List<plantInfoModel> modelList) {
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerViewTest.setLayoutManager(layoutManager);
         recyclerAdapter=new plantInfoRecyclerAdapter(this,modelList);
         recyclerViewTest.setAdapter(recyclerAdapter);
+        final int speedScroll = 2000;
+        final Handler handler = new Handler();
+        final Runnable runnable = new Runnable() {
+            int count = 0;
+            boolean flag = true;
+            @Override
+            public void run() {
+                if(count < recyclerAdapter.getItemCount()){
+                    if(count==recyclerAdapter.getItemCount()-1){
+                        flag = false;
+                    }else if(count == 0){
+                        flag = true;
+                    }
+                    if(flag)
+                        count++;
+                    else
+                        count =0;
 
+                    recyclerViewTest.smoothScrollToPosition(count);
+                    handler.postDelayed(this,speedScroll);
+                }
+            }
+        };
+
+        handler.postDelayed(runnable,speedScroll);
 
     }
+
 }

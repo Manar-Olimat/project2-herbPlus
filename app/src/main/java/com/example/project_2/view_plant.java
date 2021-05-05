@@ -13,6 +13,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.project_2.Models.userDB;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -30,7 +32,7 @@ public class view_plant extends AppCompatActivity {
     FirebaseUser user;
     String userID;
     String type_account;
-    ImageView back;
+    ImageView back ,image_plant;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +43,7 @@ public class view_plant extends AppCompatActivity {
         information=findViewById(R.id.information);
         update=findViewById(R.id.update);
         delete=findViewById(R.id.delete);
+        image_plant=findViewById(R.id.image_plant);
         update.setVisibility(View.INVISIBLE);
         delete.setVisibility(View.INVISIBLE);
         SharedPreferences prefs = getSharedPreferences("viewplant", MODE_PRIVATE);
@@ -48,12 +51,16 @@ public class view_plant extends AppCompatActivity {
         String Symptoms = prefs.getString("Symptoms", "No name defined");
         String description1 = prefs.getString("description", "No name defined");
         String information1 = prefs.getString("information", "No name defined");
+        String image_plant1=prefs.getString("plant_image", "No name defined");
+
 
         //Bundle bundle = getIntent().getExtras();
         name.setText(name1);
         symptom.setText(Symptoms);
         description.setText(description1);
         information.setText(information1);
+        Glide.with(view_plant.this).load(image_plant1).apply(new RequestOptions().centerCrop().centerInside().placeholder(R.drawable.plant)).into(image_plant);
+
         back=findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override

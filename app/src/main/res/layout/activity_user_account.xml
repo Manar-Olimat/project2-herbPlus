@@ -41,26 +41,6 @@
         app:strokeWidth="2dp"
         tools:ignore="MissingConstraints" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/edit_userProfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:layout_weight="0.6"
-        android:tint="#FFFFFF"
-        app:backgroundTint="#6200EE"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/edit"
-        app:tint="@color/cardview_light_background"
-        tools:ignore="MissingConstraints,VectorDrawableCompat">
-
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
     <TextView
         android:id="@+id/username_viewProfile1"
         android:layout_width="131dp"

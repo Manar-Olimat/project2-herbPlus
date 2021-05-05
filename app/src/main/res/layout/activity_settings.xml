@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/account">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/Notification"
+            android:id="@+id/edit_image"
             android:layout_width="390dp"
             android:layout_height="50dp"
             android:layout_margin="4dp"
@@ -93,7 +93,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
-                    android:id="@+id/edit_image"
+                    android:id="@+id/edit_image5"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
 
@@ -120,7 +120,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/change"
+            android:id="@+id/change_image"
             android:layout_width="390dp"
             android:layout_height="50dp"
             android:layout_margin="4dp"
@@ -154,7 +154,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
-                    android:id="@+id/change_image"
+                    android:id="@+id/change_image6"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/arrow_forward"
@@ -195,7 +195,7 @@
         app:layout_constraintTop_toBottomOf="@+id/about">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/privacy"
+            android:id="@+id/Privacy_image"
             android:layout_width="390dp"
             android:layout_height="50dp"
             android:layout_margin="4dp"
@@ -229,7 +229,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
-                    android:id="@+id/Privacy_image"
+                    android:id="@+id/Privacy_image5"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
 
@@ -256,7 +256,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/terms"
+            android:id="@+id/terms_image"
             android:layout_width="390dp"
             android:layout_height="50dp"
             android:layout_margin="4dp"
@@ -290,7 +290,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageView
-                    android:id="@+id/terms_image"
+                    android:id="@+id/terms_image5"
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/arrow_forward"

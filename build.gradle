@@ -23,3 +23,9 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext {
+    // App dependencies
+    rxjava2Version = '2.1.9'
+    rxandroidVersion = '2.1.1'
+    butterKnifeVersion = '10.1.0'
+}

@@ -3,22 +3,16 @@ package com.example.project_2;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.project_2.Models.plantInfoModel;
 
-import java.util.ArrayList;
 import java.util.List;
-
-import de.hdodenhof.circleimageview.CircleImageView;
 
 public class plantInfoRecyclerAdapter extends RecyclerView.Adapter<plantInfoRecyclerAdapter.plantInfoViewHolder> {
     Context context;
@@ -40,6 +34,7 @@ public class plantInfoRecyclerAdapter extends RecyclerView.Adapter<plantInfoRecy
     public void onBindViewHolder(@NonNull plantInfoViewHolder holder, int position) {
         holder.desc.setText(modelList.get(position).getDescription());
         holder.plant.setBackgroundResource(modelList.get(position).getImgURL());
+
 
     }
 

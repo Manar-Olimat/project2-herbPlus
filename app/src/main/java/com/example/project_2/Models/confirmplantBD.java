@@ -7,17 +7,19 @@ public class confirmplantBD {
     String information;
     String added_by;
     String date;
+    String plant_image;
 
     public confirmplantBD() {
     }
 
-    public confirmplantBD(String name, String symptoms, String description, String information, String added_by, String date) {
+    public confirmplantBD(String name, String symptoms, String description, String information, String added_by, String date,String plant_image) {
         this.name = name;
         Symptoms = symptoms;
         this.description = description;
         this.information = information;
         this.added_by = added_by;
         this.date = date;
+        this.plant_image=plant_image;
     }
 
     public String getName() {
@@ -66,5 +68,13 @@ public class confirmplantBD {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getPlant_image() {
+        return plant_image;
+    }
+
+    public void setPlant_image(String plant_image) {
+        this.plant_image = plant_image;
     }
 }

@@ -1834,6 +1834,7 @@ id META
 id NO_DEBUG
 id Notification
 id Privacy_image
+id Privacy_image5
 id Reject
 id SHIFT
 id SHOW_ALL
@@ -1903,6 +1904,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_img
 id addplant
 id adjust_height
 id adjust_width
@@ -1943,9 +1945,9 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id change
 id change_button
 id change_image
+id change_image6
 id checkTerms
 id checkbox
 id checked
@@ -2007,8 +2009,9 @@ id easeInOut
 id easeOut
 id editProfilePhoto1
 id edit_image
+id edit_image5
+id edit_plant
 id edit_query
-id edit_userProfile
 id email
 id email1
 id email_editProfile
@@ -2060,8 +2063,8 @@ id ignoreRequest
 id image
 id imageView
 id imageView2
-id imageView3
 id imageView4
+id image_plant
 id image_view11
 id image_view12
 id image_view21
@@ -2189,13 +2192,15 @@ id peekHeight
 id percent
 id pin
 id plantInfo
+id plant_image
+id plant_img
 id plant_info_img
 id plant_name
 id plantname
 id position
 id postLayout
-id privacy
 id profile_image2
+id profile_img
 id progress_circular
 id progress_horizontal
 id ptofile
@@ -2241,6 +2246,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id showprofile_image
 id signUp
 id sign_in
 id sin
@@ -2283,9 +2289,9 @@ id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
-id terms
 id terms_con
 id terms_image
+id terms_image5
 id test_checkbox_android_button_tint
 id test_checkbox_app_button_tint
 id test_radiobutton_android_button_tint
@@ -2332,6 +2338,7 @@ id toggle
 id toolbar
 id top
 id topAppBar
+id topAppBar1
 id topPanel
 id touch_outside
 id transitionToEnd
@@ -2928,6 +2935,7 @@ style CardView_Dark
 style CardView_Light
 style Circular
 style Cut
+style Dexter_Internal_Theme_Transparent
 style EmptyTheme
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
@@ -3556,6 +3564,7 @@ styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewPager2 android_orientation
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml file_provider_paths
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

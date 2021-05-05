@@ -13,6 +13,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.project_2.Models.confirmplantBD;
 
 import java.util.ArrayList;
@@ -40,6 +42,8 @@ public class Confirmadapter extends RecyclerView.Adapter<Confirmadapter.MyViweHo
         holder.name.setText(list.get(position).getName());
         holder.nameherbalist.setText(list.get(position).getAdded_by());
         holder.date.setText(list.get(position).getDate());
+        Glide.with(context).load(list.get(position).getPlant_image()).apply(new RequestOptions().centerCrop().centerInside().placeholder(R.drawable.plant)).into(holder.img);
+
         holder.relativeLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +53,7 @@ public class Confirmadapter extends RecyclerView.Adapter<Confirmadapter.MyViweHo
                 editor.putString("description", list.get(position).getDescription());
                 editor.putString("information", list.get(position).getInformation());
                 editor.putString("date", list.get(position).getDate());
-
+                editor.putString("plant_image",list.get(position).getPlant_image());
                 editor.apply();
                 Intent intent = new Intent(context, ViewConfirm.class);
                 context.startActivity(intent);

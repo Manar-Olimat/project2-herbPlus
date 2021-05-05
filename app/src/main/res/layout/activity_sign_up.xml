@@ -35,6 +35,47 @@
 
     </View>
 
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/showprofile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/cardview_light_background"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular"
+        app:srcCompat="@drawable/user"
+        app:strokeColor="#00A79B"
+        app:strokeWidth="2dp"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/profile_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginStart="79dp"
+        android:layout_marginLeft="79dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:scaleType="center"
+        android:tint="#FFFFFF"
+        app:backgroundTint="#00A79B"
+        app:fabSize="mini"
+        app:layout_constraintBottom_toBottomOf="@+id/showprofile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/showprofile_image"
+        app:layout_constraintTop_toTopOf="@+id/showprofile_image"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+        app:tint="@color/cardview_light_background"
+        tools:ignore="MissingConstraints,VectorDrawableCompat" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/username1"
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
@@ -68,15 +109,16 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
         android:text="Create New Account"
         android:textColor="@android:color/background_light"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.155" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/back11"

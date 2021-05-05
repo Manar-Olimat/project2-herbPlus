@@ -6,12 +6,15 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -19,12 +22,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class ViewConfirm extends AppCompatActivity {
+public class ViewConfirm extends AppCompatActivity implements View.OnClickListener{
     TextView name,symptom,description,info,date;
     Button Accept,Reject;
     FirebaseDatabase root;
     FirebaseAuth mAuth ;
     DatabaseReference reference ,ref;
+    String name1 ,Symptoms ,description1 ,information1,dat ,image_plant1;
+    ImageView image_plant;
 
 
     @Override
@@ -38,92 +43,100 @@ public class ViewConfirm extends AppCompatActivity {
         description=findViewById(R.id.description);
         info=findViewById(R.id.information);
         date=findViewById(R.id.date);
+        image_plant=findViewById(R.id.image_plant);
         SharedPreferences prefs = getSharedPreferences("viewplant", MODE_PRIVATE);
-        String name1 = prefs.getString("name", "No name defined");
-        String Symptoms = prefs.getString("Symptoms", "No name defined");
-        String description1 = prefs.getString("description", "No name defined");
-        String information = prefs.getString("information", "No name defined");
-        String dat = prefs.getString("date", "No name defined");
+        name1 = prefs.getString("name", "No name defined");
+        Symptoms = prefs.getString("Symptoms", "No Symptoms defined");
+        description1 = prefs.getString("description", "No description defined");
+        information1 = prefs.getString("information", "No information defined");
+        image_plant1=prefs.getString("plant_image", "No name defined");
+        dat = prefs.getString("date", "No name defined");
 
         name.setText(name1);
         symptom.setText(Symptoms);
         description.setText(description1);
-        info.setText(information);
+        info.setText(information1);
         date.setText(dat);
+        Glide.with(ViewConfirm.this).load(image_plant1).apply(new RequestOptions().centerCrop().centerInside().placeholder(R.drawable.plant)).into(image_plant);
+
         Accept=findViewById(R.id.Accept);
-        Accept.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        Accept.setOnClickListener(this);
+        Reject=findViewById(R.id.Reject);
+        Reject.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.Accept:
                 reference = root.getReference("plants");
                 reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if (snapshot.hasChild(name1)) {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.hasChild(name1)) {
 
-                        AlertDialog.Builder builder1 = new AlertDialog.Builder(ViewConfirm.this);
-                        builder1.setMessage("The plant already exists. Do you want to modify the data?");
-                        builder1.setCancelable(false);
+                            AlertDialog.Builder builder1 = new AlertDialog.Builder(ViewConfirm.this);
+                            builder1.setMessage("The plant already exists. Do you want to modify the data?");
+                            builder1.setCancelable(false);
 
-                        builder1.setPositiveButton(
-                                "Yes",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
-                                        ref.removeValue();
+                            builder1.setPositiveButton(
+                                    "Yes",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
+                                            ref.removeValue();
 
-                                        reference = root.getReference("plants").child(name1);
-                                        reference.child("name").setValue(name1);
-                                        reference.child("symptoms").setValue(Symptoms);
-                                        reference.child("description").setValue(description1);
-                                        reference.child("information").setValue(information);
-                                        Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
-                                        ViewConfirm.this.startActivity(mainIntent);
-                                    }
-                                });
+                                            reference = root.getReference("plants").child(name1);
+                                            reference.child("name").setValue(name1);
+                                            reference.child("symptoms").setValue(Symptoms);
+                                            reference.child("description").setValue(description1);
+                                            reference.child("information").setValue(information1);
+                                            reference.child("plant_image").setValue(image_plant1);
 
-                        builder1.setNegativeButton(
-                                "No",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        dialog.cancel();
-                                    }
-                                });
+                                            Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
+                                            ViewConfirm.this.startActivity(mainIntent);
+                                        }
+                                    });
 
-                        AlertDialog alert11 = builder1.create();
-                        alert11.show();
+                            builder1.setNegativeButton(
+                                    "No",
+                                    new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int id) {
+                                            dialog.cancel();
+                                        }
+                                    });
+
+                            AlertDialog alert11 = builder1.create();
+                            alert11.show();
+                        }
+                        else{
+                            ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
+                            ref.removeValue();
+                            reference = root.getReference("plants").child(name1);
+                            reference.child("name").setValue(name1);
+                            reference.child("symptoms").setValue(Symptoms);
+                            reference.child("description").setValue(description1);
+                            reference.child("information").setValue(information1);
+                            reference.child("plant_image").setValue(image_plant1);
+                            Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
+                            ViewConfirm.this.startActivity(mainIntent);
+                        }
                     }
-                    else{
-                        ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
-                        ref.removeValue();
-                        reference = root.getReference("plants").child(name1);
-                        reference.child("name").setValue(name1);
-                        reference.child("symptoms").setValue(Symptoms);
-                        reference.child("description").setValue(description1);
-                        reference.child("information").setValue(information);
-                        Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
-                        ViewConfirm.this.startActivity(mainIntent);
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
                     }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-
-
-            }
-        });
-        Reject=findViewById(R.id.Reject);
-        Reject.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                });
+                break;
+            case R.id.Reject:
                 ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
                 ref.removeValue();
                 Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
                 ViewConfirm.this.startActivity(mainIntent);
 
-            }
-        });
+
+                break;
+        }
     }
 }

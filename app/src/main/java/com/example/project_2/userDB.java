@@ -3,7 +3,7 @@ package com.example.project_2;
 public class userDB {
     String username,email,password,accountType;
 
-    public userDB() {
+    public userDB(String usernameValue, String emailValue, String passwordValue, String finalAccountTypeValue, String s) {
     }
 
     public userDB(String username, String email, String password, String accountType) {
