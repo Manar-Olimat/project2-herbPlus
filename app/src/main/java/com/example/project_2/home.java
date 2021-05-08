@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.project_2.Models.plantGalleryModel;
 import com.example.project_2.Models.plantInfoModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -26,6 +27,11 @@ public class home extends AppCompatActivity {
     RecyclerView recyclerViewTest;
     plantInfoRecyclerAdapter recyclerAdapter;
     List<plantInfoModel> modelList;
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+    public static int itemPosition=0;
+    RecyclerView galleryRecyclerView;
+    plantGalleryAdapter galleryAdapter;
+    List<plantGalleryModel> galleryModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -78,6 +84,44 @@ public class home extends AppCompatActivity {
         modelList.add(new plantInfoModel(getString(R.string.Moonflowers),R.drawable.moonflower));
         modelList.add(new plantInfoModel(getString(R.string.Gingko),R.drawable.gingko));
         setRecyclerViewTest(modelList);
+        
+        //*********************************
+        galleryRecyclerView=findViewById(R.id.recTest);
+
+        //add data to model
+        galleryModels=new ArrayList<>();
+        galleryModels.add(new plantGalleryModel("Fruits",R.drawable.fruit,R.drawable.fruit_icon));
+        galleryModels.add(new plantGalleryModel("Vegetables",R.drawable.vegetables,R.drawable.vegetables_icon));
+        galleryModels.add(new plantGalleryModel("Leaf",R.drawable.leaf,R.drawable.leaf_icon));
+        galleryModels.add(new plantGalleryModel("Flower",R.drawable.flower,R.drawable.flower_icon));
+        galleryModels.add(new plantGalleryModel("Trees",R.drawable.tree,R.drawable.tree_icon));
+
+        setRecyclerViewGallery(galleryModels);
+    }
+
+    private void setRecyclerViewGallery(List<plantGalleryModel> galleryModels1) {
+
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        galleryRecyclerView.setLayoutManager(layoutManager);
+        galleryAdapter=new plantGalleryAdapter(this,galleryModels1 , this::onGalleryClick);
+        galleryRecyclerView.setAdapter(galleryAdapter);
+    }
+
+    /*******************************************************
+     *
+to make the recycler view clickable
+*************************************************************     */
+    public void onGalleryClick(int position) {
+        itemPosition=position;
+        //    Log.d("TAG","onGalleryClick : clicked.");
+        //   if (galleryModels.get(position).name)
+        // Intent intent=new Intent(this,galleryRecycler.class);
+        // startActivity(intent);
+        Intent intent = new Intent(this, gallery_recycler.class);
+        String message = galleryModels.get(itemPosition).getName();
+        // String message = editText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
     private void setRecyclerViewTest(List<plantInfoModel> modelList) {
