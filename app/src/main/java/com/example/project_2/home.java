@@ -95,6 +95,8 @@ public class home extends AppCompatActivity {
         galleryModels.add(new plantGalleryModel("Leaf",R.drawable.leaf,R.drawable.leaf_icon));
         galleryModels.add(new plantGalleryModel("Flower",R.drawable.flower,R.drawable.flower_icon));
         galleryModels.add(new plantGalleryModel("Trees",R.drawable.tree,R.drawable.tree_icon));
+        galleryModels.add(new plantGalleryModel("Seed",R.drawable.seeds,R.drawable.seed_icon));
+        galleryModels.add(new plantGalleryModel("Root",R.drawable.root,R.drawable.root_icon));
 
         setRecyclerViewGallery(galleryModels);
     }
