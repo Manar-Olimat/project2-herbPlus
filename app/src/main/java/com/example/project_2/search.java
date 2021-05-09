@@ -62,7 +62,7 @@ public class search extends AppCompatActivity {
                         modelList.add(ds.getValue(plantBD.class));
                     }
 
-                    Myadapter myadapter=new Myadapter(modelList,context);
+                    searchadapter myadapter=new searchadapter(modelList,context);
                     recyclerView.setAdapter(myadapter);
 
                 }
@@ -199,7 +199,7 @@ public class search extends AppCompatActivity {
                 list.add(object);
             }
         }
-        Myadapter myadapter=new Myadapter(list,context);
+        searchadapter myadapter=new searchadapter(list,context);
         recyclerView.setAdapter(myadapter);
 
 
@@ -212,7 +212,7 @@ public class search extends AppCompatActivity {
                 list.add(object);
             }
         }
-        Myadapter myadapter=new Myadapter(list,context);
+        searchadapter myadapter=new searchadapter(list,context);
         recyclerView.setAdapter(myadapter);
 
 

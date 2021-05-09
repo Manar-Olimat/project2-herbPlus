@@ -10,7 +10,7 @@ public class userDB {
     public userDB() {
     }
 
-    public userDB(String username, String email, String password, String accountType,String profile_image) {
+    public userDB(String username, String email, String password, String accountType,String profile_image ) {
         this.username = username;
         this.email = email;
         this.password = password;
@@ -57,4 +57,6 @@ public class userDB {
     public void setProfile_image(String profile_image) {
         this.profile_image = profile_image;
     }
+
+
 }

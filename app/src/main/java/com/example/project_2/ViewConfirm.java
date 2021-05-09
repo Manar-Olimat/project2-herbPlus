@@ -28,7 +28,7 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
     FirebaseDatabase root;
     FirebaseAuth mAuth ;
     DatabaseReference reference ,ref;
-    String name1 ,Symptoms ,description1 ,information1,dat ,image_plant1;
+    String name1 ,Symptoms ,description1 ,information1,dat ,image_plant1,used;
     ImageView image_plant;
 
 
@@ -51,6 +51,8 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
         information1 = prefs.getString("information", "No information defined");
         image_plant1=prefs.getString("plant_image", "No name defined");
         dat = prefs.getString("date", "No name defined");
+        used=prefs.getString("used", "No name defined");
+
 
         name.setText(name1);
         symptom.setText(Symptoms);
@@ -92,6 +94,7 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
                                             reference.child("description").setValue(description1);
                                             reference.child("information").setValue(information1);
                                             reference.child("plant_image").setValue(image_plant1);
+                                            reference.child("used").setValue(used);
 
                                             Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
                                             ViewConfirm.this.startActivity(mainIntent);
@@ -118,6 +121,8 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
                             reference.child("description").setValue(description1);
                             reference.child("information").setValue(information1);
                             reference.child("plant_image").setValue(image_plant1);
+                            reference.child("used").setValue(used);
+
                             Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
                             ViewConfirm.this.startActivity(mainIntent);
                         }

@@ -1,99 +1,106 @@
 package com.example.project_2;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.project_2.Models.plantTypeGalleryModel;
+import com.example.project_2.Models.plantBD;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class gallery_recycler extends AppCompatActivity {
+    DatabaseReference databaseReference;
     RecyclerView galleryRecyclerView;
     plantTypeGalleryAdapter galleryAdapter;
-    List<plantTypeGalleryModel> galleryModels;
-    ImageView imageView;
+    List<plantBD> galleryModels;
+    ImageView imageView ,back;
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_recycler);
         // Get the Intent that started this activity and extract the string
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(home.EXTRA_MESSAGE);
-
+        SharedPreferences prefs = getSharedPreferences("gallery", MODE_PRIVATE);
+        String message = prefs.getString("message", "No name defined");
         // Capture the layout's TextView and set the string as its text
         textView = findViewById(R.id.intentMsg);
         textView.setText(message);
         galleryRecyclerView=findViewById(R.id.rec22);
         galleryModels=new ArrayList<>();
         imageView=findViewById(R.id.coverImg);
+        back=findViewById(R.id.back11);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gallery_recycler.this.startActivity(new Intent(gallery_recycler.this, home.class));
+            }
+        });
+
+        databaseReference= FirebaseDatabase.getInstance().getReference().child("plants");
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    galleryModels=new ArrayList<>();
+                    for(DataSnapshot ds:snapshot.getChildren()) {
+                        plantBD plant = ds.getValue(plantBD.class);
+                        if (plant != null) {
+                            if (plant.getUsed().contains(message)) {
+                                galleryModels.add(plant);
+                            }
+                        }
+                        setRecyclerViewTest(galleryModels);
+                    }
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
         if ("Fruits".equals(textView.getText())) {
-            //change cover photo
             imageView.setImageResource(R.drawable.fruit);
-            //add data to model
-            galleryModels.add(new plantTypeGalleryModel("Banana","Orange",R.drawable.bananas,R.drawable.oranges));
-            galleryModels.add(new plantTypeGalleryModel("Berries","Cranberries",R.drawable.berries,R.drawable.cranberries));
-            galleryModels.add(new plantTypeGalleryModel("Kiwis","Pears",R.drawable.kiwis,R.drawable.pears));
-
-            setRecyclerViewTest(galleryModels);
-        }
-        else if ("Vegetables".equals(textView.getText())) {
-//change cover photo
-            imageView.setImageResource(R.drawable.vegetables);
-
-            galleryModels.add(new plantTypeGalleryModel("Onions","Potato",R.drawable.onion,R.drawable.potato));
-            galleryModels.add(new plantTypeGalleryModel("Carrot","Spinach",R.drawable.carrot,R.drawable.spinach));
-
-
-            setRecyclerViewTest(galleryModels);
         }
         else if ("Leaf".equals(textView.getText())) {
-//change cover photo
             imageView.setImageResource(R.drawable.leaf);
-
-            galleryModels.add(new plantTypeGalleryModel("Kale","Microgreens",R.drawable.kale,R.drawable.microgreens));
-            galleryModels.add(new plantTypeGalleryModel("Cabbage","Watercress",R.drawable.cabbage,R.drawable.watercress));
-
-
-            setRecyclerViewTest(galleryModels);
         }
         else if ("Flower".equals(textView.getText())) {
-//change cover photo
             imageView.setImageResource(R.drawable.flower);
-
-            galleryModels.add(new plantTypeGalleryModel("Sunflower","Marigold",
-                    R.drawable.sunflower,R.drawable.mariegold));
-            galleryModels.add(new plantTypeGalleryModel("Birds of Paradise","Asiatic Lily",
-                    R.drawable.birds_of_paradise,R.drawable.asiatic_lily));
-
-
             setRecyclerViewTest(galleryModels);
         }
-        else //if ("Trees".equals(textView))
+        else if ("Trees".equals(textView.getText()))
         {
-            //change cover photo
             imageView.setImageResource(R.drawable.tree);
-
-            galleryModels.add(new plantTypeGalleryModel("oak tree\n" ,"japanese maple",
-                    R.drawable.oak_tree,R.drawable.japanese_maple));
-
-
-            setRecyclerViewTest(galleryModels);
         }
-
+        else if ("Seeds".equals(textView.getText()))
+        {
+            imageView.setImageResource(R.drawable.seeds);
+        }else if ("Roots".equals(textView.getText()))
+        {
+            imageView.setImageResource(R.drawable.root);
+        }
     }
 
-    private void setRecyclerViewTest(List<plantTypeGalleryModel> galleryModels) {
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this,
-                LinearLayoutManager.VERTICAL, false);
+    private void setRecyclerViewTest(List<plantBD> galleryModels) {
+        LinearLayoutManager layoutManager = new GridLayoutManager(this, 3);
         galleryRecyclerView.setLayoutManager(layoutManager);
         galleryAdapter=new plantTypeGalleryAdapter(this,galleryModels );
         galleryRecyclerView.setAdapter(galleryAdapter);

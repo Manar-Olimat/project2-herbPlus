@@ -11,7 +11,8 @@ com/example/project_2/update_plant.java
  com.example.project_2.update_plant$5
  com.example.project_2.update_plant$6
  com.example.project_2.update_plant$7
- com.example.project_2.update_plant$7$1
+ com.example.project_2.update_plant$8
+ com.example.project_2.update_plant$8$1
 com/example/project_2/plantInfoRecyclerAdapter.java
  com.example.project_2.plantInfoRecyclerAdapter
  com.example.project_2.plantInfoRecyclerAdapter$plantInfoViewHolder
@@ -21,12 +22,12 @@ com/example/project_2/user_account.java
  com.example.project_2.user_account$2
 com/example/project_2/gallery_recycler.java
  com.example.project_2.gallery_recycler
+ com.example.project_2.gallery_recycler$1
+ com.example.project_2.gallery_recycler$2
 com/example/project_2/confirm_list.java
  com.example.project_2.confirm_list
  com.example.project_2.confirm_list$1
  com.example.project_2.confirm_list$2
-com/example/project_2/Models/plantTypeGalleryModel.java
- com.example.project_2.Models.plantTypeGalleryModel
 com/example/project_2/userDB.java
  com.example.project_2.userDB
 com/example/project_2/settings.java
@@ -38,6 +39,10 @@ com/example/project_2/Models/plantInfoModel.java
  com.example.project_2.Models.plantInfoModel
 com/example/project_2/Models/plantGalleryModel.java
  com.example.project_2.Models.plantGalleryModel
+com/example/project_2/searchadapter.java
+ com.example.project_2.searchadapter
+ com.example.project_2.searchadapter$1
+ com.example.project_2.searchadapter$MyViweHolder
 com/example/project_2/add_plant.java
  com.example.project_2.add_plant
  com.example.project_2.add_plant$1
@@ -45,23 +50,24 @@ com/example/project_2/add_plant.java
  com.example.project_2.add_plant$3
  com.example.project_2.add_plant$4
  com.example.project_2.add_plant$5
- com.example.project_2.add_plant$5$1
- com.example.project_2.add_plant$5$1$1
- com.example.project_2.add_plant$5$1$1$1
- com.example.project_2.add_plant$5$1$1$2
- com.example.project_2.add_plant$5$1$1$3
- com.example.project_2.add_plant$5$1$1$3$1
- com.example.project_2.add_plant$5$1$2
- com.example.project_2.add_plant$5$1$3
- com.example.project_2.add_plant$5$1$4
- com.example.project_2.add_plant$5$1$5
- com.example.project_2.add_plant$5$1$5$1
- com.example.project_2.add_plant$5$2
- com.example.project_2.add_plant$5$2$1
- com.example.project_2.add_plant$5$2$2
- com.example.project_2.add_plant$5$2$3
- com.example.project_2.add_plant$5$2$3$1
- com.example.project_2.add_plant$5$3
+ com.example.project_2.add_plant$6
+ com.example.project_2.add_plant$6$1
+ com.example.project_2.add_plant$6$1$1
+ com.example.project_2.add_plant$6$1$1$1
+ com.example.project_2.add_plant$6$1$1$2
+ com.example.project_2.add_plant$6$1$1$3
+ com.example.project_2.add_plant$6$1$1$3$1
+ com.example.project_2.add_plant$6$1$2
+ com.example.project_2.add_plant$6$1$3
+ com.example.project_2.add_plant$6$1$4
+ com.example.project_2.add_plant$6$1$5
+ com.example.project_2.add_plant$6$1$5$1
+ com.example.project_2.add_plant$6$2
+ com.example.project_2.add_plant$6$2$1
+ com.example.project_2.add_plant$6$2$2
+ com.example.project_2.add_plant$6$2$3
+ com.example.project_2.add_plant$6$2$3$1
+ com.example.project_2.add_plant$6$3
 com/example/project_2/Models/userDB.java
  com.example.project_2.Models.userDB
 com/example/project_2/BuildConfig.java
@@ -123,14 +129,11 @@ com/example/project_2/Edit_userprofile.java
  com.example.project_2.Edit_userprofile$5$1
 com/example/project_2/plantTypeGalleryAdapter.java
  com.example.project_2.plantTypeGalleryAdapter
+ com.example.project_2.plantTypeGalleryAdapter$1
  com.example.project_2.plantTypeGalleryAdapter$plantTypeGalleryViewHolder
 com/example/project_2/sign_in.java
  com.example.project_2.sign_in
  com.example.project_2.sign_in$1
-com/example/project_2/Myadapter.java
- com.example.project_2.Myadapter
- com.example.project_2.Myadapter$1
- com.example.project_2.Myadapter$MyViweHolder
 com/example/project_2/sign_up.java
  com.example.project_2.sign_up
  com.example.project_2.sign_up$1

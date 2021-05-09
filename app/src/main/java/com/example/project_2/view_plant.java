@@ -33,10 +33,17 @@ public class view_plant extends AppCompatActivity {
     String userID;
     String type_account;
     ImageView back ,image_plant;
+    String message;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_plant);
+        Intent intent = getIntent();
+         message = intent.getStringExtra("Gallery");
+         if(message==null){
+             message="view";
+         }
+
         name=findViewById(R.id.name);
         symptom=findViewById(R.id.symptom);
         description=findViewById(R.id.description);
@@ -65,10 +72,18 @@ public class view_plant extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(message.equals("Gallery"))
+                {
+                    startActivity(new Intent(view_plant.this, gallery_recycler.class));
+
+                }
+                else
                 startActivity(new Intent(view_plant.this, search.class));
 
             }
         });
+
+
         user= FirebaseAuth.getInstance().getCurrentUser();
         userID=user.getUid();
         reference= FirebaseDatabase.getInstance().getReference("users");
@@ -81,6 +96,10 @@ public class view_plant extends AppCompatActivity {
                 if(type_account.equals("Admin Account")||type_account.equals("Herbalist Account")) {
                     update.setVisibility(View.VISIBLE);
                     delete.setVisibility(View.VISIBLE);
+                    if(message.equals("Gallery")){
+                        update.setVisibility(View.INVISIBLE);
+                        delete.setVisibility(View.INVISIBLE);
+                    }
                     update.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {

@@ -1,16 +1,14 @@
 package com.example.project_2;
 
-import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -61,17 +59,6 @@ public class home extends AppCompatActivity {
             }
         });
 
-        // Inflate the options menu from XML
-        MenuInflater inflater = getMenuInflater();
-        Menu menu;
-      //  inflater.inflate(R.menu.class, menu);
-
-        // Get the SearchView and set the searchable configuration
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-      //  SearchView searchView = (SearchView) menu.findItem(R.id.menu_search).getActionView();
-        // Assumes current activity is the searchable activity
-      //  searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-      //  searchView.setIconifiedByDefault(false); // Do not iconify the widget; expand it by default
 
         // ******* recycler view
         recyclerViewTest=findViewById(R.id.recyclerView);
@@ -90,20 +77,19 @@ public class home extends AppCompatActivity {
 
         //add data to model
         galleryModels=new ArrayList<>();
-        galleryModels.add(new plantGalleryModel("Fruits",R.drawable.fruit,R.drawable.fruit_icon));
-        galleryModels.add(new plantGalleryModel("Vegetables",R.drawable.vegetables,R.drawable.vegetables_icon));
+        galleryModels.add(new plantGalleryModel("Fruit",R.drawable.fruit,R.drawable.fruits_icon1));
         galleryModels.add(new plantGalleryModel("Leaf",R.drawable.leaf,R.drawable.leaf_icon));
-        galleryModels.add(new plantGalleryModel("Flower",R.drawable.flower,R.drawable.flower_icon));
-        galleryModels.add(new plantGalleryModel("Trees",R.drawable.tree,R.drawable.tree_icon));
-        galleryModels.add(new plantGalleryModel("Seed",R.drawable.seeds,R.drawable.seed_icon));
-        galleryModels.add(new plantGalleryModel("Root",R.drawable.root,R.drawable.root_icon));
+        galleryModels.add(new plantGalleryModel("Flower",R.drawable.flower,R.drawable.flower_icon1));
+        galleryModels.add(new plantGalleryModel("Trees",R.drawable.tree,R.drawable.tree_icon1));
+        galleryModels.add(new plantGalleryModel("Seeds",R.drawable.seeds,R.drawable.seeds_icon));
+        galleryModels.add(new plantGalleryModel("Roots",R.drawable.root,R.drawable.root_icon));
 
         setRecyclerViewGallery(galleryModels);
     }
 
     private void setRecyclerViewGallery(List<plantGalleryModel> galleryModels1) {
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        LinearLayoutManager layoutManager = new GridLayoutManager(this, 2);
         galleryRecyclerView.setLayoutManager(layoutManager);
         galleryAdapter=new plantGalleryAdapter(this,galleryModels1 , this::onGalleryClick);
         galleryRecyclerView.setAdapter(galleryAdapter);
@@ -123,6 +109,10 @@ to make the recycler view clickable
         String message = galleryModels.get(itemPosition).getName();
         // String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
+        SharedPreferences.Editor editor = getApplicationContext().getSharedPreferences("gallery", MODE_PRIVATE).edit();
+        editor.putString("message",message);
+
+        editor.apply();
         startActivity(intent);
     }
 

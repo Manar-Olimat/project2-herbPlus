@@ -21,11 +21,11 @@ import java.util.ArrayList;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViweHolder> {
+public class searchadapter extends RecyclerView.Adapter<searchadapter.MyViweHolder> {
     ArrayList<plantBD> list;
     Context context;
 
-    public Myadapter(ArrayList<plantBD> list, Context context) {
+    public searchadapter(ArrayList<plantBD> list, Context context) {
         this.list = list;
         this.context=context;
 
@@ -53,6 +53,7 @@ public class Myadapter extends RecyclerView.Adapter<Myadapter.MyViweHolder> {
                 editor.putString("description", list.get(position).getDescription());
                 editor.putString("information", list.get(position).getInformation());
                 editor.putString("plant_image",list.get(position).getPlant_image());
+                editor.putString("used",list.get(position).getUsed());
 
                 editor.apply();
                 Intent intent = new Intent(context, view_plant.class);

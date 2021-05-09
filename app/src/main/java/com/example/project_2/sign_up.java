@@ -193,7 +193,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
 
                                     }
                                     else {
-                                        Toast.makeText(com.example.project_2.sign_up.this, "sign up failed", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(sign_up.this, "sign up failed", Toast.LENGTH_LONG).show();
                                     }
 
                                 }

@@ -6,16 +6,18 @@ public class plantBD {
     String description;
     String information;
     String plant_image;
+    String used;
 
     public plantBD() {
     }
 
-    public plantBD(String name, String symptoms, String description,String information ,String plant_image) {
+    public plantBD(String name, String symptoms, String description,String information ,String plant_image, String used) {
         this.name = name;
         this.Symptoms = symptoms;
         this.description = description;
         this.information=information;
         this.plant_image=plant_image;
+        this.used=used;
     }
 
 
@@ -58,4 +60,11 @@ public class plantBD {
         this.plant_image = plant_image;
     }
 
+    public String getUsed() {
+        return used;
+    }
+
+    public void setUsed(String used) {
+        this.used = used;
+    }
 }

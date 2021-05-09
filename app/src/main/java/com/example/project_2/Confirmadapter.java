@@ -54,6 +54,8 @@ public class Confirmadapter extends RecyclerView.Adapter<Confirmadapter.MyViweHo
                 editor.putString("information", list.get(position).getInformation());
                 editor.putString("date", list.get(position).getDate());
                 editor.putString("plant_image",list.get(position).getPlant_image());
+                editor.putString("used", list.get(position).getUsed());
+
                 editor.apply();
                 Intent intent = new Intent(context, ViewConfirm.class);
                 context.startActivity(intent);

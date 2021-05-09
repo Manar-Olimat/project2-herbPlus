@@ -14,6 +14,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
@@ -56,6 +57,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
     MaterialToolbar back;
     EditText plantame;
     TextView symptoms;
+    CheckBox fruits,leaf,flower,trees,seeds,roots;
     MultiAutoCompleteTextView description, information;
     Button addplant;
     boolean[]selectedsymptoms;
@@ -68,6 +70,8 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
     FirebaseAuth mAuth ;
     DatabaseReference reference,reference_user;
     String userID;
+    String used ;
+
 
     FloatingActionButton add_img;
     ImageView plant_img;
@@ -87,6 +91,12 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
         back=findViewById(R.id.topAppBar);
         add_img=findViewById(R.id.add_img);
         plant_img=findViewById(R.id.plant_img);
+        fruits=findViewById(R.id.Fruit);
+        leaf=findViewById(R.id.Leaf);
+        flower=findViewById(R.id.Flower);
+        trees=findViewById(R.id.Trees);
+        seeds=findViewById(R.id.Seeds);
+        roots=findViewById(R.id.Roots);
         mAuth = FirebaseAuth.getInstance();
         root = FirebaseDatabase.getInstance();
         mStorageRef = FirebaseStorage.getInstance().getReference("plants");
@@ -94,7 +104,13 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
         user= FirebaseAuth.getInstance().getCurrentUser();
         selectedsymptoms = new boolean[symptomsArray.length];
         symptoms.setOnClickListener(this);
-        back.setOnClickListener(this);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(add_plant.this, home.class));
+
+            }
+        });
         add_img.setOnClickListener(this);
         addplant.setOnClickListener(this);
     }
@@ -149,16 +165,36 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
 
                 break;
 
-            case R.id.back:
-                startActivity(new Intent(add_plant.this, home.class));
-                break;
+
             case R.id.add_img:
                 selectImage();
                 break;
             case R.id.addplant:
                 checkDataEntered();
+                if(fruits.isChecked()){
+                    used+=fruits.getText()+", ";
+                }
+                if(flower.isChecked()){
+                    used+=flower.getText()+", ";
+                }
+                if(seeds.isChecked()){
+                    used+=seeds.getText()+", ";
+
+                }
+                if(trees.isChecked()){
+                    used+=trees.getText()+", ";
+
+                }
+                if(leaf.isChecked()){
+                    used+=leaf.getText()+", ";
+                }
+                if(roots.isChecked()){
+                    used+=roots.getText()+", ";
+
+                }
                 if (!plantame.getText().toString().isEmpty() && !symptoms.getText().toString().isEmpty() &&
-                        !description.getText().toString().isEmpty() &&!information.getText().toString().isEmpty()  ){
+                        !description.getText().toString().isEmpty() &&!information.getText().toString().isEmpty() &&(used!=null)
+                        ){
                     final String plantnameValue = plantame.getText().toString();
                     final String symptomsValue = symptoms.getText().toString();
                     final String descriptionValue = description.getText().toString();
@@ -197,20 +233,26 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                             public void onSuccess(Uri uri) {
                                                                                 final Uri downloadUrl = uri;
                                                                                 if(downloadUrl!=null){
-                                                                                    reference = root.getReference("plants").child(plantnameValue);
-                                                                                    reference.child("name").setValue(plantnameValue);
-                                                                                    reference.child("symptoms").setValue(symptomsValue);
-                                                                                    reference.child("description").setValue(descriptionValue);
-                                                                                    reference.child("information").setValue(informationValue);
-                                                                                    reference.child("plant_image").setValue(downloadUrl.toString());
+                                                                                    if(used.toString()!=null) {
+                                                                                        reference = root.getReference("plants").child(plantnameValue);
+                                                                                        reference.child("name").setValue(plantnameValue);
+                                                                                        reference.child("symptoms").setValue(symptomsValue);
+                                                                                        reference.child("description").setValue(descriptionValue);
+                                                                                        reference.child("information").setValue(informationValue);
+                                                                                        reference.child("plant_image").setValue(downloadUrl.toString());
+                                                                                        reference.child("used").setValue(used.toString());
+                                                                                    }
+                                                                                    else {
+                                                                                        Toast.makeText(add_plant.this, "No Parts of plant that we use selected", Toast.LENGTH_SHORT).show();
 
-                                                                                    Intent mainIntent = new Intent(add_plant.this, home.class);
-                                                                                    add_plant.this.startActivity(mainIntent);
+                                                                                    }
+
                                                                                 }else {
                                                                                     Toast.makeText(add_plant.this, "No file selected", Toast.LENGTH_SHORT).show();
 
                                                                                 }
-
+                                                                                Intent mainIntent = new Intent(add_plant.this, home.class);
+                                                                                add_plant.this.startActivity(mainIntent);
                                                                                 }
                                                                             });
 
@@ -263,6 +305,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                     reference.child("description").setValue(descriptionValue);
                                                                     reference.child("information").setValue(informationValue);
                                                                     reference.child("plant_image").setValue(downloadUrl.toString());
+                                                                    reference.child("used").setValue(used.toString());
 
                                                                     Intent mainIntent = new Intent(add_plant.this, home.class);
                                                                     add_plant.this.startActivity(mainIntent);
@@ -331,6 +374,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                         reference.child("added_by").setValue(userProfile.getUsername());
                                                                         reference.child("plant_image").setValue(downloadUrl.toString());
                                                                         reference.child("date").setValue(localDate.getMonthValue()+"/"+ localDate.getDayOfMonth()+"/"+ localDate.getYear());
+                                                                        reference.child("used").setValue(used.toString());
 
                                                                         Intent mainIntent = new Intent(add_plant.this, home.class);
                                                                         add_plant.this.startActivity(mainIntent);

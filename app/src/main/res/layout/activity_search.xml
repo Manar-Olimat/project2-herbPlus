@@ -1,31 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+    android:background="@color/PrimaryTint_9"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appbar"
-        android:layout_height="105dp"
+    <LinearLayout
         android:layout_width="match_parent"
-        >
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_navigation"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_navigation">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="105dp">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
-                android:layout_height="?attr/actionBarSize"
                 android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
                 android:background="@color/PrimaryTint_3"
                 app:navigationIconColor="@color/PrimaryShade_2"
                 app:titleTextColor="@color/PrimaryShade_2"
 
 
                 >
+
                 <SearchView
                     android:id="@+id/search_bar"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
+
                 <TextView
                     android:id="@+id/symptoms"
                     android:layout_width="match_parent"
@@ -42,88 +56,86 @@
 
             </androidx.appcompat.widget.Toolbar>
 
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/cardview_light_background"
-            app:tabTextColor="@color/PrimaryShade_2"
-            >
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search by name" />
-
-            <com.google.android.material.tabs.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Search by Symptoms" />
-
-
-        </com.google.android.material.tabs.TabLayout>
-
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-
-
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:background="@color/PrimaryTint_9"
-            android:fitsSystemWindows="true"
-            tools:context=".search">
-
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginBottom="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                android:layout_height="match_parent"
+                android:background="@color/cardview_light_background"
+                app:tabTextColor="@color/PrimaryShade_2">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search by name" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Search by Symptoms" />
 
 
-        </RelativeLayout>
+            </com.google.android.material.tabs.TabLayout>
 
-    </androidx.core.widget.NestedScrollView>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/PrimaryTint_9"
+                android:fitsSystemWindows="true"
+                tools:context=".search">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="39dp"
+                    android:layout_marginEnd="-4dp"
+                    android:layout_marginRight="-4dp"
+                    android:layout_marginBottom="-39dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
         app:backgroundTint="@color/PrimaryTint_3"
         app:itemIconTint="@color/cardview_light_background"
         app:itemTextColor="@color/cardview_light_background"
         app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/bottom_nav_menu" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floating_action_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom"
-        android:layout_marginTop="36dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="70dp"
-        android:layout_weight="0.6"
-        android:tint="#FFFFFF"
-        app:backgroundTint="@color/PrimaryTint_3"
-        app:srcCompat="@drawable/ic_camera_24"
-        app:tint="@color/cardview_light_background"
-        tools:ignore="VectorDrawableCompat">
-
-    </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>
