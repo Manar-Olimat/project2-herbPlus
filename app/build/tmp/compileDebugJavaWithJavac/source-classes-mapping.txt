@@ -30,8 +30,8 @@ com/example/project_2/confirm_list.java
  com.example.project_2.confirm_list$2
 com/example/project_2/userDB.java
  com.example.project_2.userDB
-com/example/project_2/Models/confirmplantBD.java
- com.example.project_2.Models.confirmplantBD
+com/example/project_2/settings.java
+ com.example.project_2.settings
 com/example/project_2/Terms_Condition.java
  com.example.project_2.Terms_Condition
  com.example.project_2.Terms_Condition$1
@@ -94,9 +94,10 @@ com/example/project_2/view_plant.java
  com.example.project_2.view_plant$2$2
  com.example.project_2.view_plant$2$2$1
  com.example.project_2.view_plant$2$2$2
-com/example/project_2/JSSEProvider.java
- com.example.project_2.JSSEProvider
- com.example.project_2.JSSEProvider$1
+com/example/project_2/change_password.java
+ com.example.project_2.change_password
+ com.example.project_2.change_password$1
+ com.example.project_2.change_password$1$1
 com/example/project_2/search.java
  com.example.project_2.search
  com.example.project_2.search$1
@@ -133,6 +134,10 @@ com/example/project_2/plantTypeGalleryAdapter.java
 com/example/project_2/sign_in.java
  com.example.project_2.sign_in
  com.example.project_2.sign_in$1
+com/example/project_2/Myadapter.java
+ com.example.project_2.Myadapter
+ com.example.project_2.Myadapter$1
+ com.example.project_2.Myadapter$MyViweHolder
 com/example/project_2/sign_up.java
  com.example.project_2.sign_up
  com.example.project_2.sign_up$1
@@ -146,14 +151,8 @@ com/example/project_2/home.java
  com.example.project_2.home
  com.example.project_2.home$1
  com.example.project_2.home$2
-com/example/project_2/settings.java
- com.example.project_2.settings
-com/example/project_2/Myadapter.java
- com.example.project_2.Myadapter
- com.example.project_2.Myadapter$1
- com.example.project_2.Myadapter$MyViweHolder
-com/example/project_2/change_password.java
- com.example.project_2.change_password
- com.example.project_2.change_password$1
- com.example.project_2.change_password$2
- com.example.project_2.change_password$2$1
+com/example/project_2/JSSEProvider.java
+ com.example.project_2.JSSEProvider
+ com.example.project_2.JSSEProvider$1
+com/example/project_2/Models/confirmplantBD.java
+ com.example.project_2.Models.confirmplantBD

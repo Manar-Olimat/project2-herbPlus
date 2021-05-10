@@ -36,12 +36,7 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_change_password);
         reference= FirebaseDatabase.getInstance().getReference("users");
         back=findViewById(R.id.topAppBar1);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(change_password.this, settings.class));
-            }
-        });
+        back.setOnClickListener(this);
         Cancel=findViewById(R.id.cancel);
         Cancel.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
@@ -58,6 +53,9 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.topAppBar1 :
+                startActivity(new Intent(change_password.this, settings.class));
+                break;
             case R.id.cancel:
                 startActivity(new Intent(change_password.this, settings.class));
                 break;
