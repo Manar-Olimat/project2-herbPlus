@@ -53,7 +53,7 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.back :
+            case R.id.topAppBar1 :
                 startActivity(new Intent(change_password.this, settings.class));
                 break;
             case R.id.cancel:
