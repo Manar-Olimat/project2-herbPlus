@@ -2,23 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-
-    <item android:id="@+id/search"
-        android:title="search"
+    <item
+        android:id="@+id/search"
         android:icon="@drawable/ic_search"
-        app:showAsAction="always">
-    </item>
-    <item android:id="@+id/home"
+        android:title="search"
+        app:showAsAction="always"></item>
+    <item
+        android:id="@+id/home"
         android:icon="@drawable/ic_home_black_24dp"
-        app:showAsAction="always"
-        android:title="Home">
-    </item>
+        android:title="Home"
+        app:showAsAction="always"></item>
 
-    <item android:id="@+id/ptofile"
-    android:title="Ptofile"
-    android:icon="@drawable/user"
-    app:showAsAction="always">
-
-</item>
+    <item
+        android:id="@+id/ptofile"
+        android:icon="@drawable/user"
+        android:title="Ptofile"
+        app:showAsAction="always"></item>
 
 </menu>

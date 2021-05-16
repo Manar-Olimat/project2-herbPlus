@@ -5,6 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,46 +25,51 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class user_account extends AppCompatActivity implements View.OnClickListener {
-    CardView Notification;
-    CardView logout, help,setting;
-    TextView username;
-    FirebaseUser user;
-    private DatabaseReference reference;
-    private  String userID;
-    String type_account;
     BottomNavigationView bottomNavigationView;
-    ImageView profile_image;
+    CardView logout,setting;
+
+    CircleImageView myimage;
+    TextView user_name,profile_status;
+
+
+    private FirebaseAuth mAuth;
+    private DatabaseReference reference;
+    private String currentUserID;
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_account);
-        Notification = findViewById(R.id.Notification);
-        profile_image=findViewById(R.id.profile_image2);
-        username=findViewById(R.id.username_viewProfile1);
-        help=findViewById(R.id.help);
+
+        myimage=findViewById(R.id.visit_profile_image);
+        user_name=findViewById(R.id.visit_user_name);
+        profile_status=findViewById(R.id.visit_profile_status);
+
         setting=findViewById(R.id.settings);
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         setting.setOnClickListener(this);
         logout=findViewById(R.id.LogOut);
         logout.setOnClickListener(this);
-        help.setOnClickListener(this);
-        user= FirebaseAuth.getInstance().getCurrentUser();
-        userID=user.getUid();
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUserID = mAuth.getCurrentUser().getUid();
         reference= FirebaseDatabase.getInstance().getReference("users");
-        reference.child(userID).addValueEventListener(new ValueEventListener() {
+
+        reference.child(currentUserID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-
                 userDB userProfile=snapshot.getValue(userDB.class);
-                type_account =userProfile.getAccountType();
-                username.setText(userProfile.getUsername());
-                Glide.with(user_account.this).load(userProfile.getProfile_image()).apply(new RequestOptions().centerCrop().placeholder(R.drawable.user)).into(profile_image);
-
-
+                if (userProfile !=null){
+                    user_name.setText(userProfile.getUsername());
+                    profile_status.setText(userProfile.getEmail());
+                    Picasso.get().load(userProfile.getProfile_image()).placeholder(R.drawable.user).into(myimage);
+                }
             }
 
             @Override
@@ -79,15 +85,13 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                         Intent intent1 = new Intent(user_account.this, home.class);
                         startActivity(intent1);
                         break;
-                    case R.id.ptofile:
-                        Intent intent2 = new Intent(user_account.this, user_account.class);
+                    case R.id.message:
+                        Intent intent2 = new Intent(user_account.this, herbalist.class);
                         startActivity(intent2);
                         break;
                     case R.id.search:
                         startActivity(new Intent(user_account.this, search.class));
                         break;
-
-
                 }
                 return true;
             }
@@ -101,11 +105,6 @@ public class user_account extends AppCompatActivity implements View.OnClickListe
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(user_account.this, sign_in.class));
 
-                break;
-            case R.id.help:
-                if(type_account.equals("Admin Account")) {
-                    startActivity(new Intent(user_account.this, confirm_list.class));
-                }
                 break;
             case R.id.settings:
                 startActivity(new Intent(user_account.this, settings.class));

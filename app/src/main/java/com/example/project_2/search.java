@@ -16,8 +16,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_2.Models.plantBD;
+import com.example.project_2.Models.userDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,6 +40,10 @@ public class search extends AppCompatActivity {
     TabLayout tabLayout;
     TextView symptoms;
 
+    String type_account;
+    private DatabaseReference reference;
+    private  String userID;
+
     boolean[]selectedsymptoms;
     ArrayList<Integer> symptomsList =new ArrayList<>();
     String [] symptomsArray={"Fatigue","Fever","Stomachache","Headache","Nausea","Skin irritation",
@@ -47,6 +53,23 @@ public class search extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+
+        userID= FirebaseAuth.getInstance().getCurrentUser().getUid();
+        reference= FirebaseDatabase.getInstance().getReference("users");
+        reference.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                userDB userProfile=snapshot.getValue(userDB.class);
+                type_account =userProfile.getAccountType();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
         selectedsymptoms = new boolean[symptomsArray.length];
         modelList =new ArrayList<>();
         recyclerView=findViewById(R.id.recyclerView);
@@ -173,9 +196,24 @@ public class search extends AppCompatActivity {
                         startActivity(intent1);
                         break;
                     case R.id.ptofile:
-                        Intent intent2 = new Intent(search.this, user_account.class);
-                        startActivity(intent2);
-                        break;
+                        if(type_account.equals("Admin Account"))
+                        {
+                            Intent intent2 = new Intent(search.this, AdminProfile.class);
+                            startActivity(intent2);
+                            break;
+                        }
+                        else if(type_account.equals("Herbalist Account"))
+                        {
+                            Intent intent2 = new Intent(search.this, HerbalistProfile.class);
+                            startActivity(intent2);
+                            break;
+                        }
+                        else
+                        {
+                            Intent intent2 = new Intent(search.this, user_account.class);
+                            startActivity(intent2);
+                            break;
+                        }
                     case R.id.search:
                         startActivity(new Intent(search.this, search.class));
                         break;

@@ -14,7 +14,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_2.Models.plantGalleryModel;
 import com.example.project_2.Models.plantInfoModel;
+import com.example.project_2.Models.userDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,25 +38,58 @@ public class home extends AppCompatActivity {
     plantGalleryAdapter galleryAdapter;
     List<plantGalleryModel> galleryModels;
 
+    String type_account;
+    private DatabaseReference reference;
+    private  String userID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
 
+        userID= FirebaseAuth.getInstance().getCurrentUser().getUid();
+        reference= FirebaseDatabase.getInstance().getReference("users");
+        reference.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                userDB userProfile=snapshot.getValue(userDB.class);
+                type_account =userProfile.getAccountType();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
-                    case R.id.home:
-                        Intent intent1 = new Intent(home.this, add_plant.class);
+                    case R.id.message:
+                        Intent intent1 = new Intent(home.this, herbalist.class);
                         startActivity(intent1);
                         break;
                     case R.id.ptofile:
-
-                        Intent intent2 = new Intent(home.this, user_account.class);
-                        startActivity(intent2);
-                        break;
+                        if(type_account.equals("Admin Account"))
+                        {
+                            Intent intent2 = new Intent(home.this, AdminProfile.class);
+                            startActivity(intent2);
+                            break;
+                        }
+                        else if(type_account.equals("Herbalist Account"))
+                        {
+                            Intent intent2 = new Intent(home.this, HerbalistProfile.class);
+                            startActivity(intent2);
+                            break;
+                        }
+                        else
+                        {
+                            Intent intent2 = new Intent(home.this, user_account.class);
+                            startActivity(intent2);
+                            break;
+                        }
                     case R.id.search:
                         startActivity(new Intent(home.this, search.class));
                         break;

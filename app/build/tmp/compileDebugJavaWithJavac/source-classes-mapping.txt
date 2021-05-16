@@ -13,6 +13,17 @@ com/example/project_2/update_plant.java
  com.example.project_2.update_plant$7
  com.example.project_2.update_plant$8
  com.example.project_2.update_plant$8$1
+com/example/project_2/ChatActivity.java
+ com.example.project_2.ChatActivity
+ com.example.project_2.ChatActivity$1
+ com.example.project_2.ChatActivity$2
+ com.example.project_2.ChatActivity$2$1
+ com.example.project_2.ChatActivity$3
+ com.example.project_2.ChatActivity$4
+ com.example.project_2.ChatActivity$4$1
+ com.example.project_2.ChatActivity$5
+ com.example.project_2.ChatActivity$6
+ com.example.project_2.ChatActivity$7
 com/example/project_2/plantInfoRecyclerAdapter.java
  com.example.project_2.plantInfoRecyclerAdapter
  com.example.project_2.plantInfoRecyclerAdapter$plantInfoViewHolder
@@ -20,6 +31,14 @@ com/example/project_2/user_account.java
  com.example.project_2.user_account
  com.example.project_2.user_account$1
  com.example.project_2.user_account$2
+com/example/project_2/AdminProfile.java
+ com.example.project_2.AdminProfile
+ com.example.project_2.AdminProfile$1
+ com.example.project_2.AdminProfile$2
+ com.example.project_2.AdminProfile$3
+ com.example.project_2.AdminProfile$4
+ com.example.project_2.AdminProfile$5
+ com.example.project_2.AdminProfile$6
 com/example/project_2/gallery_recycler.java
  com.example.project_2.gallery_recycler
  com.example.project_2.gallery_recycler$1
@@ -28,8 +47,6 @@ com/example/project_2/confirm_list.java
  com.example.project_2.confirm_list
  com.example.project_2.confirm_list$1
  com.example.project_2.confirm_list$2
-com/example/project_2/userDB.java
- com.example.project_2.userDB
 com/example/project_2/settings.java
  com.example.project_2.settings
 com/example/project_2/Terms_Condition.java
@@ -43,6 +60,9 @@ com/example/project_2/searchadapter.java
  com.example.project_2.searchadapter
  com.example.project_2.searchadapter$1
  com.example.project_2.searchadapter$MyViweHolder
+com/example/project_2/herbalist.java
+ com.example.project_2.herbalist
+ com.example.project_2.herbalist$1
 com/example/project_2/add_plant.java
  com.example.project_2.add_plant
  com.example.project_2.add_plant$1
@@ -72,6 +92,12 @@ com/example/project_2/Models/userDB.java
  com.example.project_2.Models.userDB
 com/example/project_2/BuildConfig.java
  com.example.project_2.BuildConfig
+com/example/project_2/GroupsFragment.java
+ com.example.project_2.GroupsFragment
+ com.example.project_2.GroupsFragment$1
+ com.example.project_2.GroupsFragment$1$1
+ com.example.project_2.GroupsFragment$1$2
+ com.example.project_2.GroupsFragment$herbalistViewHolder
 com/example/project_2/forget_password.java
  com.example.project_2.forget_password
  com.example.project_2.forget_password$1
@@ -79,13 +105,35 @@ com/example/project_2/Confirmadapter.java
  com.example.project_2.Confirmadapter
  com.example.project_2.Confirmadapter$1
  com.example.project_2.Confirmadapter$MyViweHolder
+com/example/project_2/HerbalistProfile.java
+ com.example.project_2.HerbalistProfile
+ com.example.project_2.HerbalistProfile$1
+ com.example.project_2.HerbalistProfile$2
+ com.example.project_2.HerbalistProfile$3
+ com.example.project_2.HerbalistProfile$4
+ com.example.project_2.HerbalistProfile$5
 com/example/project_2/searchable.java
  com.example.project_2.searchable
 com/example/project_2/Models/firDB.java
  com.example.project_2.Models.firDB
+com/example/project_2/ProfileActivity.java
+ com.example.project_2.ProfileActivity
+ com.example.project_2.ProfileActivity$1
+ com.example.project_2.ProfileActivity$1$1
+ com.example.project_2.ProfileActivity$2
+com/example/project_2/MessageAdapter.java
+ com.example.project_2.MessageAdapter
+ com.example.project_2.MessageAdapter$1
+ com.example.project_2.MessageAdapter$MessageViewHolder
 com/example/project_2/privacy_policy.java
  com.example.project_2.privacy_policy
  com.example.project_2.privacy_policy$1
+com/example/project_2/ChatsFragment.java
+ com.example.project_2.ChatsFragment
+ com.example.project_2.ChatsFragment$1
+ com.example.project_2.ChatsFragment$1$1
+ com.example.project_2.ChatsFragment$1$2
+ com.example.project_2.ChatsFragment$ChatsViewHolder
 com/example/project_2/view_plant.java
  com.example.project_2.view_plant
  com.example.project_2.view_plant$1
@@ -103,13 +151,12 @@ com/example/project_2/search.java
  com.example.project_2.search$1
  com.example.project_2.search$2
  com.example.project_2.search$3
- com.example.project_2.search$3$1
- com.example.project_2.search$3$1$1
- com.example.project_2.search$3$1$2
- com.example.project_2.search$3$1$3
  com.example.project_2.search$4
-com/example/project_2/Verification.java
- com.example.project_2.Verification
+ com.example.project_2.search$4$1
+ com.example.project_2.search$4$1$1
+ com.example.project_2.search$4$1$2
+ com.example.project_2.search$4$1$3
+ com.example.project_2.search$5
 com/example/project_2/ViewConfirm.java
  com.example.project_2.ViewConfirm
  com.example.project_2.ViewConfirm$1
@@ -143,10 +190,15 @@ com/example/project_2/sign_up.java
  com.example.project_2.sign_up$1$3$1
 com/example/project_2/Models/plantBD.java
  com.example.project_2.Models.plantBD
+com/example/project_2/TabsAccessorAdapter.java
+ com.example.project_2.TabsAccessorAdapter
+com/example/project_2/Models/Messages.java
+ com.example.project_2.Models.Messages
 com/example/project_2/home.java
  com.example.project_2.home
  com.example.project_2.home$1
  com.example.project_2.home$2
+ com.example.project_2.home$3
 com/example/project_2/JSSEProvider.java
  com.example.project_2.JSSEProvider
  com.example.project_2.JSSEProvider$1

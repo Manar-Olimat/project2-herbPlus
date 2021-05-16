@@ -12,13 +12,21 @@
     <uses-feature android:name="android.hardware.camera.flash" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".gallery_recycler"></activity>
+        <activity android:name=".AdminProfile"></activity>
+        <activity android:name=".HerbalistProfile" />
+        <activity
+            android:name=".ChatActivity"
+            android:parentActivityName=".herbalist" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".herbalist" />
+        <activity android:name=".gallery_recycler" />
         <activity android:name=".update_plant" />
         <activity android:name=".Terms_Condition" />
         <activity android:name=".privacy_policy" />
@@ -30,7 +38,6 @@
         <activity android:name=".confirm_list" />
         <activity android:name=".view_plant" />
         <activity android:name=".search" />
-        <activity android:name=".Verification" />
         <activity android:name=".forget_password" />
         <activity android:name=".add_plant" />
         <activity android:name=".Edit_userprofile" />
