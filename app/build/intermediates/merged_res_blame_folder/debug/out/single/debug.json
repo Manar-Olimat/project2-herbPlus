@@ -72,16 +72,16 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_cancel.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_leaf.jpg.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\leaf.jpg"
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_cranberries.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\cranberries.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_root.jpg.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\root.jpg"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_cranberries.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\cranberries.png"
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_leaf.jpg.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\leaf.jpg"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_vegetables_icon.png.flat",
@@ -104,12 +104,12 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_camera_24.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard_black_24dp.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_leaf_icon.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\leaf_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_dashboard_black_24dp.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_dashboard_black_24dp.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_exit.xml.flat",
@@ -152,12 +152,12 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\cranberries.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_change_password.xml.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_change_password.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_lock.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\lock.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_change_password.xml.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_change_password.xml"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_oranges.png.flat",
@@ -196,12 +196,12 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\watercress.jpg"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_flower_icon.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\flower_icon.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_camera_24.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_camera_24.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_flower_icon.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-mdpi\\flower_icon.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_view_plant.xml.flat",
@@ -212,24 +212,24 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-ldpi\\sign_rose.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_profile.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\profile.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_profile.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\profile.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_forgetpass.png.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\forgetpass.png"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_idintify_herb.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\idintify_herb.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_forgetpass.png.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\forgetpass.png"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_watercress.jpg.flat",
@@ -248,12 +248,12 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_searchable.xml"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_terms__condition.xml.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_terms__condition.xml"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_frame2.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\frame2.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_terms__condition.xml.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\layout\\activity_terms__condition.xml"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_oak_tree.jpg.flat",
@@ -264,12 +264,12 @@
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xhdpi\\forgetpass.png"
     },
     {
-        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_carrot.jpg.flat",
-        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\carrot.jpg"
-    },
-    {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_plant_fact.png.flat",
         "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-xxhdpi\\plant_fact.png"
+    },
+    {
+        "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_carrot.jpg.flat",
+        "source": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\src\\main\\res\\drawable-hdpi\\carrot.jpg"
     },
     {
         "merged": "C:\\Users\\HP\\OneDrive\\Documents\\project2-herbPlus\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_verf_button.png.flat",
