@@ -13,8 +13,10 @@
         android:layout_height="wrap_content">
 
         <include
+
             android:id="@+id/main_page_toolbar"
             layout="@layout/herbalist_app_bar">
+
         </include>
 
         <com.google.android.material.tabs.TabLayout
@@ -23,6 +25,8 @@
             android:layout_height="wrap_content"
             android:background="@color/PrimaryShade_2">
         </com.google.android.material.tabs.TabLayout>
+
+
 
     </com.google.android.material.appbar.AppBarLayout>
 

@@ -128,7 +128,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
 
         switch (v.getId()){
             case R.id.topAppBar:
-                startActivity(new Intent(Edit_userprofile.this, user_account.class));
+                startActivity(new Intent(Edit_userprofile.this, settings.class));
                break;
             case R.id.updateProfile2:
                 final String usernameValue=username.getText().toString().trim();
@@ -162,6 +162,8 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
                 reference.child(userID).child("username").setValue(usernameValue);
                 reference.child(userID).child("accountType").setValue(finalAccountTypeValue);
                 reference.child(userID).child("email").setValue(emailValue);
+                reference.child(userID).child("id").setValue(user.getUid());
+
                 AuthCredential credential = EmailAuthProvider
                         .getCredential(Objects.requireNonNull(user.getEmail()), password);
                 user.reauthenticate(credential)

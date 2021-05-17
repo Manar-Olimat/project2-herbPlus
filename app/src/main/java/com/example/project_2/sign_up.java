@@ -157,9 +157,9 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
                                                         @Override
                                                         public void onSuccess(Uri uri) {
                                                             final Uri downloadUrl = uri;
-
                                                             if(downloadUrl!=null){
                                                                 reference.child("username").setValue(usernameValue);
+                                                                reference.child("id").setValue(user.getUid());
                                                                 reference.child("email").setValue(emailValue);
                                                                 reference.child("password").setValue(passwordValue);
                                                                 reference.child("accountType").setValue(finalAccountTypeValue);

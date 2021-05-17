@@ -49,6 +49,7 @@ com/example/project_2/confirm_list.java
  com.example.project_2.confirm_list$2
 com/example/project_2/settings.java
  com.example.project_2.settings
+ com.example.project_2.settings$1
 com/example/project_2/Terms_Condition.java
  com.example.project_2.Terms_Condition
  com.example.project_2.Terms_Condition$1
@@ -97,7 +98,7 @@ com/example/project_2/GroupsFragment.java
  com.example.project_2.GroupsFragment$1
  com.example.project_2.GroupsFragment$1$1
  com.example.project_2.GroupsFragment$1$2
- com.example.project_2.GroupsFragment$herbalistViewHolder
+ com.example.project_2.GroupsFragment$2
 com/example/project_2/forget_password.java
  com.example.project_2.forget_password
  com.example.project_2.forget_password$1
@@ -181,10 +182,11 @@ com/example/project_2/plantTypeGalleryAdapter.java
 com/example/project_2/sign_in.java
  com.example.project_2.sign_in
  com.example.project_2.sign_in$1
-com/example/project_2/Myadapter.java
- com.example.project_2.Myadapter
- com.example.project_2.Myadapter$1
- com.example.project_2.Myadapter$MyViweHolder
+com/example/project_2/herbalistAdapter.java
+ com.example.project_2.herbalistAdapter
+ com.example.project_2.herbalistAdapter$1
+ com.example.project_2.herbalistAdapter$2
+ com.example.project_2.herbalistAdapter$herbalistViewHolder
 com/example/project_2/sign_up.java
  com.example.project_2.sign_up
  com.example.project_2.sign_up$1

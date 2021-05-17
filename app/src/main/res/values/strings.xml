@@ -7,36 +7,19 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="emailToast">You must enter email to register!</string>
+
     <string name="Marigold">Marigold health benefits:
 Soothes skin and treats skin diseases
 Reduces inflammation
 Strong antibacterial and antiseptic properties
-Treats ear pain and infection
 Strengthens eyes</string>
+
     <string name="Catnip">
-    Catnip is a fun plant for cats. Most cats are attracted to the plant and will
-    roll around near it since its aroma acts as a stimulant. These medicinal plants also act as a
-    sedative for cats if consumed. For humans, on the other hand, it is normally used as a stress reliever,
-    sleep aid and a solution for skin issues. The majority of its health benefits come from the presence of nepetalactone,
-    thymol and other compounds that make this plant great for you and your furry friend.
-
-Catnip health benefits:
-1.Repels bugs and relieves irritation from bug bites.
-2.Calms restlessness, anxiety and stress.
-3.Relieves stomach discomfort.
-4.Accelerates recovery from colds and fevers.</string>
+        Catnip is a fun plant for cats. Most cats are attracted to the plant and will roll around near it since its aroma acts as a stimulant.
+    </string>
     <string name="Gingko">
-        As one of the oldest tree species, gingko is also one of the oldest homeopathic plants and a
-        key herb in Chinese medicine. The leaves are used to create capsules, tablets, and extracts,
-        and when dried, can be consumed as a tea.
+        gingko is one of the oldest homeopathic plants and a key herb in Chinese medicine. The leaves are used to create capsules, tablets, and extracts, and when dried, can be consumed as a tea.
 
-    It’s perhaps best-known for its ability to boost brain health. Studies say that gingko can treat
-        patients with mild to moderate dementiaTrusted Source, and can slow cognition decline in
-        dementia and Alzheimer’s disease.
-
-    Recent research is looking into a component that can help diabetes,
-        and there continue to be more studies, including an animal study
-        that says it might influence bone healing.
     </string>
     <string name="Turmeric">
        <b> Turmeric could be beneficial for:</b>
@@ -47,10 +30,9 @@ several skin diseases.
     </string>
 
     <string name="Moonflowers">
-       <b> INTERESTING FACT</b>
-Evening primrose flowers are also called moonflower
-        because they bloom as the sun begins to set. People often say they smell like lemons.
+Evening primrose flowers are also called moonflower because they bloom as the sun begins to set. People often say they smell like lemons.
     </string>
+
     <string name="privacypolicy">
         <b>Privacy Policy of plant plus, Inc.</b>
           \n\n

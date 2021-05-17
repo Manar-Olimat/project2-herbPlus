@@ -2,6 +2,7 @@ package com.example.project_2.Models;
 
 public class userDB {
     String username;
+    String id;
     String email;
     String password;
     String accountType;
@@ -10,8 +11,9 @@ public class userDB {
     public userDB() {
     }
 
-    public userDB(String username, String email, String password, String accountType,String profile_image ) {
+    public userDB(String username, String email, String password, String accountType,String profile_image,String id ) {
         this.username = username;
+        this.id=id;
         this.email = email;
         this.password = password;
         this.accountType = accountType;
@@ -56,6 +58,14 @@ public class userDB {
 
     public void setProfile_image(String profile_image) {
         this.profile_image = profile_image;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
 

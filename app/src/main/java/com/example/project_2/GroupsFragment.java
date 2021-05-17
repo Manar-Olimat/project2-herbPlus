@@ -1,37 +1,25 @@
 package com.example.project_2;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.SearchView;
-import android.widget.TextView;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.project_2.Models.userDB;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
-import de.hdodenhof.circleimageview.CircleImageView;
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -41,8 +29,11 @@ import de.hdodenhof.circleimageview.CircleImageView;
 public class GroupsFragment extends Fragment {
     private View ContactsView;
     private RecyclerView myContactsList;
+    private SearchView searchView;
     private DatabaseReference UsersRef;
-    private String accountType="Herbalist Account";
+    ArrayList<userDB> modelList;
+
+    private final String accountType="Herbalist Account";
 
     private FirebaseAuth mAuth;
     private String currentUserID="";
@@ -101,6 +92,153 @@ public class GroupsFragment extends Fragment {
         myContactsList = (RecyclerView) ContactsView.findViewById(R.id.contacts_list);
         myContactsList.setLayoutManager(new LinearLayoutManager(getContext()));
 
+        searchView=ContactsView.findViewById(R.id.search_herbalist);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+
+                UsersRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()){
+                            modelList=new ArrayList<>();
+                            String visit_user_id =snapshot.getRef().getKey();
+                            userDB user;
+
+                            for(DataSnapshot ds:snapshot.getChildren()){
+                                user=ds.getValue(userDB.class);
+                                if(user.getAccountType().equals(accountType)&& user.getUsername().contains(query)){
+                                    modelList.add(ds.getValue(userDB.class));
+
+                                }
+                            }
+
+                            herbalistAdapter myadapter=new herbalistAdapter(modelList,getContext());
+                            myContactsList.setAdapter(myadapter);
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                UsersRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if(snapshot.exists()){
+                            modelList=new ArrayList<>();
+                            String visit_user_id =snapshot.getRef().getKey();
+                            userDB user;
+
+                            for(DataSnapshot ds:snapshot.getChildren()){
+                                user=ds.getValue(userDB.class);
+                                if(user.getAccountType().equals(accountType)&& user.getUsername().contains(newText)){
+                                    modelList.add(ds.getValue(userDB.class));
+
+                                }
+                            }
+
+                            herbalistAdapter myadapter=new herbalistAdapter(modelList,getContext());
+                            myContactsList.setAdapter(myadapter);
+
+                        }
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+
+                    }
+                });
+               /* FirebaseRecyclerOptions<userDB> options =
+                        new FirebaseRecyclerOptions.Builder<userDB>()
+                                .setQuery(UsersRef.orderByChild("username").startAt(newText), userDB.class)
+                                .build();
+
+                FirebaseRecyclerAdapter<userDB, herbalistViewHolder> adapter =new FirebaseRecyclerAdapter<userDB, herbalistViewHolder>(options) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull herbalistViewHolder holder, int position, @NonNull userDB model) {
+
+                        String visit_user_id = getRef(position).getKey();
+
+                        if(model.getAccountType().equals(accountType)){
+
+                            holder.userName.setText(model.getUsername());
+                            holder.userStatus.setText(model.getEmail());
+                            Glide.with(GroupsFragment.this).load(model.getProfile_image()).apply(new RequestOptions().centerCrop().placeholder(R.drawable.user)).into(holder.profileImage);
+
+                            UsersRef.child(visit_user_id).addValueEventListener(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    if (snapshot.child("userState").hasChild("state"))
+                                    {
+                                        String state = snapshot.child("userState").child("state").getValue().toString();
+                                        String date = snapshot.child("userState").child("date").getValue().toString();
+                                        String time = snapshot.child("userState").child("time").getValue().toString();
+
+                                        if (state.equals("online"))
+                                        {
+                                            holder.onlineIcon.setVisibility(View.VISIBLE);
+                                        }
+                                        else if (state.equals("offline"))
+                                        {
+                                            holder.onlineIcon.setVisibility(View.INVISIBLE);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        holder.onlineIcon.setVisibility(View.INVISIBLE);
+                                    }
+                                }
+
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
+                                }
+                            });
+
+
+                        }
+                        else{
+
+                        }
+
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view)
+                            {
+                                Intent profileIntent = new Intent(getContext(), ProfileActivity.class);
+                                profileIntent.putExtra("visit_user_id", visit_user_id);
+                                startActivity(profileIntent);
+                            }
+                        });
+
+                    }
+
+                    @NonNull
+                    @Override
+                    public herbalistViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
+                        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.users_display_layout, viewGroup, false);
+                        herbalistViewHolder viewHolder = new herbalistViewHolder(view);
+                        return viewHolder;
+                    }
+                };
+                myContactsList.setAdapter(adapter);
+                adapter.startListening();*/
+
+                return false;
+            }
+        });
+
+
         return ContactsView;
     }
 
@@ -108,93 +246,34 @@ public class GroupsFragment extends Fragment {
     public void onStart() {
         super.onStart();
         //userDB userProfile=snapshot.getValue(userDB.class);
-        FirebaseRecyclerOptions<userDB> options =
-                new FirebaseRecyclerOptions.Builder<userDB>()
-                        .setQuery(UsersRef, userDB.class)
-                        .build();
-
-        FirebaseRecyclerAdapter<userDB, herbalistViewHolder> adapter =new FirebaseRecyclerAdapter<userDB, herbalistViewHolder>(options) {
+        UsersRef.addValueEventListener(new ValueEventListener() {
             @Override
-            protected void onBindViewHolder(@NonNull herbalistViewHolder holder, int position, @NonNull userDB model) {
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(snapshot.exists()){
+                    modelList=new ArrayList<>();
+                    String visit_user_id =snapshot.getRef().getKey();
+                    userDB user;
 
-                String visit_user_id = getRef(position).getKey();
+                    for(DataSnapshot ds:snapshot.getChildren()){
+                        user=ds.getValue(userDB.class);
+                        if(user.getAccountType().equals(accountType)){
+                            modelList.add(ds.getValue(userDB.class));
 
-                if(model.getAccountType().equals(accountType)){
-                    if(!(currentUserID.equals(visit_user_id)))
-                    {
-                        holder.userName.setText(model.getUsername());
-                        holder.userStatus.setText(model.getEmail());
-                        Glide.with(GroupsFragment.this).load(model.getProfile_image()).apply(new RequestOptions().centerCrop().placeholder(R.drawable.user)).into(holder.profileImage);
-
-                        UsersRef.child(visit_user_id).addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                if (snapshot.child("userState").hasChild("state"))
-                                {
-                                    String state = snapshot.child("userState").child("state").getValue().toString();
-                                    String date = snapshot.child("userState").child("date").getValue().toString();
-                                    String time = snapshot.child("userState").child("time").getValue().toString();
-
-                                    if (state.equals("online"))
-                                    {
-                                        holder.onlineIcon.setVisibility(View.VISIBLE);
-                                    }
-                                    else if (state.equals("offline"))
-                                    {
-                                        holder.onlineIcon.setVisibility(View.INVISIBLE);
-                                    }
-                                }
-                                else
-                                {
-                                    holder.onlineIcon.setVisibility(View.INVISIBLE);
-                                }
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-                            }
-                        });
+                        }
                     }
+
+                    herbalistAdapter myadapter=new herbalistAdapter(modelList,getContext());
+                    myContactsList.setAdapter(myadapter);
+
                 }
 
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view)
-                    {
-                        Intent profileIntent = new Intent(getContext(), ProfileActivity.class);
-                        profileIntent.putExtra("visit_user_id", visit_user_id);
-                        startActivity(profileIntent);
-                    }
-                });
-
             }
 
-            @NonNull
             @Override
-            public herbalistViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
-                View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.users_display_layout, viewGroup, false);
-                herbalistViewHolder viewHolder = new herbalistViewHolder(view);
-                return viewHolder;
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
-        };
-        myContactsList.setAdapter(adapter);
-        adapter.startListening();
-    }
+        });
 
-    public static class herbalistViewHolder extends RecyclerView.ViewHolder
-    {
-        TextView userName, userStatus;
-        CircleImageView profileImage;
-        ImageView onlineIcon;
-
-        public herbalistViewHolder(@NonNull View itemView)
-        {
-            super(itemView);
-
-            userName = itemView.findViewById(R.id.user_profile_name);
-            userStatus = itemView.findViewById(R.id.user_status);
-            profileImage = itemView.findViewById(R.id.users_profile_image);
-            onlineIcon = (ImageView) itemView.findViewById(R.id.user_online_status);
-        }
     }
 }
