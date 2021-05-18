@@ -101,7 +101,7 @@ public class herbalist extends AppCompatActivity {
         onlineStateMap.put("date", saveCurrentDate);
         onlineStateMap.put("state", state);
 
-        RootRef.child("Users").child(currentUserID).child("userState")
+        RootRef.child("users").child(currentUserID).child("userState")
                 .updateChildren(onlineStateMap);
 
     }
