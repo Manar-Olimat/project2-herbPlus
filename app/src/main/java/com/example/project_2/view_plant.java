@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -26,7 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class view_plant extends AppCompatActivity {
 
-    TextView name,symptom,description,information;
+    TextView name,symptom,description,information,parts,location;
     Button update,delete;
     DatabaseReference reference ,ref;
     FirebaseUser user;
@@ -50,6 +51,8 @@ public class view_plant extends AppCompatActivity {
         information=findViewById(R.id.information);
         update=findViewById(R.id.update);
         delete=findViewById(R.id.delete);
+        parts=findViewById(R.id.parts);
+        location=findViewById(R.id.location);
         image_plant=findViewById(R.id.image_plant);
         update.setVisibility(View.INVISIBLE);
         delete.setVisibility(View.INVISIBLE);
@@ -58,7 +61,9 @@ public class view_plant extends AppCompatActivity {
         String Symptoms = prefs.getString("Symptoms", "No name defined");
         String description1 = prefs.getString("description", "No name defined");
         String information1 = prefs.getString("information", "No name defined");
+        String used1=prefs.getString("used", "No name defined");
         String image_plant1=prefs.getString("plant_image", "No name defined");
+        String location1=prefs.getString("location", "No name defined");
 
 
         //Bundle bundle = getIntent().getExtras();
@@ -66,6 +71,8 @@ public class view_plant extends AppCompatActivity {
         symptom.setText(Symptoms);
         description.setText(description1);
         information.setText(information1);
+        parts.setText(used1);
+        location.setText(location1);
         Glide.with(view_plant.this).load(image_plant1).apply(new RequestOptions().centerCrop().centerInside().placeholder(R.drawable.plant)).into(image_plant);
 
         back=findViewById(R.id.back);
@@ -113,15 +120,16 @@ public class view_plant extends AppCompatActivity {
                         public void onClick(View v) {
 
                             AlertDialog.Builder builder1 = new AlertDialog.Builder(view_plant.this);
-                            builder1.setMessage("Do you want to delete the plant?");
+                            builder1.setMessage(getString(R.string.delete_plant));
                             builder1.setCancelable(false);
 
                             builder1.setPositiveButton(
-                                    "Yes",
+                                    getString(R.string.yes),
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
                                             ref = FirebaseDatabase.getInstance().getReference("plants").child(name1);
                                             ref.removeValue();
+                                            Toast.makeText(getApplicationContext(),getString(R.string.Plant_deleted),Toast.LENGTH_SHORT).show();
                                             Intent mainIntent = new Intent(view_plant.this, search.class);
                                             view_plant.this.startActivity(mainIntent);
 
@@ -129,7 +137,7 @@ public class view_plant extends AppCompatActivity {
                                     });
 
                             builder1.setNegativeButton(
-                                    "No",
+                                    getString(R.string.no),
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
                                             dialog.cancel();

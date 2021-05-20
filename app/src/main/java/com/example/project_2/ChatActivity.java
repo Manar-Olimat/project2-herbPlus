@@ -1,5 +1,20 @@
 package com.example.project_2;
 
+import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
@@ -9,22 +24,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ProgressDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
-import android.text.TextUtils;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.TextView;
-import android.view.LayoutInflater;
-import android.widget.Toast;
-
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.example.project_2.Models.Messages;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -139,10 +138,10 @@ public class ChatActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CharSequence options[]=new CharSequence[]
                         {
-                          "Gallery", "Cancel"
+                          getString(R.string.gallery), getString(R.string.cancel)
                         };
                 AlertDialog.Builder builder=new AlertDialog.Builder(ChatActivity.this);
-                builder.setTitle("Select Image");
+                builder.setTitle(getString(R.string.Select_image));
                 builder.setItems(options, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -167,6 +166,7 @@ public class ChatActivity extends AppCompatActivity {
     private void DisplayLastSeen() {
         RootRef.child("users").child(messageReceiverID)
                 .addValueEventListener(new ValueEventListener() {
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if (snapshot.child("userState").hasChild("state"))
@@ -201,8 +201,8 @@ public class ChatActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 438 && resultCode == RESULT_OK && data != null && data.getData() != null) {
 
-            loadingBar.setTitle("Sending Image");
-            loadingBar.setMessage("Please wait...");
+            loadingBar.setTitle(getString(R.string.Sending_image));
+            loadingBar.setMessage(getString(R.string.Please_wait));
             loadingBar.setCanceledOnTouchOutside(false);
             loadingBar.show();
 
@@ -256,12 +256,12 @@ public class ChatActivity extends AppCompatActivity {
                                 if (task.isSuccessful())
                                 {
                                     loadingBar.dismiss();
-                                    Toast.makeText(ChatActivity.this, "Image Sent Successfully...", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ChatActivity.this, getString(R.string.Image_successfully), Toast.LENGTH_SHORT).show();
                                 }
                                 else
                                 {
                                     loadingBar.dismiss();
-                                    Toast.makeText(ChatActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(ChatActivity.this, getString(R.string.error), Toast.LENGTH_SHORT).show();
                                 }
                                 MessageInputText.setText("");
                             }
@@ -272,7 +272,7 @@ public class ChatActivity extends AppCompatActivity {
         }
         else {
             loadingBar.dismiss();
-            Toast.makeText(ChatActivity.this, "something went wrong!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(ChatActivity.this, getString(R.string.Try_Again), Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -317,7 +317,7 @@ public class ChatActivity extends AppCompatActivity {
 
         if (TextUtils.isEmpty(messageText))
         {
-            Toast.makeText(this, "write your message first...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.write_message), Toast.LENGTH_SHORT).show();
         }
         else
         {
@@ -349,7 +349,7 @@ public class ChatActivity extends AppCompatActivity {
                     }
                     else
                     {
-                        Toast.makeText(ChatActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ChatActivity.this, getString(R.string.error), Toast.LENGTH_SHORT).show();
                     }
                     MessageInputText.setText("");
                 }

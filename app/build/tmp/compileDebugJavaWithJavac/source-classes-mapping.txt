@@ -5,6 +5,10 @@ com/example/project_2/plantGalleryAdapter.java
 com/example/project_2/update_plant.java
  com.example.project_2.update_plant
  com.example.project_2.update_plant$1
+ com.example.project_2.update_plant$10
+ com.example.project_2.update_plant$11
+ com.example.project_2.update_plant$12
+ com.example.project_2.update_plant$12$1
  com.example.project_2.update_plant$2
  com.example.project_2.update_plant$3
  com.example.project_2.update_plant$4
@@ -12,7 +16,7 @@ com/example/project_2/update_plant.java
  com.example.project_2.update_plant$6
  com.example.project_2.update_plant$7
  com.example.project_2.update_plant$8
- com.example.project_2.update_plant$8$1
+ com.example.project_2.update_plant$9
 com/example/project_2/ChatActivity.java
  com.example.project_2.ChatActivity
  com.example.project_2.ChatActivity$1
@@ -50,6 +54,7 @@ com/example/project_2/confirm_list.java
 com/example/project_2/settings.java
  com.example.project_2.settings
  com.example.project_2.settings$1
+ com.example.project_2.settings$2
 com/example/project_2/Terms_Condition.java
  com.example.project_2.Terms_Condition
  com.example.project_2.Terms_Condition$1
@@ -67,28 +72,32 @@ com/example/project_2/herbalist.java
 com/example/project_2/add_plant.java
  com.example.project_2.add_plant
  com.example.project_2.add_plant$1
+ com.example.project_2.add_plant$10
+ com.example.project_2.add_plant$10$1
+ com.example.project_2.add_plant$10$1$1
+ com.example.project_2.add_plant$10$1$1$1
+ com.example.project_2.add_plant$10$1$1$2
+ com.example.project_2.add_plant$10$1$1$3
+ com.example.project_2.add_plant$10$1$1$3$1
+ com.example.project_2.add_plant$10$1$2
+ com.example.project_2.add_plant$10$1$3
+ com.example.project_2.add_plant$10$1$4
+ com.example.project_2.add_plant$10$1$5
+ com.example.project_2.add_plant$10$1$5$1
+ com.example.project_2.add_plant$10$2
+ com.example.project_2.add_plant$10$2$1
+ com.example.project_2.add_plant$10$2$2
+ com.example.project_2.add_plant$10$2$3
+ com.example.project_2.add_plant$10$2$3$1
+ com.example.project_2.add_plant$10$3
  com.example.project_2.add_plant$2
  com.example.project_2.add_plant$3
  com.example.project_2.add_plant$4
  com.example.project_2.add_plant$5
  com.example.project_2.add_plant$6
- com.example.project_2.add_plant$6$1
- com.example.project_2.add_plant$6$1$1
- com.example.project_2.add_plant$6$1$1$1
- com.example.project_2.add_plant$6$1$1$2
- com.example.project_2.add_plant$6$1$1$3
- com.example.project_2.add_plant$6$1$1$3$1
- com.example.project_2.add_plant$6$1$2
- com.example.project_2.add_plant$6$1$3
- com.example.project_2.add_plant$6$1$4
- com.example.project_2.add_plant$6$1$5
- com.example.project_2.add_plant$6$1$5$1
- com.example.project_2.add_plant$6$2
- com.example.project_2.add_plant$6$2$1
- com.example.project_2.add_plant$6$2$2
- com.example.project_2.add_plant$6$2$3
- com.example.project_2.add_plant$6$2$3$1
- com.example.project_2.add_plant$6$3
+ com.example.project_2.add_plant$7
+ com.example.project_2.add_plant$8
+ com.example.project_2.add_plant$9
 com/example/project_2/Models/userDB.java
  com.example.project_2.Models.userDB
 com/example/project_2/BuildConfig.java
@@ -158,11 +167,14 @@ com/example/project_2/search.java
  com.example.project_2.search$4$1$2
  com.example.project_2.search$4$1$3
  com.example.project_2.search$5
+com/example/project_2/Verification.java
+ com.example.project_2.Verification
 com/example/project_2/ViewConfirm.java
  com.example.project_2.ViewConfirm
  com.example.project_2.ViewConfirm$1
- com.example.project_2.ViewConfirm$1$1
- com.example.project_2.ViewConfirm$1$2
+ com.example.project_2.ViewConfirm$2
+ com.example.project_2.ViewConfirm$2$1
+ com.example.project_2.ViewConfirm$2$2
 com/example/project_2/splashScreen.java
  com.example.project_2.splashScreen
  com.example.project_2.splashScreen$1

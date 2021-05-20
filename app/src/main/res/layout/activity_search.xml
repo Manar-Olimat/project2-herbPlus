@@ -46,7 +46,7 @@
                     android:layout_height="match_parent"
                     android:drawableEnd="@drawable/ic_search"
                     android:drawableTint="@color/PrimaryShade_10"
-                    android:hint="Select Symptoms"
+                    android:hint="@string/select_symptoms"
                     android:padding="12dp"
                     android:textColor="@android:color/black"
                     android:textColorHint="#555353"
@@ -66,12 +66,12 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Search by name" />
+                    android:text="@string/search_name" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Search by Symptoms" />
+                    android:text="@string/search_symptoms" />
 
 
             </com.google.android.material.tabs.TabLayout>

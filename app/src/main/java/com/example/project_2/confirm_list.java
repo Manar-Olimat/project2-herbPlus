@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,11 @@ public class confirm_list extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_confirm_list);
+        Bundle bundle = getIntent().getExtras();
+
+        if(bundle!=null){
+            sendMail(bundle.getString("email"),bundle.getString("text"));
+        }
         confirmplantBDS =new ArrayList<>();
         recyclerView=findViewById(R.id.recyclerView1);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -65,5 +71,16 @@ public class confirm_list extends AppCompatActivity {
 
             }
         });
+    }
+    private void sendMail(String mail,String message) {
+        String subject =getString(R.string.confirm_plant);
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, new String[]{mail});
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, "Choose an email client"));
+        Toast.makeText(getApplicationContext(), getString(R.string.send_email), Toast.LENGTH_SHORT).show();
+
     }
 }

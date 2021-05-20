@@ -67,7 +67,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="47dp"
                         android:layout_marginTop="10dp"
-                        android:text="Catnip (nepeta cataria)"
+                        android:text="@string/plant_name"
                         android:gravity="center"
                         android:textSize="18dp"
                         android:fontFamily="sans-serif-black"
@@ -94,7 +94,7 @@
                         android:fontFamily="sans-serif-black"
                         android:textSize="16dp"
 
-                        android:text="Symptoms treated by the plant"
+                        android:text="@string/symptoms"
                         android:textColor="@color/PrimaryShade_6"
                         app:layout_constraintEnd_toEndOf="@+id/view6"
                         app:layout_constraintHorizontal_bias="0.265"
@@ -113,13 +113,65 @@
                         app:layout_constraintHorizontal_bias="0.265"
                         app:layout_constraintStart_toStartOf="@+id/view6"
                         app:layout_constraintTop_toTopOf="@+id/view6" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="16dp"
+
+                        android:text="@string/parts"
+                        android:textColor="@color/PrimaryShade_6"
+                        app:layout_constraintEnd_toEndOf="@+id/view6"
+                        app:layout_constraintHorizontal_bias="0.265"
+                        app:layout_constraintStart_toStartOf="@+id/view6"
+                        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/parts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="paers"
+                        android:textSize="16dp"
+                        android:textColor="@color/PrimaryShade_6"
+                        app:layout_constraintEnd_toEndOf="@+id/view6"
+                        app:layout_constraintHorizontal_bias="0.265"
+                        app:layout_constraintStart_toStartOf="@+id/view6"
+                        app:layout_constraintTop_toTopOf="@+id/view6" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="sans-serif-black"
+                        android:textSize="16dp"
+
+                        android:text="@string/Place_origin"
+                        android:textColor="@color/PrimaryShade_6"
+                        app:layout_constraintEnd_toEndOf="@+id/view6"
+                        app:layout_constraintHorizontal_bias="0.265"
+                        app:layout_constraintStart_toStartOf="@+id/view6"
+                        app:layout_constraintTop_toTopOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="location"
+                        android:textSize="16dp"
+                        android:textColor="@color/PrimaryShade_6"
+                        app:layout_constraintEnd_toEndOf="@+id/view6"
+                        app:layout_constraintHorizontal_bias="0.265"
+                        app:layout_constraintStart_toStartOf="@+id/view6"
+                        app:layout_constraintTop_toTopOf="@+id/view6" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="16dp"
                         android:fontFamily="sans-serif-black"
-                        android:text="Did you know"
+                        android:text="@string/did"
                         android:textSize="16dp"
                         android:textColor="@color/PrimaryShade_6"
                         app:layout_constraintEnd_toEndOf="@+id/view6"
@@ -153,7 +205,7 @@
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
                             android:layout_marginRight="15dp"
-                            android:text="update "
+                            android:text="@string/update"
                             android:background="#73AC76"
 
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -163,7 +215,7 @@
                             android:id="@+id/delete"
                             android:layout_width="120dp"
                             android:layout_height="wrap_content"
-                            android:text="delete"
+                            android:text="@string/delete"
                             android:background="#73AC76"
 
                             app:layout_constraintBottom_toBottomOf="parent"

@@ -35,10 +35,10 @@ public class herbalist extends AppCompatActivity {
         mToolbar = (Toolbar) findViewById(R.id.main_page_toolbar);
         setSupportActionBar(mToolbar);
         getSupportActionBar().setLogo(R.drawable.arrow_back);
-        getSupportActionBar().setTitle(" Message");
+        getSupportActionBar().setTitle(getString(R.string.message));
 
         myViewPager = (ViewPager) findViewById(R.id.main_tabs_pager);
-        myTabsAccessorAdapter = new TabsAccessorAdapter(getSupportFragmentManager());
+        myTabsAccessorAdapter = new TabsAccessorAdapter(getSupportFragmentManager(),herbalist.this);
         myViewPager.setAdapter(myTabsAccessorAdapter);
 
         myTabLayout = (TabLayout) findViewById(R.id.main_tabs);

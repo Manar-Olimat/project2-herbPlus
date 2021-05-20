@@ -107,9 +107,11 @@ public class GroupsFragment extends Fragment {
 
                             for(DataSnapshot ds:snapshot.getChildren()){
                                 user=ds.getValue(userDB.class);
-                                if(user.getAccountType().equals(accountType)&& user.getUsername().contains(query)){
-                                    modelList.add(ds.getValue(userDB.class));
+                                if(user.getAccountType() !=null && user.getUsername()!=null){
 
+                                    if(user.getAccountType().equals(accountType)&& user.getUsername().equals(query)) {
+                                        modelList.add(ds.getValue(userDB.class));
+                                    }
                                 }
                             }
 
@@ -141,9 +143,11 @@ public class GroupsFragment extends Fragment {
 
                             for(DataSnapshot ds:snapshot.getChildren()){
                                 user=ds.getValue(userDB.class);
-                                if(user.getAccountType().equals(accountType)&& user.getUsername().contains(newText)){
-                                    modelList.add(ds.getValue(userDB.class));
+                                if(user.getAccountType() !=null && user.getUsername()!=null){
 
+                                    if(user.getAccountType().equals(accountType)&& user.getUsername().startsWith(newText)) {
+                                        modelList.add(ds.getValue(userDB.class));
+                                    }
                                 }
                             }
 
@@ -251,14 +255,14 @@ public class GroupsFragment extends Fragment {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     modelList=new ArrayList<>();
-                    String visit_user_id =snapshot.getRef().getKey();
                     userDB user;
 
                     for(DataSnapshot ds:snapshot.getChildren()){
                         user=ds.getValue(userDB.class);
-                        if(user.getAccountType().equals(accountType)){
-                            modelList.add(ds.getValue(userDB.class));
-
+                        if(user.getAccountType() !=null){
+                            if(user.getAccountType().equals(accountType)) {
+                                modelList.add(ds.getValue(userDB.class));
+                            }
                         }
                     }
 

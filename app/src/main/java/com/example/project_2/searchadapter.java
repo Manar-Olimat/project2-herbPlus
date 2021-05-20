@@ -54,12 +54,11 @@ public class searchadapter extends RecyclerView.Adapter<searchadapter.MyViweHold
                 editor.putString("information", list.get(position).getInformation());
                 editor.putString("plant_image",list.get(position).getPlant_image());
                 editor.putString("used",list.get(position).getUsed());
-
+                editor.putString("location",list.get(position).getLocation());
                 editor.apply();
                 Intent intent = new Intent(context, view_plant.class);
 
                 context.startActivity(intent);
-                System.out.println(list.get(position).getName()+" "+list.get(position).getSymptoms());
             }
         });    }
 

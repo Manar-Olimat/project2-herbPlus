@@ -21,7 +21,7 @@
         android:layout_height="?attr/actionBarSize"
         app:navigationIcon="@drawable/arrow_back"
         app:navigationIconColor="@color/PrimaryShade_10"
-        app:title="Update Plant"
+        app:title="@string/update_plant"
         app:titleTextColor="@color/PrimaryShade_10"
         tools:ignore="ExtraText">
 
@@ -95,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
-            android:text="Plant Name"
+            android:text="@string/plant_name"
             android:textColor="#4CAF50"
             android:gravity="center"
             android:fontFamily="sans-serif-black"
@@ -109,7 +109,7 @@
             android:layout_height="29dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="20dp"
-            android:text="Symptoms treated by the plant"
+            android:text="@string/symptoms"
             android:fontFamily="sans-serif-black"
 
             android:textColor="@android:color/black"
@@ -124,7 +124,34 @@
             android:background="@drawable/boarder"
             android:drawableEnd="@drawable/arrow_drop_down"
             android:drawableTint="@color/PrimaryShade_10"
-            android:hint="Select Symptoms"
+            android:hint="@string/select_symptoms"
+
+            android:padding="12dp"
+            android:textColor="@android:color/black"
+            android:textColorHint="#555353"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="205dp"
+            android:layout_height="29dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/Place_origin"
+            android:fontFamily="sans-serif-black"
+
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="317dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/boarder"
+            android:drawableEnd="@drawable/arrow_drop_down"
+            android:drawableTint="@color/PrimaryShade_10"
+            android:hint="@string/Select_location"
 
             android:padding="12dp"
             android:textColor="@android:color/black"
@@ -137,7 +164,7 @@
             android:layout_height="27dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="16dp"
-            android:text="Description"
+            android:text="@string/description"
             android:textColor="@android:color/black"
             android:fontFamily="sans-serif-black"
 
@@ -159,7 +186,7 @@
             android:layout_height="27dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="16dp"
-            android:text="Parts of plant that we use"
+            android:text="@string/parts"
             android:textColor="@android:color/black"
             android:fontFamily="sans-serif-black"
 
@@ -176,7 +203,7 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="#4CAF50"
-                android:text="Fruit"
+                android:text="@string/fruit"
                 android:textColor="@color/PrimaryShade_6" />
 
             <CheckBox
@@ -184,7 +211,7 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="#4CAF50"
-                android:text="Leaf"
+                android:text="@string/leaf"
                 android:textColor="@color/PrimaryShade_6" />
 
             <CheckBox
@@ -192,7 +219,7 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="#4CAF50"
-                android:text="Flower"
+                android:text="@string/flower"
                 android:textColor="@color/PrimaryShade_6" />
 
 
@@ -207,7 +234,7 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="#4CAF50"
-                android:text="Trees"
+                android:text="@string/trees"
                 android:textColor="@color/PrimaryShade_6" />
 
             <CheckBox
@@ -215,7 +242,7 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="#4CAF50"
-                android:text="Seeds"
+                android:text="@string/seeds"
                 android:textColor="@color/PrimaryShade_6" />
 
             <CheckBox
@@ -223,7 +250,7 @@
                 android:layout_width="115dp"
                 android:layout_height="wrap_content"
                 android:buttonTint="#4CAF50"
-                android:text="Roots"
+                android:text="@string/roots"
                 android:textColor="@color/PrimaryShade_6" />
 
 
@@ -234,7 +261,7 @@
             android:layout_height="27dp"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="16dp"
-            android:text="Did you know"
+            android:text="@string/did"
             android:textColor="@android:color/black"
             android:fontFamily="sans-serif-black"
 
@@ -259,7 +286,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="70dp"
             android:background="#4CAF50"
-            android:text="Update"
+            android:text="@string/update"
             android:textColor="#ffffff"
 
             android:textSize="25dp" />

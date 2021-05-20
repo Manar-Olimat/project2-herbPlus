@@ -50,6 +50,7 @@ public void onBindViewHolder(@NonNull plantTypeGalleryViewHolder holder, int pos
             editor.putString("information", modelList.get(position).getInformation());
             editor.putString("plant_image",modelList.get(position).getPlant_image());
             editor.putString("used",modelList.get(position).getUsed());
+            editor.putString("location",modelList.get(position).getLocation());
 
             editor.apply();
             Intent intent = new Intent(context, view_plant.class);

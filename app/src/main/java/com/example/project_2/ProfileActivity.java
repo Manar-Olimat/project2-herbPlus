@@ -1,12 +1,12 @@
 package com.example.project_2;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
@@ -17,7 +17,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -90,7 +89,7 @@ public class ProfileActivity extends AppCompatActivity {
                     String userName = userProfile.getUsername();
                     String userstatus = userProfile.getAccountType()+"\n"+userProfile.getEmail();
 
-                    Glide.with(ProfileActivity.this).load(userImage).apply(new RequestOptions().centerCrop().placeholder(R.drawable.user)).into(userProfileImage);
+                    Glide.with(getApplicationContext()).load(userProfile.getProfile_image()).apply(new RequestOptions().centerCrop().placeholder(R.drawable.user)).into(userProfileImage);
                     userProfileName.setText(userName);
                     userProfileStatus.setText(userstatus);
                 }

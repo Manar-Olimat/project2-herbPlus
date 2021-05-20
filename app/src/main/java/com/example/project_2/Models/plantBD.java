@@ -7,17 +7,19 @@ public class plantBD {
     String information;
     String plant_image;
     String used;
+    String location;
 
     public plantBD() {
     }
 
-    public plantBD(String name, String symptoms, String description,String information ,String plant_image, String used) {
+    public plantBD(String name, String symptoms, String description,String information ,String plant_image, String used ,String location) {
         this.name = name;
         this.Symptoms = symptoms;
         this.description = description;
         this.information=information;
         this.plant_image=plant_image;
         this.used=used;
+        this.location=location;
     }
 
 
@@ -67,4 +69,13 @@ public class plantBD {
     public void setUsed(String used) {
         this.used = used;
     }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
 }

@@ -53,6 +53,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDB userProfile=snapshot.getValue(userDB.class);
+
                 type_account =userProfile.getAccountType();
             }
 
@@ -72,6 +73,7 @@ public class home extends AppCompatActivity {
                         startActivity(intent1);
                         break;
                     case R.id.ptofile:
+                        if(type_account!=null){
                         if(type_account.equals("Admin Account"))
                         {
                             Intent intent2 = new Intent(home.this, AdminProfile.class);
@@ -90,6 +92,8 @@ public class home extends AppCompatActivity {
                             startActivity(intent2);
                             break;
                         }
+                        }
+                        break;
                     case R.id.search:
                         startActivity(new Intent(home.this, search.class));
                         break;
@@ -117,12 +121,12 @@ public class home extends AppCompatActivity {
 
         //add data to model
         galleryModels=new ArrayList<>();
-        galleryModels.add(new plantGalleryModel("Fruit",R.drawable.fruit,R.drawable.fruits_icon1));
-        galleryModels.add(new plantGalleryModel("Leaf",R.drawable.leaf,R.drawable.leaf_icon));
-        galleryModels.add(new plantGalleryModel("Flower",R.drawable.flower,R.drawable.flower_icon1));
-        galleryModels.add(new plantGalleryModel("Trees",R.drawable.tree,R.drawable.tree_icon1));
-        galleryModels.add(new plantGalleryModel("Seeds",R.drawable.seeds,R.drawable.seeds_icon));
-        galleryModels.add(new plantGalleryModel("Roots",R.drawable.root,R.drawable.root_icon));
+        galleryModels.add(new plantGalleryModel(getString(R.string.fruit),R.drawable.fruit,R.drawable.fruits_icon1));
+        galleryModels.add(new plantGalleryModel(getString(R.string.leaf),R.drawable.leaf,R.drawable.leaf_icon));
+        galleryModels.add(new plantGalleryModel(getString(R.string.flower),R.drawable.flower,R.drawable.flower_icon1));
+        galleryModels.add(new plantGalleryModel(getString(R.string.trees),R.drawable.tree,R.drawable.tree_icon1));
+        galleryModels.add(new plantGalleryModel(getString(R.string.seeds),R.drawable.seeds,R.drawable.seeds_icon));
+        galleryModels.add(new plantGalleryModel(getString(R.string.roots),R.drawable.root,R.drawable.root_icon));
 
         setRecyclerViewGallery(galleryModels);
     }

@@ -59,14 +59,14 @@
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/visit_profile_status"
+        android:layout_marginTop="30dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:weightSum="2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        android:layout_below="@+id/visit_profile_status"
-        android:layout_marginTop="30dp">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/LogOut"
@@ -78,8 +78,8 @@
             android:clickable="true"
             android:elevation="12dp"
             android:focusable="true"
-            app:cardBackgroundColor="@color/cardview_light_background"
             android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/cardview_light_background"
             app:cardCornerRadius="8dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -104,7 +104,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Log Out"
+                    android:text="@string/logout"
                     android:textColor="#180E21"
                     android:textSize="14sp"
                     android:textStyle="bold"
@@ -128,8 +128,8 @@
             android:clickable="true"
             android:elevation="12dp"
             android:focusable="true"
-            app:cardBackgroundColor="@color/cardview_light_background"
             android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/cardview_light_background"
             app:cardCornerRadius="8dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -154,7 +154,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Settings"
+                    android:text="@string/settings"
                     android:textColor="#180E21"
                     android:textSize="14sp"
                     android:textStyle="bold"

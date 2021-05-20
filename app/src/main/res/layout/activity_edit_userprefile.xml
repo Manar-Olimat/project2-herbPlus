@@ -22,7 +22,7 @@
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/arrow_back"
             app:navigationIconColor="@color/PrimaryShade_4"
-            app:title="Edit Profile"
+            app:title="@string/edit_profile"
             app:titleTextColor="@color/PrimaryShade_4"
             tools:ignore="ExtraText">
 
@@ -41,7 +41,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.162"
+        app:layout_constraintVertical_bias="0.248"
         app:shapeAppearanceOverlay="@style/Circular"
         app:srcCompat="@drawable/sign_rose"
         app:strokeColor="#4CAF50"
@@ -75,21 +75,20 @@
         android:layout_width="347dp"
         android:layout_height="54dp"
         android:background="#00A79B"
-        android:text="Update Profile"
+        android:text="@string/update_profile"
         android:textColor="#ffffff"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.468"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" />
+        app:layout_constraintVertical_bias="0.927" />
 
     <View
         android:id="@+id/view3"
-        android:layout_width="371dp"
-        android:layout_height="309dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="369dp"
+        android:layout_height="212dp"
+        android:layout_marginTop="15dp"
         android:layout_marginBottom="80dp"
         android:background="@color/cardview_light_background"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,7 +101,7 @@
         style="@style/Theme.AppCompat.DayNight.DarkActionBar"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:hint="User name"
+        android:hint="@string/username"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -135,7 +134,7 @@
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:layout_marginTop="10dp"
-        android:hint="email"
+        android:hint="@string/email"
         app:endIconMode="clear_text"
         app:endIconTint="#272626"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -156,56 +155,5 @@
             android:inputType="text"
             android:textColor="@android:color/background_dark" />
     </com.google.android.material.textfield.TextInputLayout>
-
-    <RadioGroup
-        android:id="@+id/accountRadio_edit"
-        android:layout_width="245dp"
-        android:layout_height="58dp"
-        android:layout_marginTop="10dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0">
-
-        <RadioButton
-            android:id="@+id/herbalist_edit"
-            android:layout_width="162dp"
-            android:layout_height="wrap_content"
-            android:buttonTint="#00A79B"
-            android:text="Herbalist Account"
-            android:textColor="@color/SecondaryShade_10"
-
-            android:textSize="16dp" />
-
-        <RadioButton
-            android:id="@+id/userAccount_edit"
-            android:layout_width="166dp"
-            android:layout_height="wrap_content"
-            android:buttonTint="#00A79B"
-            android:text="User Account"
-            android:textColor="@color/SecondaryShade_10"
-            android:textSize="16dp" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="152dp"
-        android:text="Account Type"
-        android:textColor="@color/SecondaryShade_10"
-        android:textSize="17dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.034"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/TextInputLayout1"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

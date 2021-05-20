@@ -1,8 +1,5 @@
 package com.example.project_2;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -52,12 +52,12 @@ resetPassword();
         String emailValue=email.getText().toString().trim();
 
         if (emailValue.isEmpty()) {
-            email.setError(" email required!");
+            email.setError(getString(R.string.email_required));
             email.requestFocus();
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(emailValue).matches()) {
-            email.setError("Enter valid email!");
+            email.setError(getString(R.string.valid_email));
             email.requestFocus();
             return;
         }
@@ -66,11 +66,11 @@ resetPassword();
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()) {
-                    Toast.makeText(com.example.project_2.forget_password.this, "Check your email to reset password",
+                    Toast.makeText(com.example.project_2.forget_password.this, getString(R.string.Check_email),
                             Toast.LENGTH_LONG).show();
 
                 } else {
-                    Toast.makeText(com.example.project_2.forget_password.this, "Try Again ! Something wrong happened!",
+                    Toast.makeText(com.example.project_2.forget_password.this, getString(R.string.Try_Again),
                             Toast.LENGTH_LONG).show();
 
                 }

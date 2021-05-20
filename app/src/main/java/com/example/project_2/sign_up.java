@@ -63,7 +63,12 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
     private static final int PICK_IMAGE_REQUEST = 1;
 
     private Uri mImageUri=null;
+    private String img=null;
     private StorageReference mStorageRef;
+
+    FirebaseUser user ;
+    private int id;
+
 
 
     @Override
@@ -78,6 +83,7 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
         herbalistradio = findViewById(R.id.herbalist);
         userRadio = findViewById(R.id.userAccount);
         mAuth = FirebaseAuth.getInstance();
+
         sign_up.setOnClickListener(this);
         back11 = findViewById(R.id.back11);
         back11.setOnClickListener(this);
@@ -94,16 +100,16 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
 
     private void checkDataEntered() {
         if (isEmpty(username)) {
-            username.setError("Empty username");
+            username.setError(getString(R.string.username_required));
         }
         if (isEmpty(password)) {
-            password.setError("Empty password");
+            password.setError(getString(R.string.Empty_password));
         }
         if (!isEmail(email))
-            email.setError("Enter valid email!");
+            email.setError(getString(R.string.valid_email));
 
         if (!herbalistradio.isChecked() && !userRadio.isChecked())
-            herbalistradio.setError("choose your account type");
+            herbalistradio.setError(getString(R.string.choose));
 
     }
 
@@ -137,67 +143,80 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
                         accountTypeValue = userRadio.getText().toString();
                     else if (herbalistradio.isChecked())
                         accountTypeValue = herbalistradio.getText().toString();
-
+                    if(accountTypeValue.equals("حساب المعالج بالأعشاب"))
+                        accountTypeValue="Herbalist Account";
+                    else if(accountTypeValue.equals("حساب المستخدم"))
+                        accountTypeValue="User Account";
 
                     final String finalAccountTypeValue = accountTypeValue;
-                    mAuth.createUserWithEmailAndPassword(emailValue, passwordValue)
-                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                                @Override
-                                public void onComplete(@NonNull Task<AuthResult> task) {
-                                    if (task.isSuccessful()) {
-                                        FirebaseUser user = mAuth.getCurrentUser();
-                                        reference = root.getReference("users").child(user.getUid());
-                                        if (mImageUri != null) {
-                                            mStorageRef = mStorageRef.child(user.getUid()
-                                                    + "." + getFileExtension(mImageUri));
-                                            mStorageRef.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                                @Override
-                                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                                    mStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                                        @Override
-                                                        public void onSuccess(Uri uri) {
-                                                            final Uri downloadUrl = uri;
-                                                            if(downloadUrl!=null){
-                                                                reference.child("username").setValue(usernameValue);
-                                                                reference.child("id").setValue(user.getUid());
-                                                                reference.child("email").setValue(emailValue);
-                                                                reference.child("password").setValue(passwordValue);
-                                                                reference.child("accountType").setValue(finalAccountTypeValue);
-                                                                reference.child("profile_image").setValue(downloadUrl.toString());
-                                                                Intent mainIntent = new Intent(sign_up.this, home.class);
-                                                                sign_up.this.startActivity(mainIntent);
-                                                                sign_up.this.finish();
-                                                            }else {
-                                                                Toast.makeText(sign_up.this, "No file selected", Toast.LENGTH_SHORT).show();
+
+                    if(mImageUri!=null && usernameValue!=null &&emailValue!=null && passwordValue!=null && finalAccountTypeValue!=null ) {
+                        mAuth.createUserWithEmailAndPassword(emailValue, passwordValue)
+                                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                        if (task.isSuccessful()) {
+                                            user = mAuth.getCurrentUser();
+                                            reference = root.getReference("users").child(user.getUid());
+                                            System.out.println(usernameValue + "====" + user.getUid() + "====" + passwordValue + "====" + emailValue + "====" + finalAccountTypeValue + "====" + img);
+                                            reference.child("username").setValue(usernameValue);
+                                            reference.child("id").setValue(user.getUid());
+                                            reference.child("email").setValue(emailValue);
+                                            reference.child("password").setValue(passwordValue);
+                                            reference.child("accountType").setValue(finalAccountTypeValue);
+                                            if (mImageUri != null) {
+                                                mStorageRef = mStorageRef.child(user.getUid()
+                                                        + "." + getFileExtension(mImageUri));
+                                                mStorageRef.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                                    @Override
+                                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                                        mStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                            @Override
+                                                            public void onSuccess(Uri uri) {
+                                                                final Uri downloadUrl = uri;
+                                                                if(downloadUrl!=null){
+                                                                    img=downloadUrl.toString();
+                                                                    reference.child("profile_image").setValue(downloadUrl.toString());
+
+
+                                                                }
 
                                                             }
+                                                        });
 
-                                                        }
-                                                    });
+                                                    }
+                                                })
+                                                        .addOnFailureListener(new OnFailureListener() {
+                                                            @Override
+                                                            public void onFailure(@NonNull Exception e) {
+                                                                Toast.makeText(sign_up.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                            }
+                                                        })
+                                                        .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                                                            @Override
+                                                            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
 
-                                                }
-                                            })
-                                                    .addOnFailureListener(new OnFailureListener() {
-                                                        @Override
-                                                        public void onFailure(@NonNull Exception e) {
-                                                            Toast.makeText(sign_up.this, e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    })
-                                                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                                                        @Override
-                                                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                                                            }
+                                                        });
+                                            }
 
-                                                        }
-                                                    });
+                                            Intent mainIntent = new Intent(sign_up.this, home.class);
+                                            sign_up.this.startActivity(mainIntent);
+                                            sign_up.this.finish();
+
+                                        } else {
+                                            Toast.makeText(sign_up.this, getString(R.string.signup_failed), Toast.LENGTH_LONG).show();
                                         }
 
                                     }
-                                    else {
-                                        Toast.makeText(sign_up.this, "sign up failed", Toast.LENGTH_LONG).show();
-                                    }
+                                });
+                    }
+                    else {
+                        Toast.makeText(sign_up.this, getString(R.string.Fill_information), Toast.LENGTH_SHORT).show();
 
-                                }
-                            });
+                    }
+
+
                 }
                 break;
             case R.id.back11:
@@ -247,15 +266,15 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void selectImage() {
-        final CharSequence[] items = {"Take Photo", "Choose from Library",
-                "Cancel"};
+        final CharSequence[] items = {getString(R.string.take_photo), getString(R.string.choose_gallery),
+                getString(R.string.cancel)};
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(sign_up.this);
         builder.setItems(items, (dialog, item) -> {
-            if (items[item].equals("Take Photo")) {
+            if (items[item].equals(getString(R.string.take_photo))) {
                 TakePicture();
-            } else if (items[item].equals("Choose from Library")) {
+            } else if (items[item].equals(getString(R.string.choose_gallery))) {
                 openFileChooser();
-            } else if (items[item].equals("Cancel")) {
+            } else if (items[item].equals(getString(R.string.cancel))) {
                 dialog.dismiss();
             }
         });
@@ -263,7 +282,8 @@ public class sign_up extends AppCompatActivity implements View.OnClickListener {
     }
 
 
-   @RequiresApi(api = Build.VERSION_CODES.M)
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
    private void TakePicture(){
        if (ContextCompat.checkSelfPermission(sign_up.this, Manifest.permission.CAMERA) !=
                PackageManager.PERMISSION_GRANTED) {

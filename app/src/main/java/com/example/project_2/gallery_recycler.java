@@ -59,7 +59,7 @@ public class gallery_recycler extends AppCompatActivity {
                     galleryModels=new ArrayList<>();
                     for(DataSnapshot ds:snapshot.getChildren()) {
                         plantBD plant = ds.getValue(plantBD.class);
-                        if (plant != null) {
+                        if (plant.getUsed() != null) {
                             if (plant.getUsed().contains(message)) {
                                 galleryModels.add(plant);
                             }
@@ -76,24 +76,24 @@ public class gallery_recycler extends AppCompatActivity {
             }
         });
 
-        if ("Fruits".equals(textView.getText())) {
+        if ("Fruits".equals(textView.getText()) || "فاكهة".equals(textView.getText())) {
             imageView.setImageResource(R.drawable.fruit);
         }
-        else if ("Leaf".equals(textView.getText())) {
+        else if ("Leaf".equals(textView.getText())|| "ورقة".equals(textView.getText())) {
             imageView.setImageResource(R.drawable.leaf);
         }
-        else if ("Flower".equals(textView.getText())) {
+        else if ("Flower".equals(textView.getText())|| "زهرة".equals(textView.getText())) {
             imageView.setImageResource(R.drawable.flower);
             setRecyclerViewTest(galleryModels);
         }
-        else if ("Trees".equals(textView.getText()))
+        else if ("Trees".equals(textView.getText())|| "الأشجار".equals(textView.getText()))
         {
             imageView.setImageResource(R.drawable.tree);
         }
-        else if ("Seeds".equals(textView.getText()))
+        else if ("Seeds".equals(textView.getText())|| "بذور".equals(textView.getText()))
         {
             imageView.setImageResource(R.drawable.seeds);
-        }else if ("Roots".equals(textView.getText()))
+        }else if ("Roots".equals(textView.getText())|| "الجذور".equals(textView.getText()))
         {
             imageView.setImageResource(R.drawable.root);
         }

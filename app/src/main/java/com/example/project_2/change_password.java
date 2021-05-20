@@ -77,28 +77,28 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     if (task.isSuccessful()) {
                                                         reference.child(user.getUid()).child("password").setValue(new_password.getText().toString());
-                                                        Toast.makeText(getApplicationContext(),"Password updated",Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(getApplicationContext(),getString(R.string.Password_updated),Toast.LENGTH_SHORT).show();
                                                         startActivity(new Intent(change_password.this, settings.class));
 
                                                     } else {
-                                                        Toast.makeText(getApplicationContext(),"Error password not updated",Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(getApplicationContext(),getString(R.string.Error_password),Toast.LENGTH_SHORT).show();
 
                                                     }
                                                 }
                                             });}
                                         else {
-                                            Toast.makeText(getApplicationContext(),"Password mismatching",Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(getApplicationContext(),getString(R.string.Password_mismatching),Toast.LENGTH_SHORT).show();
 
                                         }
                                     } else {
-                                        Toast.makeText(getApplicationContext(),"Current Password incorrect",Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(getApplicationContext(),getString(R.string.Password_incorrect),Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
 
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Please enter all fields.",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),getString(R.string.all_fields),Toast.LENGTH_SHORT).show();
                 }
                 break;
 

@@ -25,7 +25,7 @@
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/arrow_back"
             app:navigationIconColor="@color/PrimaryShade_10"
-            app:title="Confirm plants"
+            app:title="@string/confirm_plant"
             app:titleTextColor="@color/PrimaryShade_10"
             tools:ignore="ExtraText">
 

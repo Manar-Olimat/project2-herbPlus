@@ -11,10 +11,12 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.TextUtils;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.TextView;
@@ -41,11 +43,12 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class update_plant extends AppCompatActivity implements View.OnClickListener {
     MaterialToolbar back;
-    TextView plantname, symptoms;
+    TextView plantname, symptoms,location;
     MultiAutoCompleteTextView description, information;
     Button updateplant;
     FloatingActionButton edit_plant;
@@ -54,27 +57,40 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
 
     static final int REQUEST_TAKE_PHOTO = 100;
     private static final int PICK_IMAGE_REQUEST = 1;
-    StringBuilder used = new StringBuilder();
+    String used = " ";
 
     private Uri mImageUri;
     private StorageReference mStorageRef;
     boolean[]selectedsymptoms;
     ArrayList<Integer> symptomsList =new ArrayList<>();
-    String [] symptomsArray={"Fatigue","Fever","Stomachache","Headache","Nausea","Skin irritation",
-            "Indigestion","Infections and ulcers","Diarrhea","Constipation","Colds"};
+    String [] symptomsArray;
+    boolean[]selectedlocation;
+    ArrayList<Integer> locationList =new ArrayList<>();
+    String [] locationArray;
 
 
     DatabaseReference reference;
-    String name1 ,Symptoms ,description1 ,information1 ,image_plant1, used1;
+    String name1 ,Symptoms ,description1 ,information1 ,image_plant1, used1,location1;
     SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_plant);
+        symptomsArray= new String[]{getString(R.string.fatigue), getString(R.string.fever), getString(R.string.stomachache), getString(R.string.headache)
+                , getString(R.string.nausea), getString(R.string.skin), getString(R.string.indigestion), getString(R.string.infections), getString(R.string.diarrhea)
+                , getString(R.string.constipation), getString(R.string.colds)};
+        Arrays.sort(symptomsArray);
+
+        locationArray=new String[]{getString(R.string.levant), getString(R.string.Arab_Maghreb), getString(R.string.Arabian_Peninsula), getString(R.string.Latin_america)
+                , getString(R.string.Australia), getString(R.string.Europe), getString(R.string.Africa), getString(R.string.Middle_Atlantic), getString(R.string.Western_Indian)
+                , getString(R.string.West_Asia), getString(R.string.Pacific), getString(R.string.North_Amarica), getString(R.string.South_America)};
+        Arrays.sort(locationArray);
+
         plantname =findViewById(R.id.plantname);
         symptoms = findViewById(R.id.symptoms);
         description=findViewById(R.id.description);
+        location=findViewById(R.id.location);
         information=findViewById(R.id.information);
         updateplant=findViewById(R.id.updateplant);
         edit_plant=findViewById(R.id.edit_plant);
@@ -87,8 +103,10 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
         roots=findViewById(R.id.Roots);
         back=findViewById(R.id.topAppBar);
         mStorageRef = FirebaseStorage.getInstance().getReference("users");
+        reference = FirebaseDatabase.getInstance().getReference("plants");
 
         selectedsymptoms = new boolean[symptomsArray.length];
+        selectedlocation=new boolean[locationArray.length];
         SharedPreferences prefs = getSharedPreferences("viewplant", MODE_PRIVATE);
         name1 = prefs.getString("name", "No name defined");
         Symptoms = prefs.getString("Symptoms", "No Symptoms defined");
@@ -96,11 +114,14 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
         information1 = prefs.getString("information", "No information defined");
         image_plant1=prefs.getString("plant_image", "No name defined");
         used1 =prefs.getString("used", "No name defined");
+        location1 =prefs.getString("location", "No name defined");
+
 
         plantname.setText(name1);
         symptoms.setText(Symptoms);
         description.setText(description1);
         information.setText(information1);
+        location.setText(location1);
         Glide.with(update_plant.this).load(image_plant1).apply(new RequestOptions().centerCrop().centerInside().placeholder(R.drawable.plant)).into(plant_image);
 
         if(used1.contains(fruits.getText()))
@@ -131,6 +152,8 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
             }
         });
         symptoms.setOnClickListener(this);
+        location.setOnClickListener(this);
+        symptoms.setOnClickListener(this);
         updateplant.setOnClickListener(this);
         edit_plant.setOnClickListener(this);
 
@@ -147,7 +170,7 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.symptoms:
                 AlertDialog.Builder builder = new AlertDialog.Builder(update_plant.this);
-                builder.setTitle("Selected Symptoms...");
+                builder.setTitle(getString(R.string.select_symptoms));
                 builder.setCancelable(false);
                 builder.setMultiChoiceItems(symptomsArray, selectedsymptoms, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
@@ -159,7 +182,7 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                             symptomsList.remove(Integer.valueOf(which));
                         }
                     }
-                }).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                }).setPositiveButton(getString(R.string.save), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         StringBuilder stringBuilder = new StringBuilder();
@@ -173,13 +196,13 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                         symptoms.setError(null);
 
                     }
-                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                }).setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
                         dialog.dismiss();
                     }
-                }).setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
+                }).setNeutralButton(getString(R.string.clear_all), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         for (int i = 0; i < selectedsymptoms.length; i++) {
@@ -191,40 +214,84 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                 }).show();
 
                 break;
-            case R.id.updateplant:
+            case R.id.location:
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(update_plant.this);
+                builder1.setTitle(getString(R.string.Select_location));
+                builder1.setCancelable(false);
+                builder1.setMultiChoiceItems(locationArray, selectedlocation, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        if (isChecked) {
+                            locationList.add(which);
+                            Collections.sort(locationList);
+                        } else if (locationList.contains(which)) {
+                            locationList.remove(Integer.valueOf(which));
+                        }
+                    }
+                }).setPositiveButton(getString(R.string.save), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        StringBuilder stringBuilder = new StringBuilder();
+                        for (int i = 0; i < locationList.size(); i++) {
+                            stringBuilder.append(locationArray[locationList.get(i)]);
+                            if (i != locationList.size() - 1) {
+                                stringBuilder.append(", ");
+                            }
+                        }
+                        location.setText(stringBuilder.toString());
+                        location.setError(null);
 
+                    }
+                }).setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                        dialog.dismiss();
+                    }
+                }).setNeutralButton(getString(R.string.clear_all), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        for (int i = 0; i < selectedlocation.length; i++) {
+                            selectedlocation[i] = false;
+                            locationList.clear();
+                            location.setText("");
+                        }
+                    }
+                }).show();
+
+                break;
+            case R.id.updateplant:
+                checkDataEntered();
                 if ( !symptoms.getText().toString().isEmpty() && !description.getText().toString().isEmpty()
-                        &&!information.getText().toString().isEmpty() &&
+                        &&!information.getText().toString().isEmpty() &&!location.getText().toString().isEmpty()&&
                         (fruits.isChecked()|| flower.isChecked() || trees.isChecked() || leaf.isChecked() || seeds.isChecked() ||roots.isChecked()) ){
 
                     if(fruits.isChecked()){
-                        used.append(fruits.getText()+", ");
+                        used+=fruits.getText()+", ";
                     }
                     if(flower.isChecked()){
-                        used.append(flower.getText()+", ");
+                        used+=flower.getText()+", ";
                     }
                     if(seeds.isChecked()){
-                        used.append(seeds.getText()+", ");
+                        used+=seeds.getText()+", ";
 
                     }
                     if(trees.isChecked()){
-                        used.append(trees.getText()+", ");
-
+                        used+=trees.getText()+", ";
                     }
                     if(leaf.isChecked()){
-                        used.append(leaf.getText()+", ");
+                        used+=leaf.getText()+", ";
                     }
                     if(roots.isChecked()){
-                        used.append(roots.getText()+", ");
+                        used+=roots.getText()+", ";
 
                     }
                     editor = getApplicationContext().getSharedPreferences("viewplant", MODE_PRIVATE).edit();
-
-                    reference = FirebaseDatabase.getInstance().getReference("plants");
                     reference.child(name1).child("symptoms").setValue(symptoms.getText().toString());
                     reference.child(name1).child("description").setValue(description.getText().toString());
                     reference.child(name1).child("information").setValue(information.getText().toString());
                     reference.child(name1).child("used").setValue(used.toString());
+                    reference.child(name1).child("location").setValue(location.getText().toString());
 
                     if (mImageUri != null) {
                         mStorageRef = mStorageRef.child(name1
@@ -255,17 +322,21 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                                     }
                                 });
                     }
+                    editor.putString("name", name1);
+                    editor.putString("Symptoms", symptoms.getText().toString());
+                    editor.putString("description",description.getText().toString());
+                    editor.putString("information", information.getText().toString());
+                    editor.putString("used", used);
+                    editor.putString("location", location.getText().toString());
+
+                    editor.apply();
+                    Toast.makeText(getApplicationContext(),getString(R.string.Plant_updated),Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(update_plant.this, view_plant.class));
+                }
+                else {
+                    Toast.makeText(getApplicationContext(),getString(R.string.all_fields),Toast.LENGTH_SHORT).show();
 
                 }
-                editor.putString("name", name1);
-                editor.putString("Symptoms", symptoms.getText().toString());
-                editor.putString("description",description.getText().toString());
-                editor.putString("information", information.getText().toString());
-                editor.putString("used", used.toString());
-
-
-                editor.apply();
-                startActivity(new Intent(update_plant.this, view_plant.class));
                 break;
         }
 
@@ -302,19 +373,47 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void selectImage() {
-        final CharSequence[] items = {"Take Photo", "Choose from Library",
-                "Cancel"};
+        final CharSequence[] items = {getString(R.string.take_photo), getString(R.string.choose_gallery),
+                getString(R.string.cancel)};
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(update_plant.this);
         builder.setItems(items, (dialog, item) -> {
-            if (items[item].equals("Take Photo")) {
+            if (items[item].equals(getString(R.string.take_photo))) {
                 TakePicture();
-            } else if (items[item].equals("Choose from Library")) {
+            } else if (items[item].equals(getString(R.string.choose_gallery))) {
                 openFileChooser();
-            } else if (items[item].equals("Cancel")) {
+            } else if (items[item].equals(getString(R.string.cancel))) {
                 dialog.dismiss();
             }
         });
         builder.show();
+    }
+    private void checkDataEntered() {
+
+        if ( isEmpty(symptoms)) {
+            symptoms.setError(getString(R.string.Empty_symptoms));
+
+        }
+        if (isEmpty(description)) {
+            description.setError(getString(R.string.Empty_description));
+        }
+        if ( isEmpty(location)) {
+            symptoms.setError(getString(R.string.Empty_location));
+
+        }
+        if (isEmpty(information)) {
+            information.setError(getString(R.string.Empty_information));
+        }
+    }
+    boolean isEmpty( EditText text) {
+        CharSequence str = text.getText().toString();
+        return TextUtils.isEmpty(str);
+    }
+    boolean isEmpty( TextView text) {
+        CharSequence str = text.getText().toString();
+        return TextUtils.isEmpty(str);
+    }boolean isEmpty( MultiAutoCompleteTextView text) {
+        CharSequence str = text.getText().toString();
+        return TextUtils.isEmpty(str);
     }
 
 

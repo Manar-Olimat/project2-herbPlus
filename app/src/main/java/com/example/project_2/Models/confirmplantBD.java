@@ -6,22 +6,27 @@ public class confirmplantBD {
     String description;
     String information;
     String added_by;
+    String id;
     String date;
     String plant_image;
     String used;
+    String location;
 
     public confirmplantBD() {
     }
 
-    public confirmplantBD(String name, String symptoms, String description, String information, String added_by, String date,String plant_image ,String used ) {
+    public confirmplantBD(String name, String symptoms, String description, String information,String id,
+                          String added_by, String date,String plant_image ,String used ,String location ) {
         this.name = name;
         Symptoms = symptoms;
         this.description = description;
         this.information = information;
+        this.id=id;
         this.added_by = added_by;
         this.date = date;
         this.plant_image=plant_image;
         this.used=used;
+        this.location=location;
     }
 
     public String getName() {
@@ -86,5 +91,21 @@ public class confirmplantBD {
 
     public void setUsed(String used) {
         this.used = used;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

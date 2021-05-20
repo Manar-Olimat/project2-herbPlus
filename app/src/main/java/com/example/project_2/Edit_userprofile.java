@@ -14,7 +14,6 @@ import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -54,8 +53,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
     FloatingActionButton editUserPhoto;
     Button updateProfile;
     TextInputEditText username;
-    RadioButton herbalistradio;
-    RadioButton userRadio;
+
     TextInputEditText email;
     ImageView profile_image;
     String password=null;
@@ -75,8 +73,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
         username=findViewById(R.id.newUsername1);
         email=findViewById(R.id.email_editProfile);
 
-        herbalistradio=findViewById(R.id.herbalist_edit);
-        userRadio=findViewById(R.id.userAccount_edit);
+
         updateProfile=findViewById(R.id.updateProfile2);
         updateProfile.setOnClickListener(this);
         editUserPhoto=findViewById(R.id.editProfilePhoto1);
@@ -105,18 +102,13 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
                 username.setText(usernameValue);
                 password=userProfile.getPassword();
                 email.setText(emailValue);
-                if (accountTypeValue.equals("Herbalist Account"))
-                    herbalistradio.setChecked(true);
-                else if (accountTypeValue.equals("User Account"))
-                        userRadio.setChecked(true);
-
 
             }
     }
 
     @Override
     public void onCancelled(@NonNull DatabaseError error) {
-        Toast.makeText(com.example.project_2.Edit_userprofile.this, " Something wrong happened!",Toast.LENGTH_LONG).show();
+        Toast.makeText(com.example.project_2.Edit_userprofile.this, getString(R.string.Try_Again),Toast.LENGTH_LONG).show();
 
     }
 });
@@ -133,34 +125,23 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
             case R.id.updateProfile2:
                 final String usernameValue=username.getText().toString().trim();
                 final String emailValue=email.getText().toString().trim();
-                 String accountTypeValue=herbalistradio.getText().toString().trim();
-                if(herbalistradio.isChecked())
-                    accountTypeValue=herbalistradio.getText().toString().trim();
-                else if( userRadio.isChecked())
-                    accountTypeValue=userRadio.getText().toString().trim();
+
                 if (usernameValue.isEmpty()) {
-                    username.setError(" username required!");
+                    username.setError(getString(R.string.username_required));
                     username.requestFocus();
                     return;
                 }
-                if (accountTypeValue.isEmpty()) {
-                    herbalistradio.setError("choose your account type");
-                    herbalistradio.requestFocus();
-                    return;
-                }
                 if (emailValue.isEmpty()) {
-                    email.setError(" email required!");
+                    email.setError(getString(R.string.email_required));
                     email.requestFocus();
                     return;
                 }
                 if (!Patterns.EMAIL_ADDRESS.matcher(emailValue).matches()) {
-                    email.setError("Enter valid email!");
+                    email.setError(getString(R.string.valid_email));
                     email.requestFocus();
                     return;
                 }
-                String finalAccountTypeValue = accountTypeValue;
                 reference.child(userID).child("username").setValue(usernameValue);
-                reference.child(userID).child("accountType").setValue(finalAccountTypeValue);
                 reference.child(userID).child("email").setValue(emailValue);
                 reference.child(userID).child("id").setValue(user.getUid());
 
@@ -214,7 +195,9 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
                                 }
                             });
                 }
-                            startActivity(new Intent(Edit_userprofile.this, settings.class));
+                Toast.makeText(getApplicationContext(),getString(R.string.Profile_updated),Toast.LENGTH_SHORT).show();
+
+                startActivity(new Intent(Edit_userprofile.this, settings.class));
 
                 break;
             case R.id.editProfilePhoto1:
@@ -257,15 +240,15 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void selectImage() {
-        final CharSequence[] items = {"Take Photo", "Choose from Library",
-                "Cancel"};
+        final CharSequence[] items = {getString(R.string.take_photo), getString(R.string.choose_gallery),
+                getString(R.string.cancel)};
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(Edit_userprofile.this);
         builder.setItems(items, (dialog, item) -> {
-            if (items[item].equals("Take Photo")) {
+            if (items[item].equals(getString(R.string.take_photo))) {
                 TakePicture();
-            } else if (items[item].equals("Choose from Library")) {
+            } else if (items[item].equals(getString(R.string.choose_gallery))) {
                 openFileChooser();
-            } else if (items[item].equals("Cancel")) {
+            } else if (items[item].equals(getString(R.string.cancel))) {
                 dialog.dismiss();
             }
         });

@@ -50,27 +50,31 @@ import com.google.firebase.storage.UploadTask;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Date;
 
 public class add_plant extends AppCompatActivity implements View.OnClickListener{
     MaterialToolbar back;
     EditText plantame;
-    TextView symptoms;
+    TextView symptoms,location;
     CheckBox fruits,leaf,flower,trees,seeds,roots;
     MultiAutoCompleteTextView description, information;
     Button addplant;
     boolean[]selectedsymptoms;
     ArrayList<Integer> symptomsList =new ArrayList<>();
-    String [] symptomsArray={"Fatigue","Fever","Stomachache","Headache","Nausea","Skin irritation",
-            "Indigestion","Infections and ulcers","Diarrhea","Constipation","Colds"};
+    String [] symptomsArray;
+
+    boolean[]selectedlocation;
+    ArrayList<Integer> locationList =new ArrayList<>();
+    String [] locationArray;
 
     FirebaseDatabase root;
     FirebaseUser user;
     FirebaseAuth mAuth ;
     DatabaseReference reference,reference_user;
     String userID;
-    String used ;
+    String used=" " ;
 
 
     FloatingActionButton add_img;
@@ -83,8 +87,19 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_plant);
+        symptomsArray= new String[]{getString(R.string.fatigue), getString(R.string.fever), getString(R.string.stomachache), getString(R.string.headache)
+                , getString(R.string.nausea), getString(R.string.skin), getString(R.string.indigestion), getString(R.string.infections), getString(R.string.diarrhea)
+                , getString(R.string.constipation), getString(R.string.colds)};
+        Arrays.sort(symptomsArray);
+
+        locationArray=new String[]{getString(R.string.levant), getString(R.string.Arab_Maghreb), getString(R.string.Arabian_Peninsula), getString(R.string.Latin_america)
+                , getString(R.string.Australia), getString(R.string.Europe), getString(R.string.Africa), getString(R.string.Middle_Atlantic), getString(R.string.Western_Indian)
+                , getString(R.string.West_Asia), getString(R.string.Pacific), getString(R.string.North_Amarica), getString(R.string.South_America)};
+        Arrays.sort(locationArray);
+
         plantame =findViewById(R.id.plantname);
         symptoms = findViewById(R.id.symptoms);
+        location=findViewById(R.id.location);
         description=findViewById(R.id.description);
         information=findViewById(R.id.information);
         addplant=findViewById(R.id.addplant);
@@ -103,7 +118,9 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
 
         user= FirebaseAuth.getInstance().getCurrentUser();
         selectedsymptoms = new boolean[symptomsArray.length];
+        selectedlocation=new boolean[locationArray.length];
         symptoms.setOnClickListener(this);
+        location.setOnClickListener(this);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,7 +137,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
         switch (v.getId()) {
             case R.id.symptoms:
                 AlertDialog.Builder builder = new AlertDialog.Builder(add_plant.this);
-                builder.setTitle("Selected Symptoms...");
+                builder.setTitle(getString(R.string.select_symptoms));
                 builder.setCancelable(false);
                 builder.setMultiChoiceItems(symptomsArray, selectedsymptoms, new DialogInterface.OnMultiChoiceClickListener() {
                     @Override
@@ -132,7 +149,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                             symptomsList.remove(Integer.valueOf(which));
                         }
                     }
-                }).setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                }).setPositiveButton(getString(R.string.save), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         StringBuilder stringBuilder = new StringBuilder();
@@ -146,13 +163,13 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                         symptoms.setError(null);
 
                     }
-                }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                }).setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
                         dialog.dismiss();
                     }
-                }).setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
+                }).setNeutralButton(getString(R.string.clear_all), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         for (int i = 0; i < selectedsymptoms.length; i++) {
@@ -164,8 +181,52 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                 }).show();
 
                 break;
+            case R.id.location:
+                AlertDialog.Builder builder1 = new AlertDialog.Builder(add_plant.this);
+                builder1.setTitle(getString(R.string.Select_location));
+                builder1.setCancelable(false);
+                builder1.setMultiChoiceItems(locationArray, selectedlocation, new DialogInterface.OnMultiChoiceClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                        if (isChecked) {
+                            locationList.add(which);
+                            Collections.sort(locationList);
+                        } else if (locationList.contains(which)) {
+                            locationList.remove(Integer.valueOf(which));
+                        }
+                    }
+                }).setPositiveButton(getString(R.string.save), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        StringBuilder stringBuilder = new StringBuilder();
+                        for (int i = 0; i < locationList.size(); i++) {
+                            stringBuilder.append(locationArray[locationList.get(i)]);
+                            if (i != locationList.size() - 1) {
+                                stringBuilder.append(", ");
+                            }
+                        }
+                        location.setText(stringBuilder.toString());
+                        location.setError(null);
 
+                    }
+                }).setNegativeButton(getString(R.string.cancel), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
 
+                        dialog.dismiss();
+                    }
+                }).setNeutralButton(getString(R.string.clear_all), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        for (int i = 0; i < selectedlocation.length; i++) {
+                            selectedlocation[i] = false;
+                            locationList.clear();
+                            location.setText("");
+                        }
+                    }
+                }).show();
+
+                break;
             case R.id.add_img:
                 selectImage();
                 break;
@@ -194,11 +255,12 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                 }
                 if (!plantame.getText().toString().isEmpty() && !symptoms.getText().toString().isEmpty() &&
                         !description.getText().toString().isEmpty() &&!information.getText().toString().isEmpty() &&(used!=null)
-                        ){
+                        && !location.getText().toString().isEmpty()){
                     final String plantnameValue = plantame.getText().toString();
                     final String symptomsValue = symptoms.getText().toString();
                     final String descriptionValue = description.getText().toString();
                     final String informationValue = information.getText().toString();
+                    final String locationValue = location.getText().toString();
 
                     userID=user.getUid();
                     reference_user= FirebaseDatabase.getInstance().getReference("users");
@@ -214,11 +276,11 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                         if (snapshot.hasChild(plantnameValue)) {
 
                                             AlertDialog.Builder builder1 = new AlertDialog.Builder(add_plant.this);
-                                            builder1.setMessage("The plant already exists. Do you want to modify the data?");
+                                            builder1.setMessage(getString(R.string.plant_exists));
                                             builder1.setCancelable(false);
 
                                             builder1.setPositiveButton(
-                                                    "Yes",
+                                                    getText(R.string.yes),
                                                     new DialogInterface.OnClickListener() {
                                                         public void onClick(DialogInterface dialog, int id) {
 
@@ -233,24 +295,16 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                             public void onSuccess(Uri uri) {
                                                                                 final Uri downloadUrl = uri;
                                                                                 if(downloadUrl!=null){
-                                                                                    if(used.toString()!=null) {
                                                                                         reference = root.getReference("plants").child(plantnameValue);
                                                                                         reference.child("name").setValue(plantnameValue);
                                                                                         reference.child("symptoms").setValue(symptomsValue);
+                                                                                        reference.child("location").setValue(locationValue);
                                                                                         reference.child("description").setValue(descriptionValue);
                                                                                         reference.child("information").setValue(informationValue);
                                                                                         reference.child("plant_image").setValue(downloadUrl.toString());
                                                                                         reference.child("used").setValue(used.toString());
-                                                                                    }
-                                                                                    else {
-                                                                                        Toast.makeText(add_plant.this, "No Parts of plant that we use selected", Toast.LENGTH_SHORT).show();
-
-                                                                                    }
-
-                                                                                }else {
-                                                                                    Toast.makeText(add_plant.this, "No file selected", Toast.LENGTH_SHORT).show();
-
                                                                                 }
+                                                                                Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
                                                                                 Intent mainIntent = new Intent(add_plant.this, home.class);
                                                                                 add_plant.this.startActivity(mainIntent);
                                                                                 }
@@ -261,7 +315,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                         .addOnFailureListener(new OnFailureListener() {
                                                                             @Override
                                                                             public void onFailure(@NonNull Exception e) {
-                                                                                Toast.makeText(add_plant.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                                Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
                                                                             }
                                                                         })
                                                                         .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -276,7 +330,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                     });
 
                                             builder1.setNegativeButton(
-                                                    "No",
+                                                    getText(R.string.no),
                                                     new DialogInterface.OnClickListener() {
                                                         public void onClick(DialogInterface dialog, int id) {
                                                             dialog.cancel();
@@ -297,21 +351,18 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                             @Override
                                                             public void onSuccess(Uri uri) {
                                                                 final Uri downloadUrl = uri;
-
                                                                 if(downloadUrl!=null){
                                                                     reference = root.getReference("plants").child(plantnameValue);
                                                                     reference.child("name").setValue(plantnameValue);
                                                                     reference.child("symptoms").setValue(symptomsValue);
                                                                     reference.child("description").setValue(descriptionValue);
+                                                                    reference.child("location").setValue(locationValue);
                                                                     reference.child("information").setValue(informationValue);
                                                                     reference.child("plant_image").setValue(downloadUrl.toString());
                                                                     reference.child("used").setValue(used.toString());
-
+                                                                    Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
                                                                     Intent mainIntent = new Intent(add_plant.this, home.class);
                                                                     add_plant.this.startActivity(mainIntent);
-                                                                }else {
-                                                                    Toast.makeText(add_plant.this, "No file selected", Toast.LENGTH_SHORT).show();
-
                                                                 }
 
                                                             }
@@ -322,7 +373,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                         .addOnFailureListener(new OnFailureListener() {
                                                             @Override
                                                             public void onFailure(@NonNull Exception e) {
-                                                                Toast.makeText(add_plant.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
                                                             }
                                                         })
                                                         .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -344,10 +395,10 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                             else {
 
                                 AlertDialog.Builder builder1 = new AlertDialog.Builder(add_plant.this);
-                                builder1.setMessage("The plant has been add but it need for the admin confirmation...");
+                                builder1.setMessage(getString(R.string.admin_confirmation));
                                 builder1.setCancelable(false);
                                 builder1.setPositiveButton(
-                                        "Yes",
+                                        getText(R.string.yes),
                                         new DialogInterface.OnClickListener() {
                                             @RequiresApi(api = Build.VERSION_CODES.O)
                                             public void onClick(DialogInterface dialog, int id) {
@@ -370,17 +421,17 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                         reference.child("name").setValue(plantnameValue);
                                                                         reference.child("symptoms").setValue(symptomsValue);
                                                                         reference.child("description").setValue(descriptionValue);
+                                                                        reference.child("location").setValue(locationValue);
                                                                         reference.child("information").setValue(informationValue);
+                                                                        reference.child("id").setValue(user.getUid());
                                                                         reference.child("added_by").setValue(userProfile.getUsername());
                                                                         reference.child("plant_image").setValue(downloadUrl.toString());
                                                                         reference.child("date").setValue(localDate.getMonthValue()+"/"+ localDate.getDayOfMonth()+"/"+ localDate.getYear());
                                                                         reference.child("used").setValue(used.toString());
+                                                                        Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
 
                                                                         Intent mainIntent = new Intent(add_plant.this, home.class);
                                                                         add_plant.this.startActivity(mainIntent);
-                                                                    }else {
-                                                                        Toast.makeText(add_plant.this, "No file selected", Toast.LENGTH_SHORT).show();
-
                                                                     }
 
                                                                 }
@@ -391,7 +442,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                             .addOnFailureListener(new OnFailureListener() {
                                                                 @Override
                                                                 public void onFailure(@NonNull Exception e) {
-                                                                    Toast.makeText(add_plant.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                    Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
                                                                 }
                                                             })
                                                             .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -406,7 +457,7 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                         });
 
                                 builder1.setNegativeButton(
-                                        "No",
+                                        getText(R.string.no),
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
                                                 dialog.cancel();
@@ -414,7 +465,8 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                         });
 
                                 AlertDialog alert11 = builder1.create();
-                                alert11.show();                            }
+                                alert11.show();
+                            }
                         }
 
                         @Override
@@ -424,25 +476,30 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                     });
 
                 }
+                else {
+                    Toast.makeText(getApplicationContext(),getString(R.string.all_fields),Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }
     private void checkDataEntered() {
         if (isEmpty(plantame)) {
-            plantame.setError("Empty plant name");
+            plantame.setError(getString(R.string.Empty_plant_name));
         }
         if ( isEmpty(symptoms)) {
-            symptoms.setError("Empty symptoms");
+            symptoms.setError(getString(R.string.Empty_symptoms));
+
+        }
+        if ( isEmpty(location)) {
+            symptoms.setError(getString(R.string.Empty_location));
 
         }
         if (isEmpty(description)) {
-            description.setError("Empty description");
+            description.setError(getString(R.string.Empty_description));
         }
         if (isEmpty(information)) {
-            information.setError("Empty information");
+            information.setError(getString(R.string.Empty_information));
         }
-
-
     }
 
     boolean isEmpty( EditText text) {
@@ -488,15 +545,15 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     private void selectImage() {
-        final CharSequence[] items = {"Take Photo", "Choose from Library",
-                "Cancel"};
+        final CharSequence[] items = {getString(R.string.take_photo), getString(R.string.choose_gallery),
+                getString(R.string.cancel)};
         android.app.AlertDialog.Builder builder = new android.app.AlertDialog.Builder(add_plant.this);
         builder.setItems(items, (dialog, item) -> {
-            if (items[item].equals("Take Photo")) {
+            if (items[item].equals(getString(R.string.take_photo))) {
                 TakePicture();
-            } else if (items[item].equals("Choose from Library")) {
+            } else if (items[item].equals(getString(R.string.choose_gallery))) {
                 openFileChooser();
-            } else if (items[item].equals("Cancel")) {
+            } else if (items[item].equals(getString(R.string.cancel))) {
                 dialog.dismiss();
             }
         });

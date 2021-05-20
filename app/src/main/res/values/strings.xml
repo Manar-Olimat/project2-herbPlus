@@ -232,4 +232,145 @@ Evening primrose flowers are also called moonflower because they bloom as the su
 </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="settings">Settings</string>
+    <string name="account">Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_password">Change password</string>
+    <string name="change_language">Change language</string>
+    <string name="Select_language">Select language.... </string>
+    <string name="about">About</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms">Terms &amp; Conditions</string>
+    <string name="remember">Make sure you remember your password</string>
+    <string name="current_password">Your current password</string>
+    <string name="new_password">Your new password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="cancel">Cancel</string>
+    <string name="username">User name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="back">Back</string>
+    <string name="create">Create New Account</string>
+    <string name="choose">choose your account type</string>
+    <string name="herbalist">Herbalist Account</string>
+    <string name="user">User Account</string>
+    <string name="have_accepted">I have accepted the</string>
+    <string name="signup">Sign UP</string>
+    <string name="signin">Sign In</string>
+    <string name="welcome">welcome</string>
+    <string name="forget">Forgot Password?</string>
+    <string name="add_plant">Add Plant</string>
+    <string name="confirm_plant">Confirm Plants</string>
+    <string name="logout">Log Out</string>
+    <string name="chats">Chats</string>
+    <string name="herbalists">Herbalists</string>
+    <string name="message">Message</string>
+    <string name="fruit">Fruit</string>
+    <string name="leaf">Leaf</string>
+    <string name="flower">Flower</string>
+    <string name="trees">Trees</string>
+    <string name="seeds">Seeds</string>
+    <string name="roots">Roots</string>
+    <string name="plant_name">Plant Name</string>
+    <string name="symptoms">Symptoms treated by the plant</string>
+    <string name="select_symptoms">Select Symptoms</string>
+    <string name="description">Description</string>
+    <string name="parts">Parts of plant that use</string>
+    <string name="did">Did you know</string>
+    <string name="add">Add</string>
+    <string name="update_plant">Update Plant</string>
+    <string name="update">Update</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="delete">delete</string>
+    <string name="fill">Fill your email and we will sent you  a link to change your password</string>
+    <string name="get_new">Get Your New Password</string>
+    <string name="Dont_have">Don\'t have an account\?</string>
+    <string name="register">Register now</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="search_name">Search for name</string>
+    <string name="search_symptoms">search for symptoms</string>
+    <string name="clear_all">Clear All</string>
+    <string name="save">Save</string>
+    <string name="plant_exists">The plant already exists. Do you want to modify the data?</string>
+    <string name="admin_confirmation">"The plant has been add but it need for the admin confirmation…"</string>
+    <string name="delete_plant">Do you want to delete the plant?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_gallery">Choose from gallery</string>
+
+    <string name="Empty_plant_name">Empty plant name</string>
+    <string name="Empty_symptoms">Empty symptoms</string>
+    <string name="Empty_location">Empty location</string>
+
+    <string name="Empty_description">Empty description</string>
+    <string name="Empty_information">Empty information</string>
+
+    <string name="username_required">username required!</string>
+    <string name="email_required">email required!</string>
+    <string name="valid_email">Enter valid email!</string>
+    <string name="Empty_password">Empty password</string>
+    <string name="signup_failed">sign up failed</string>
+    <string name="signin_failed">sign in failed</string>
+    <string name="Fill_information">Fill in all information</string>
+    <string name="Check_email">Check your email to reset password</string>
+    <string name="Try_Again">Try Again ! Something wrong happened!</string>
+    <string name="Error_password">Error password, not updated</string>
+    <string name="Password_mismatching">Password mismatching</string>
+    <string name="Password_incorrect">Current Password incorrect</string>
+    <string name="Password_updated">Password updated successfully</string>
+    <string name="Profile_updated">Profile updated successfully</string>
+    <string name="plant_added">plant added successfully</string>
+    <string name="Plant_deleted">Plant deleted successfully</string>
+    <string name="Plant_updated">Plant updated successfully</string>
+    <string name="all_fields">Please enter all fields.</string>
+    <string name="Sending_image">Sending Image</string>
+    <string name="Please_wait">Please wait…</string>
+    <string name="gallery">Gallery</string>
+    <string name="Select_image">Select Image</string>
+    <string name="write_message">write your message first…</string>
+    <string name="Image_successfully">Image Sent Successfully…</string>
+    <string name="error">Error</string>
+
+
+    <string name="fatigue">Fatigue</string>
+    <string name="fever">Fever</string>
+    <string name="stomachache">Stomachache</string>
+    <string name="headache">Headache</string>
+    <string name="nausea">Nausea</string>
+    <string name="skin">Skin irritation</string>
+    <string name="indigestion">Indigestion</string>
+    <string name="infections">Infections and ulcers</string>
+    <string name="diarrhea">Diarrhea</string>
+    <string name="constipation">Constipation</string>
+    <string name="colds">Colds</string>
+
+    <string name="levant">Levant</string>
+    <string name="Arab_Maghreb">The Arab Maghreb</string>
+    <string name="Arabian_Peninsula">The Arabian Peninsula</string>
+    <string name="Latin_america">Latin america</string>
+    <string name="Australia">Australia</string>
+    <string name="Europe">Europe</string>
+    <string name="Africa">Africa</string>
+    <string name="Middle_Atlantic">Middle Atlantic</string>
+    <string name="Western_Indian">Western Indian Ocean</string>
+    <string name="West_Asia">West Asia</string>
+    <string name="Pacific">Pacific</string>
+    <string name="North_Amarica">North Amarica</string>
+    <string name="South_America">South America</string>
+    <string name="Select_location">Select location</string>
+    <string name="Place_origin">Place of origin</string>
+    <string name="approved">Plant has been approved by the admin</string>
+    <string name="disapproval">Plant has been disapproval by the admin</string>
+    <string name="send_email">Email has been sent to herbalist</string>
+
+
+
+
+
 </resources>

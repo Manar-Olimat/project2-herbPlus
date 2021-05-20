@@ -26,7 +26,7 @@
             android:layout_height="?attr/actionBarSize"
             app:navigationIcon="@drawable/arrow_back"
             app:navigationIconColor="@color/PrimaryShade_4"
-            app:title="Terms &amp; Conditions "
+            app:title="@string/terms"
             app:titleTextColor="@color/PrimaryShade_4"
             tools:ignore="ExtraText">
 
@@ -55,6 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:layout_margin="7dp"
                 android:text="@string/terms_conditions"
                 android:textSize="16dp"
                 android:textColor="@color/PrimaryShade_4" />

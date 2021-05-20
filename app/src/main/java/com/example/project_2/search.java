@@ -1,5 +1,6 @@
 package com.example.project_2;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -27,6 +28,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class search extends AppCompatActivity {
@@ -46,21 +48,27 @@ public class search extends AppCompatActivity {
 
     boolean[]selectedsymptoms;
     ArrayList<Integer> symptomsList =new ArrayList<>();
-    String [] symptomsArray={"Fatigue","Fever","Stomachache","Headache","Nausea","Skin irritation",
-            "Indigestion","Infections and ulcers","Diarrhea","Constipation","Colds"};
+    String [] symptomsArray;
+    boolean arabic;
 
+    @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
+        symptomsArray= new String[]{getString(R.string.fatigue), getString(R.string.fever), getString(R.string.stomachache), getString(R.string.headache)
+                , getString(R.string.nausea), getString(R.string.skin), getString(R.string.indigestion), getString(R.string.infections), getString(R.string.diarrhea)
+                , getString(R.string.constipation), getString(R.string.colds)};
+        Arrays.sort(symptomsArray);
+        arabic=isProbablyArabic(symptomsArray[0]);
         userID= FirebaseAuth.getInstance().getCurrentUser().getUid();
         reference= FirebaseDatabase.getInstance().getReference("users");
         reference.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 userDB userProfile=snapshot.getValue(userDB.class);
-                type_account =userProfile.getAccountType();
+
+                 type_account =userProfile.getAccountType();
             }
 
             @Override
@@ -75,6 +83,7 @@ public class search extends AppCompatActivity {
         recyclerView=findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
 
+
         databaseReference=FirebaseDatabase.getInstance().getReference().child("plants");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -82,7 +91,16 @@ public class search extends AppCompatActivity {
                 if(snapshot.exists()){
                     modelList=new ArrayList<>();
                     for(DataSnapshot ds:snapshot.getChildren()){
-                        modelList.add(ds.getValue(plantBD.class));
+                        plantBD plant=ds.getValue(plantBD.class);
+                        if(arabic){
+                            if(isProbablyArabic(plant.getName()))
+                                modelList.add(plant);
+
+                        }
+                        else {
+                            if(!isProbablyArabic(plant.getName()))
+                                modelList.add(plant);
+                        }
                     }
 
                     searchadapter myadapter=new searchadapter(modelList,context);
@@ -136,7 +154,7 @@ public class search extends AppCompatActivity {
                             @Override
                             public void onClick(View v) {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(search.this);
-                                builder.setTitle("Selected Symptoms...");
+                                builder.setTitle(getString(R.string.select_symptoms));
                                 builder.setCancelable(false);
                                 builder.setMultiChoiceItems(symptomsArray, selectedsymptoms, new DialogInterface.OnMultiChoiceClickListener() {
                                     @Override
@@ -148,7 +166,7 @@ public class search extends AppCompatActivity {
                                             symptomsList.remove(Integer.valueOf(which));
                                         }
                                     }
-                                }).setPositiveButton("Search", new DialogInterface.OnClickListener() {
+                                }).setPositiveButton(getString(R.string.search), new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         StringBuilder stringBuilder = new StringBuilder();
@@ -162,7 +180,7 @@ public class search extends AppCompatActivity {
                                         Symptomssearch(stringBuilder.toString());
                                     }
 
-                                }).setNeutralButton("Clear All", new DialogInterface.OnClickListener() {
+                                }).setNeutralButton(getString(R.string.clear_all), new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         for (int i = 0; i < selectedsymptoms.length; i++) {
@@ -226,7 +244,15 @@ public class search extends AppCompatActivity {
 
 
     }
-
+    public static boolean isProbablyArabic(String s) {
+        for (int i = 0; i < s.length();) {
+            int c = s.codePointAt(i);
+            if (c >= 0x0600 && c <= 0x06E0)
+                return true;
+            i += Character.charCount(c);
+        }
+        return false;
+    }
 
 
     private void namesearch(String s)
@@ -244,17 +270,21 @@ public class search extends AppCompatActivity {
     }
     private void Symptomssearch(String s)
     {
+        String[] arrOfStr = s.split(",");
+
         ArrayList<plantBD>list=new ArrayList<>();
         for(plantBD object: modelList){
-            if(object.getSymptoms().toLowerCase().contains(s.toLowerCase())){
-                list.add(object);
+            boolean exists=true;
+            for (String a : arrOfStr){
+                if(!object.getSymptoms().contains(a))
+                    exists=false;
             }
+            if(exists)
+                list.add(object);
+
         }
         searchadapter myadapter=new searchadapter(list,context);
         recyclerView.setAdapter(myadapter);
-
-
-
 
     }
 
