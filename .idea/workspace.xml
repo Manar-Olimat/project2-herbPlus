@@ -616,25 +616,25 @@
     </state>
     <state x="488" y="148" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1621545868896" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620327526790" />
-    <state width="1323" height="175" key="GridCell.Tab.0.bottom" timestamp="1621587370216">
+    <state width="1323" height="175" key="GridCell.Tab.0.bottom" timestamp="1621587621250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1621587370216" />
+    <state width="1323" height="175" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1621587621250" />
     <state width="1476" height="543" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620444750323" />
-    <state width="1323" height="175" key="GridCell.Tab.0.center" timestamp="1621587370215">
+    <state width="1323" height="175" key="GridCell.Tab.0.center" timestamp="1621587621250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="175" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1621587370215" />
+    <state width="1323" height="175" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1621587621250" />
     <state width="1476" height="543" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620444750323" />
-    <state width="1323" height="175" key="GridCell.Tab.0.left" timestamp="1621587370215">
+    <state width="1323" height="175" key="GridCell.Tab.0.left" timestamp="1621587621250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="175" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1621587370215" />
+    <state width="1323" height="175" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1621587621250" />
     <state width="1476" height="543" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620444750317" />
-    <state width="1323" height="175" key="GridCell.Tab.0.right" timestamp="1621587370215">
+    <state width="1323" height="175" key="GridCell.Tab.0.right" timestamp="1621587621250">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="175" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1621587370215" />
+    <state width="1323" height="175" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1621587621250" />
     <state width="1476" height="543" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620444750323" />
     <state width="1306" height="176" key="GridCell.Tab.1.bottom" timestamp="1617356393764">
       <screen x="0" y="0" width="1366" height="728" />
@@ -668,10 +668,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="330" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1619106251605" />
-    <state x="514" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621547878595">
+    <state x="514" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1621587847949">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="514" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1621547878595" />
+    <state x="514" y="288" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1621587847949" />
     <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1616155057800" />
     <state x="454" y="173" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1617793821751">
       <screen x="0" y="0" width="1366" height="728" />
