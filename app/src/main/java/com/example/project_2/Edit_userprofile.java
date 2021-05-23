@@ -24,7 +24,7 @@ import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -91,7 +91,7 @@ public class Edit_userprofile extends AppCompatActivity implements View.OnClickL
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
         public void onDataChange(@NonNull DataSnapshot snapshot) {
-            userDB userProfile=snapshot.getValue(userDB.class);
+            AccountDB userProfile=snapshot.getValue(AccountDB.class);
 
             if (userProfile !=null){
                 final String usernameValue= userProfile.getUsername();

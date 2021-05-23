@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.NoActionBar">
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".AdminProfile"></activity>
         <activity android:name=".HerbalistProfile" />
         <activity
@@ -33,14 +33,15 @@
         <activity android:name=".privacy_policy" />
         <activity
             android:name=".change_password"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity android:name=".settings" />
         <activity android:name=".ViewConfirm" />
         <activity android:name=".confirm_list" />
         <activity android:name=".view_plant" />
         <activity android:name=".search" />
         <activity android:name=".forget_password" />
-        <activity android:name=".add_plant" />
+        <activity android:name=".add_plant"
+                  android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".Edit_userprofile" />
         <activity android:name=".user_account" />
         <activity android:name=".home" />

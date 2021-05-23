@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.project_2.Models.confirmplantBD;
+import com.example.project_2.Models.ConfirmplantBD;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class confirm_list extends AppCompatActivity {
     DatabaseReference databaseReference;
-    ArrayList<confirmplantBD> confirmplantBDS;
+    ArrayList<ConfirmplantBD> confirmplantBDS;
     RecyclerView recyclerView;
     Context context=confirm_list.this;
     MaterialToolbar back;
@@ -47,7 +47,7 @@ public class confirm_list extends AppCompatActivity {
                 if(snapshot.exists()){
                     confirmplantBDS=new ArrayList<>();
                     for(DataSnapshot ds:snapshot.getChildren()){
-                        confirmplantBDS.add(ds.getValue(confirmplantBD.class));
+                        confirmplantBDS.add(ds.getValue(ConfirmplantBD.class));
                     }
 
                     Confirmadapter myadapter=new Confirmadapter(confirmplantBDS,context);

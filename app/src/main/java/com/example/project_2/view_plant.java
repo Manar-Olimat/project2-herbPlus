@@ -16,7 +16,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
+import com.example.project_2.Models.Admin_Account;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -35,6 +36,7 @@ public class view_plant extends AppCompatActivity {
     String type_account;
     ImageView back ,image_plant;
     String message;
+    Admin_Account admin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +66,7 @@ public class view_plant extends AppCompatActivity {
         String used1=prefs.getString("used", "No name defined");
         String image_plant1=prefs.getString("plant_image", "No name defined");
         String location1=prefs.getString("location", "No name defined");
+        System.out.println(image_plant1);
 
 
         //Bundle bundle = getIntent().getExtras();
@@ -98,11 +101,12 @@ public class view_plant extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
 
-                com.example.project_2.Models.userDB userProfile=snapshot.getValue(userDB.class);
+                AccountDB userProfile=snapshot.getValue(AccountDB.class);
                 type_account =userProfile.getAccountType();
-                if(type_account.equals("Admin Account")||type_account.equals("Herbalist Account")) {
+                if(type_account.equals("Admin Account")) {
                     update.setVisibility(View.VISIBLE);
                     delete.setVisibility(View.VISIBLE);
+                    admin=new Admin_Account();
                     if(message.equals("Gallery")){
                         update.setVisibility(View.INVISIBLE);
                         delete.setVisibility(View.INVISIBLE);
@@ -127,8 +131,7 @@ public class view_plant extends AppCompatActivity {
                                     getString(R.string.yes),
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
-                                            ref = FirebaseDatabase.getInstance().getReference("plants").child(name1);
-                                            ref.removeValue();
+                                            admin.deleteplant(name1);
                                             Toast.makeText(getApplicationContext(),getString(R.string.Plant_deleted),Toast.LENGTH_SHORT).show();
                                             Intent mainIntent = new Intent(view_plant.this, search.class);
                                             view_plant.this.startActivity(mainIntent);

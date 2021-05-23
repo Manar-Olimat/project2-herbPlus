@@ -9,6 +9,8 @@ public class plantBD {
     String used;
     String location;
 
+
+
     public plantBD() {
     }
 
@@ -20,6 +22,7 @@ public class plantBD {
         this.plant_image=plant_image;
         this.used=used;
         this.location=location;
+
     }
 
 
@@ -76,6 +79,11 @@ public class plantBD {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public void addplant(){
+
+
     }
 
 }

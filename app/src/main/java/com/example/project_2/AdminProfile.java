@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -108,7 +108,7 @@ public class AdminProfile extends AppCompatActivity {
         reference.child(currentUserID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userDB userProfile=snapshot.getValue(userDB.class);
+                AccountDB userProfile=snapshot.getValue(AccountDB.class);
                 if (userProfile !=null){
                     user_name.setText(userProfile.getUsername());
                     profile_status.setText(userProfile.getEmail());

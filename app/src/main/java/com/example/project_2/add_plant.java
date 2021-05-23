@@ -30,7 +30,11 @@ import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
+import com.example.project_2.Models.Admin_Account;
+import com.example.project_2.Models.Herbalist_Account;
+import com.example.project_2.Models.ConfirmplantBD;
+import com.example.project_2.Models.plantBD;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -75,6 +79,12 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
     DatabaseReference reference,reference_user;
     String userID;
     String used=" " ;
+    String type_account;
+    AccountDB accountDB;
+    Admin_Account admin;
+    Herbalist_Account herbalist;
+    plantBD plant;
+    ConfirmplantBD confirmplant;
 
 
     FloatingActionButton add_img;
@@ -130,6 +140,25 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
         });
         add_img.setOnClickListener(this);
         addplant.setOnClickListener(this);
+
+        mAuth = FirebaseAuth.getInstance();
+        root = FirebaseDatabase.getInstance();
+        userID=user.getUid();
+        reference_user= FirebaseDatabase.getInstance().getReference("users");
+        reference_user.child(userID).addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                accountDB = snapshot.getValue(AccountDB.class);
+
+                type_account =accountDB.getAccountType();
+
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
     }
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
@@ -262,85 +291,133 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                     final String informationValue = information.getText().toString();
                     final String locationValue = location.getText().toString();
 
-                    userID=user.getUid();
-                    reference_user= FirebaseDatabase.getInstance().getReference("users");
-                    reference_user.child(userID).addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-                            com.example.project_2.Models.userDB userProfile=snapshot.getValue(userDB.class);
-                            if(userProfile.getAccountType().equals("Admin Account")){
-                                reference = root.getReference("plants");
-                                reference.addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        if (snapshot.hasChild(plantnameValue)) {
+                    final String[] img = new String[1];
 
-                                            AlertDialog.Builder builder1 = new AlertDialog.Builder(add_plant.this);
-                                            builder1.setMessage(getString(R.string.plant_exists));
-                                            builder1.setCancelable(false);
+                    if (type_account != null) {
+                        if (type_account.equals("Admin Account")) {
+                            reference = root.getReference("plants");
+                            reference.addListenerForSingleValueEvent(new ValueEventListener() {
+                                @Override
+                                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    if (snapshot.hasChild(plantnameValue)) {
 
-                                            builder1.setPositiveButton(
-                                                    getText(R.string.yes),
-                                                    new DialogInterface.OnClickListener() {
-                                                        public void onClick(DialogInterface dialog, int id) {
+                                        AlertDialog.Builder builder1 = new AlertDialog.Builder(add_plant.this);
+                                        builder1.setMessage(getString(R.string.plant_exists));
+                                        builder1.setCancelable(false);
+                                        builder1.setPositiveButton(
+                                                getText(R.string.yes),
+                                                new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int id) {
 
-                                                            if (mImageUri != null) {
-                                                                mStorageRef = mStorageRef.child(plantnameValue
-                                                                        + "." + getFileExtension(mImageUri));
-                                                                mStorageRef.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                                                    @Override
-                                                                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                                                        mStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                                                            @Override
-                                                                            public void onSuccess(Uri uri) {
-                                                                                final Uri downloadUrl = uri;
-                                                                                if(downloadUrl!=null){
-                                                                                        reference = root.getReference("plants").child(plantnameValue);
-                                                                                        reference.child("name").setValue(plantnameValue);
-                                                                                        reference.child("symptoms").setValue(symptomsValue);
-                                                                                        reference.child("location").setValue(locationValue);
-                                                                                        reference.child("description").setValue(descriptionValue);
-                                                                                        reference.child("information").setValue(informationValue);
-                                                                                        reference.child("plant_image").setValue(downloadUrl.toString());
-                                                                                        reference.child("used").setValue(used.toString());
-                                                                                }
-                                                                                Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
-                                                                                Intent mainIntent = new Intent(add_plant.this, home.class);
+                                                        if (mImageUri != null) {
+                                                            mStorageRef = mStorageRef.child(plantnameValue
+                                                                    + "." + getFileExtension(mImageUri));
+                                                            mStorageRef.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                                                @Override
+                                                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                                                    mStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                                        @Override
+                                                                        public void onSuccess(Uri uri) {
+                                                                            final Uri downloadUrl = uri;
+                                                                            if(downloadUrl!=null){
+                                                                                admin=new Admin_Account();
+                                                                                plant=new plantBD(plantnameValue,symptomsValue,descriptionValue,informationValue, downloadUrl.toString(),used,locationValue);
+                                                                                admin.addplant(plant);
+                                                                                Toast.makeText(getApplicationContext(), getString(R.string.plant_added), Toast.LENGTH_SHORT).show();
+                                                                                Intent mainIntent = new Intent(getApplicationContext(), home.class);
                                                                                 add_plant.this.startActivity(mainIntent);
-                                                                                }
-                                                                            });
+                                                                            }
 
-                                                                            }
-                                                                        })
-                                                                        .addOnFailureListener(new OnFailureListener() {
-                                                                            @Override
-                                                                            public void onFailure(@NonNull Exception e) {
-                                                                                Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                            }
-                                                                        })
-                                                                        .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                                                                            @Override
-                                                                            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                                                                        }
+                                                                    });
 
-                                                                            }
-                                                                        });
+                                                                }
+                                                            })
+                                                                    .addOnFailureListener(new OnFailureListener() {
+                                                                        @Override
+                                                                        public void onFailure(@NonNull Exception e) {
+                                                                            Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                                        }
+                                                                    })
+                                                                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                                                                        @Override
+                                                                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+
+                                                                        }
+                                                                    });
+                                                        }
+
+                                                    }
+                                                });
+
+                                        builder1.setNegativeButton(
+                                                getText(R.string.no),
+                                                new DialogInterface.OnClickListener() {
+                                                    public void onClick(DialogInterface dialog, int id) {
+                                                        dialog.cancel();
+                                                    }
+                                                });
+
+                                        AlertDialog alert11 = builder1.create();
+                                        alert11.show();
+                                    } else {
+
+                                        if (mImageUri != null) {
+                                            mStorageRef = mStorageRef.child(plantnameValue
+                                                    + "." + getFileExtension(mImageUri));
+                                            mStorageRef.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                                                @Override
+                                                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                                                    mStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                                        @Override
+                                                        public void onSuccess(Uri uri) {
+                                                            final Uri downloadUrl = uri;
+                                                            if(downloadUrl!=null){
+                                                                admin=new Admin_Account();
+                                                                plant=new plantBD(plantnameValue,symptomsValue,descriptionValue,informationValue, downloadUrl.toString(),used,locationValue);
+                                                                admin.addplant(plant);
+                                                                Toast.makeText(getApplicationContext(), getString(R.string.plant_added), Toast.LENGTH_SHORT).show();
+                                                                Intent mainIntent = new Intent(getApplicationContext(), home.class);
+                                                                add_plant.this.startActivity(mainIntent);
                                                             }
 
                                                         }
                                                     });
 
-                                            builder1.setNegativeButton(
-                                                    getText(R.string.no),
-                                                    new DialogInterface.OnClickListener() {
-                                                        public void onClick(DialogInterface dialog, int id) {
-                                                            dialog.cancel();
+                                                }
+                                            })
+                                                    .addOnFailureListener(new OnFailureListener() {
+                                                        @Override
+                                                        public void onFailure(@NonNull Exception e) {
+                                                            Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    })
+                                                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+                                                        @Override
+                                                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+
                                                         }
                                                     });
+                                        }
+                                    }
+                                }
 
-                                            AlertDialog alert11 = builder1.create();
-                                            alert11.show();
-                                        } else {
+                                @Override
+                                public void onCancelled(@NonNull DatabaseError error) {
 
+                                }
+                            });
+
+                        } else {
+
+                            AlertDialog.Builder builder4 = new AlertDialog.Builder(add_plant.this);
+                            builder4.setMessage(getString(R.string.admin_confirmation));
+                            builder4.setCancelable(false);
+                            builder4.setPositiveButton(
+                                    getText(R.string.yes),
+                                    new DialogInterface.OnClickListener() {
+                                        @RequiresApi(api = Build.VERSION_CODES.O)
+                                        public void onClick(DialogInterface dialog, int id) {
                                             if (mImageUri != null) {
                                                 mStorageRef = mStorageRef.child(plantnameValue
                                                         + "." + getFileExtension(mImageUri));
@@ -351,16 +428,18 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                             @Override
                                                             public void onSuccess(Uri uri) {
                                                                 final Uri downloadUrl = uri;
+
                                                                 if(downloadUrl!=null){
-                                                                    reference = root.getReference("plants").child(plantnameValue);
-                                                                    reference.child("name").setValue(plantnameValue);
-                                                                    reference.child("symptoms").setValue(symptomsValue);
-                                                                    reference.child("description").setValue(descriptionValue);
-                                                                    reference.child("location").setValue(locationValue);
-                                                                    reference.child("information").setValue(informationValue);
-                                                                    reference.child("plant_image").setValue(downloadUrl.toString());
-                                                                    reference.child("used").setValue(used.toString());
-                                                                    Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
+                                                                    Date date = new Date();
+                                                                    LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+                                                                    String date_plant=localDate.getMonthValue() + "/" + localDate.getDayOfMonth() + "/" + localDate.getYear();
+                                                                    herbalist=new Herbalist_Account();
+                                                                    confirmplant=new ConfirmplantBD(plantnameValue,symptomsValue,descriptionValue,informationValue,userID,
+                                                                            accountDB.getUsername(),date_plant, downloadUrl.toString(),used,locationValue);
+                                                                    herbalist.addplant(confirmplant);
+                                                                    Toast.makeText(getApplicationContext(), getString(R.string.plant_added), Toast.LENGTH_SHORT).show();
+
+
                                                                     Intent mainIntent = new Intent(add_plant.this, home.class);
                                                                     add_plant.this.startActivity(mainIntent);
                                                                 }
@@ -383,80 +462,11 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                             }
                                                         });
                                             }
+
                                         }
-                                    }
+                                    });
 
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-
-                                    }
-                                });
-                            }
-                            else {
-
-                                AlertDialog.Builder builder1 = new AlertDialog.Builder(add_plant.this);
-                                builder1.setMessage(getString(R.string.admin_confirmation));
-                                builder1.setCancelable(false);
-                                builder1.setPositiveButton(
-                                        getText(R.string.yes),
-                                        new DialogInterface.OnClickListener() {
-                                            @RequiresApi(api = Build.VERSION_CODES.O)
-                                            public void onClick(DialogInterface dialog, int id) {
-
-                                                if (mImageUri != null) {
-                                                    mStorageRef = mStorageRef.child(plantnameValue
-                                                            + "." + getFileExtension(mImageUri));
-                                                    mStorageRef.putFile(mImageUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                                                        @Override
-                                                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                                                            mStorageRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                                                                @Override
-                                                                public void onSuccess(Uri uri) {
-                                                                    final Uri downloadUrl = uri;
-
-                                                                    if(downloadUrl!=null){
-                                                                        Date date = new Date();
-                                                                        LocalDate localDate = date.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-                                                                        reference = root.getReference("confirm_plants").child(plantnameValue);
-                                                                        reference.child("name").setValue(plantnameValue);
-                                                                        reference.child("symptoms").setValue(symptomsValue);
-                                                                        reference.child("description").setValue(descriptionValue);
-                                                                        reference.child("location").setValue(locationValue);
-                                                                        reference.child("information").setValue(informationValue);
-                                                                        reference.child("id").setValue(user.getUid());
-                                                                        reference.child("added_by").setValue(userProfile.getUsername());
-                                                                        reference.child("plant_image").setValue(downloadUrl.toString());
-                                                                        reference.child("date").setValue(localDate.getMonthValue()+"/"+ localDate.getDayOfMonth()+"/"+ localDate.getYear());
-                                                                        reference.child("used").setValue(used.toString());
-                                                                        Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
-
-                                                                        Intent mainIntent = new Intent(add_plant.this, home.class);
-                                                                        add_plant.this.startActivity(mainIntent);
-                                                                    }
-
-                                                                }
-                                                            });
-
-                                                        }
-                                                    })
-                                                            .addOnFailureListener(new OnFailureListener() {
-                                                                @Override
-                                                                public void onFailure(@NonNull Exception e) {
-                                                                    Toast.makeText(add_plant.this, "***"+e.getMessage(), Toast.LENGTH_SHORT).show();
-                                                                }
-                                                            })
-                                                            .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-                                                                @Override
-                                                                public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-
-                                                                }
-                                                            });
-                                                }
-
-                                            }
-                                        });
-
-                                builder1.setNegativeButton(
+                                builder4.setNegativeButton(
                                         getText(R.string.no),
                                         new DialogInterface.OnClickListener() {
                                             public void onClick(DialogInterface dialog, int id) {
@@ -464,16 +474,11 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                             }
                                         });
 
-                                AlertDialog alert11 = builder1.create();
+                                AlertDialog alert11 = builder4.create();
                                 alert11.show();
+                                }
+
                             }
-                        }
-
-                        @Override
-                        public void onCancelled(@NonNull DatabaseError error) {
-
-                        }
-                    });
 
                 }
                 else {

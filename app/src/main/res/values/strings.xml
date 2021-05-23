@@ -368,8 +368,9 @@ Evening primrose flowers are also called moonflower because they bloom as the su
     <string name="approved">Plant has been approved by the admin</string>
     <string name="disapproval">Plant has been disapproval by the admin</string>
     <string name="send_email">Email has been sent to herbalist</string>
-
-
+    <string name="searchname">There are no herb with that name or the name typed wrong, try again or you can find another herb in herb list.</string>
+    <string name="searchsymptoms">There is no information currently  available about herbal treatment for these symptoms, please, ask our herbalists by using send a message</string>
+    <string name="searchherbalist">There are no herbalist with that name or the name typed wrongly, try again or you can find another herbalist in herbalists list</string>
 
 
 

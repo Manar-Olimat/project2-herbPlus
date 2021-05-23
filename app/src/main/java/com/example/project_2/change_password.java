@@ -7,15 +7,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
+import com.example.project_2.Models.AccountDB;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.EmailAuthProvider;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +23,7 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
     TextInputEditText cur_password,new_password,con_password;
     Button change_button;
     FirebaseAuth mAuth;
+    AccountDB accountDB;
 
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -41,6 +38,7 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
         Cancel.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
         user= mAuth.getCurrentUser();
+        accountDB=new AccountDB();
 
         cur_password=findViewById(R.id.cur_password);
         new_password=findViewById(R.id.new_password);
@@ -62,39 +60,8 @@ public class change_password extends AppCompatActivity implements View.OnClickLi
             case R.id.change_button:
                 if(!cur_password.getText().toString().isEmpty()&&!new_password.getText().toString().isEmpty()
                         &&!con_password.getText().toString().isEmpty()){
-                    AuthCredential credential = EmailAuthProvider
-                            .getCredential(user.getEmail(), cur_password.getText().toString());
-
-                    user.reauthenticate(credential)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if (task.isSuccessful()) {
-                                        if(new_password.getText().toString().equals(con_password.getText().toString())){
-
-                                            user.updatePassword(new_password.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                                @Override
-                                                public void onComplete(@NonNull Task<Void> task) {
-                                                    if (task.isSuccessful()) {
-                                                        reference.child(user.getUid()).child("password").setValue(new_password.getText().toString());
-                                                        Toast.makeText(getApplicationContext(),getString(R.string.Password_updated),Toast.LENGTH_SHORT).show();
-                                                        startActivity(new Intent(change_password.this, settings.class));
-
-                                                    } else {
-                                                        Toast.makeText(getApplicationContext(),getString(R.string.Error_password),Toast.LENGTH_SHORT).show();
-
-                                                    }
-                                                }
-                                            });}
-                                        else {
-                                            Toast.makeText(getApplicationContext(),getString(R.string.Password_mismatching),Toast.LENGTH_SHORT).show();
-
-                                        }
-                                    } else {
-                                        Toast.makeText(getApplicationContext(),getString(R.string.Password_incorrect),Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    accountDB.changaPassword(cur_password.getText().toString(),new_password.getText().toString(),con_password.getText().toString()
+                    ,change_password.this);
 
                 }
                 else{

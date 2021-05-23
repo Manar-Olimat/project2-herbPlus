@@ -12,10 +12,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.auth.FirebaseAuth;
@@ -104,14 +102,14 @@ public class ChatsFragment extends Fragment {
     public void onStart() {
         super.onStart();
 
-        FirebaseRecyclerOptions<userDB> options =
-                new FirebaseRecyclerOptions.Builder<userDB>()
-                        .setQuery(ChatsRef, userDB.class)
+        FirebaseRecyclerOptions<AccountDB> options =
+                new FirebaseRecyclerOptions.Builder<AccountDB>()
+                        .setQuery(ChatsRef, AccountDB.class)
                         .build();
 
-        FirebaseRecyclerAdapter<userDB, ChatsViewHolder> adapter =new FirebaseRecyclerAdapter<userDB, ChatsViewHolder>(options) {
+        FirebaseRecyclerAdapter<AccountDB, ChatsViewHolder> adapter =new FirebaseRecyclerAdapter<AccountDB, ChatsViewHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull ChatsViewHolder holder, int position, @NonNull userDB model) {
+            protected void onBindViewHolder(@NonNull ChatsViewHolder holder, int position, @NonNull AccountDB model) {
 
                 final String usersIDs = getRef(position).getKey();
                 final String[] retImage = {"default_image"};

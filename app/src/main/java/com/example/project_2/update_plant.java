@@ -31,6 +31,8 @@ import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.project_2.Models.Admin_Account;
+import com.example.project_2.Models.plantBD;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.appbar.MaterialToolbar;
@@ -68,7 +70,8 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
     ArrayList<Integer> locationList =new ArrayList<>();
     String [] locationArray;
 
-
+    Admin_Account admin;
+    plantBD plant;
     DatabaseReference reference;
     String name1 ,Symptoms ,description1 ,information1 ,image_plant1, used1,location1;
     SharedPreferences.Editor editor;
@@ -290,7 +293,7 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                     reference.child(name1).child("symptoms").setValue(symptoms.getText().toString());
                     reference.child(name1).child("description").setValue(description.getText().toString());
                     reference.child(name1).child("information").setValue(information.getText().toString());
-                    reference.child(name1).child("used").setValue(used.toString());
+                    reference.child(name1).child("used").setValue(used);
                     reference.child(name1).child("location").setValue(location.getText().toString());
 
                     if (mImageUri != null) {
@@ -305,6 +308,8 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                                         final Uri downloadUrl = uri;
                                         reference.child(name1).child("plant_image").setValue(downloadUrl.toString());
                                         editor.putString("plant_image", downloadUrl.toString());
+                                        image_plant1=downloadUrl.toString();
+
                                     }
                                 });
                             }
@@ -328,10 +333,14 @@ public class update_plant extends AppCompatActivity implements View.OnClickListe
                     editor.putString("information", information.getText().toString());
                     editor.putString("used", used);
                     editor.putString("location", location.getText().toString());
-
                     editor.apply();
+                    admin=new Admin_Account();
+                    plant=new plantBD(name1,symptoms.getText().toString(),description.getText().toString(),information.getText().toString(), image_plant1,used,location.getText().toString());
+
+                    admin.updateplant(plant);
+
                     Toast.makeText(getApplicationContext(),getString(R.string.Plant_updated),Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(update_plant.this, view_plant.class));
+                    startActivity(new Intent(update_plant.this, search.class));
                 }
                 else {
                     Toast.makeText(getApplicationContext(),getString(R.string.all_fields),Toast.LENGTH_SHORT).show();

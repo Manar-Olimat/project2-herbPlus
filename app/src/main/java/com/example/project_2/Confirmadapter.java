@@ -15,17 +15,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.confirmplantBD;
+import com.example.project_2.Models.ConfirmplantBD;
 
 import java.util.ArrayList;
 
 import static android.content.Context.MODE_PRIVATE;
 
 public class Confirmadapter extends RecyclerView.Adapter<Confirmadapter.MyViweHolder>  {
-    ArrayList<confirmplantBD> list;
+    ArrayList<ConfirmplantBD> list;
     Context context;
 
-    public Confirmadapter(ArrayList<confirmplantBD> list,Context context) {
+    public Confirmadapter(ArrayList<ConfirmplantBD> list, Context context) {
         this.list = list;
         this.context=context;
 

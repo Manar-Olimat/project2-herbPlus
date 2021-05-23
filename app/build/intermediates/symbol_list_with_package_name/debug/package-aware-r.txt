@@ -2907,6 +2907,9 @@ string search
 string search_menu_title
 string search_name
 string search_symptoms
+string searchherbalist
+string searchname
+string searchsymptoms
 string seeds
 string select_symptoms
 string send_email

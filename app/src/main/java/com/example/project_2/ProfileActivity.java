@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -58,7 +58,7 @@ public class ProfileActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot)
                     {
-                        userDB userProfile=dataSnapshot.getValue(userDB.class);
+                        AccountDB userProfile=dataSnapshot.getValue(AccountDB.class);
 
                             Intent chatIntent = new Intent(ProfileActivity.this, ChatActivity.class);
                             chatIntent.putExtra("visit_user_id", receiverUserID);
@@ -82,7 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
-                userDB userProfile=dataSnapshot.getValue(userDB.class);
+                AccountDB userProfile=dataSnapshot.getValue(AccountDB.class);
                 if ((dataSnapshot.exists()))
                 {
                     String userImage = userProfile.getProfile_image();

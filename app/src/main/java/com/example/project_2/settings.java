@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -23,6 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.Locale;
+import java.util.Objects;
 
 public class settings extends AppCompatActivity implements View.OnClickListener {
 
@@ -50,12 +51,12 @@ public class settings extends AppCompatActivity implements View.OnClickListener 
         terms_image.setOnClickListener(this);
         back.setOnClickListener(this);
         change_lang.setOnClickListener(this);
-        userID= FirebaseAuth.getInstance().getCurrentUser().getUid();
+        userID= Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
         reference= FirebaseDatabase.getInstance().getReference("users");
         reference.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userDB userProfile=snapshot.getValue(userDB.class);
+                AccountDB userProfile=snapshot.getValue(AccountDB.class);
                 type_account =userProfile.getAccountType();
             }
 

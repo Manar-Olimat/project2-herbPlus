@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,14 +25,14 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class herbalistAdapter extends RecyclerView.Adapter<herbalistAdapter.herbalistViewHolder> {
-    ArrayList<userDB> model;
+    ArrayList<AccountDB> model;
     Context context;
     private DatabaseReference UsersRef;
     private final String accountType="Herbalist Account";
 
 
 
-    public herbalistAdapter(ArrayList<userDB> model, Context context) {
+    public herbalistAdapter(ArrayList<AccountDB> model, Context context) {
         this.model = model;
         this.context = context;
         UsersRef = FirebaseDatabase.getInstance().getReference().child("users");

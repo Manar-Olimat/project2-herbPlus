@@ -17,7 +17,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.Admin_Account;
+import com.example.project_2.Models.Herbalist_Account;
+import com.example.project_2.Models.ConfirmplantBD;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,6 +38,9 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
     ImageView image_plant;
 
     private DatabaseReference UserRef;
+    Admin_Account admin;
+    Herbalist_Account herbalist;
+    ConfirmplantBD confirmplant;
 
 
 
@@ -69,8 +74,8 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
             @Override
             public void onDataChange(DataSnapshot dataSnapshot)
             {
-                userDB userProfile=dataSnapshot.getValue(userDB.class);
-                email=userProfile.getEmail();
+                herbalist=dataSnapshot.getValue(Herbalist_Account.class);
+                email=herbalist.getEmail();
 
             }
 
@@ -112,17 +117,9 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
                                     getString(R.string.yes),
                                     new DialogInterface.OnClickListener() {
                                         public void onClick(DialogInterface dialog, int id) {
-                                            ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
-                                            ref.removeValue();
-
-                                            reference = root.getReference("plants").child(name1);
-                                            reference.child("name").setValue(name1);
-                                            reference.child("symptoms").setValue(Symptoms);
-                                            reference.child("description").setValue(description1);
-                                            reference.child("information").setValue(information1);
-                                            reference.child("plant_image").setValue(image_plant1);
-                                            reference.child("location").setValue(location1);
-                                            reference.child("used").setValue(used);
+                                            admin=new Admin_Account();
+                                            confirmplant=new ConfirmplantBD(name1,Symptoms,description1,information1,herbalist.getId(),herbalist.getUsername(),dat,image_plant1,used,location1);
+                                            admin.confirm_plant(confirmplant);
                                             Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
                                             sendMail("( "+name1+") "+getString(R.string.approved));
 
@@ -142,16 +139,9 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
                             alert11.show();
                         }
                         else{
-                            ref = FirebaseDatabase.getInstance().getReference("confirm_plants").child(name1);
-                            ref.removeValue();
-                            reference = root.getReference("plants").child(name1);
-                            reference.child("name").setValue(name1);
-                            reference.child("symptoms").setValue(Symptoms);
-                            reference.child("description").setValue(description1);
-                            reference.child("information").setValue(information1);
-                            reference.child("plant_image").setValue(image_plant1);
-                            reference.child("location").setValue(location1);
-                            reference.child("used").setValue(used);
+                            admin=new Admin_Account();
+                            confirmplant=new ConfirmplantBD(name1,Symptoms,description1,information1,herbalist.getId(),herbalist.getUsername(),dat,image_plant1,used,location1);
+                            admin.confirm_plant(confirmplant);
                             Toast.makeText(getApplicationContext(),getString(R.string.plant_added),Toast.LENGTH_SHORT).show();
                             sendMail("( "+name1+") "+getString(R.string.approved));
 

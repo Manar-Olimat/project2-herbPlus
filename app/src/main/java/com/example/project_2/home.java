@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_2.Models.plantGalleryModel;
 import com.example.project_2.Models.plantInfoModel;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -52,7 +52,7 @@ public class home extends AppCompatActivity {
         reference.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userDB userProfile=snapshot.getValue(userDB.class);
+                AccountDB userProfile=snapshot.getValue(AccountDB.class);
 
                 type_account =userProfile.getAccountType();
             }

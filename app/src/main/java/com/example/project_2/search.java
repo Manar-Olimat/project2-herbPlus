@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.SearchView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -17,7 +18,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.project_2.Models.plantBD;
-import com.example.project_2.Models.userDB;
+import com.example.project_2.Models.AccountDB;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -50,6 +51,7 @@ public class search extends AppCompatActivity {
     ArrayList<Integer> symptomsList =new ArrayList<>();
     String [] symptomsArray;
     boolean arabic;
+    AccountDB accountDB;
 
     @SuppressLint("ResourceType")
     @Override
@@ -66,7 +68,7 @@ public class search extends AppCompatActivity {
         reference.child(userID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                userDB userProfile=snapshot.getValue(userDB.class);
+                AccountDB userProfile=snapshot.getValue(AccountDB.class);
 
                  type_account =userProfile.getAccountType();
             }
@@ -257,34 +259,35 @@ public class search extends AppCompatActivity {
 
     private void namesearch(String s)
     {
-        ArrayList<plantBD>list=new ArrayList<>();
-        for(plantBD object: modelList){
-            if(object.getName().toLowerCase().startsWith(s.toLowerCase())){
-                list.add(object);
-            }
+        accountDB=new AccountDB();
+        accountDB.setPlant(modelList);
+        if(accountDB.searchName(s).isEmpty()){
+            Toast.makeText(getApplicationContext(),getString(R.string.searchname),Toast.LENGTH_LONG).show();
+            searchadapter myadapter=new searchadapter(accountDB.searchName(s),context);
+            recyclerView.setAdapter(myadapter);
         }
-        searchadapter myadapter=new searchadapter(list,context);
-        recyclerView.setAdapter(myadapter);
+        else {
+            searchadapter myadapter=new searchadapter(accountDB.searchName(s),context);
+            recyclerView.setAdapter(myadapter);
+        }
 
 
     }
     private void Symptomssearch(String s)
     {
-        String[] arrOfStr = s.split(",");
+        accountDB=new AccountDB();
+        accountDB.setPlant(modelList);
 
-        ArrayList<plantBD>list=new ArrayList<>();
-        for(plantBD object: modelList){
-            boolean exists=true;
-            for (String a : arrOfStr){
-                if(!object.getSymptoms().contains(a))
-                    exists=false;
-            }
-            if(exists)
-                list.add(object);
-
+        if(accountDB.searchSymptoms(s).isEmpty()){
+            Toast.makeText(getApplicationContext(),getString(R.string.searchsymptoms),Toast.LENGTH_LONG).show();
+            searchadapter myadapter=new searchadapter(accountDB.searchSymptoms(s),context);
+            recyclerView.setAdapter(myadapter);
         }
-        searchadapter myadapter=new searchadapter(list,context);
-        recyclerView.setAdapter(myadapter);
+        else {
+            searchadapter myadapter=new searchadapter(accountDB.searchSymptoms(s),context);
+            recyclerView.setAdapter(myadapter);
+        }
+
 
     }
 
