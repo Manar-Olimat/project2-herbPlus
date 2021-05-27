@@ -14,6 +14,8 @@ You will need the following things properly installed on your computer:
 
 ## Screenshots
 
+![home](https://user-images.githubusercontent.com/44707799/119847057-55d15c80-bf13-11eb-99ed-f4043481c700.jpg)
+
 	
 ## Setup
 To run this project, install it locally using npm:
