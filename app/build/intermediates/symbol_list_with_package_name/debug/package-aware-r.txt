@@ -2554,7 +2554,6 @@ layout activity_splash_screen
 layout activity_terms__condition
 layout activity_update_plant
 layout activity_user_account
-layout activity_verification
 layout activity_view_confirm
 layout activity_view_plant
 layout confirm_item

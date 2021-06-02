@@ -167,10 +167,12 @@ public class ViewConfirm extends AppCompatActivity implements View.OnClickListen
     }
     @SuppressLint({"LongLogTag", "IntentReset"})
     private void sendMail(String message) {
-        System.out.println(message + "====" + email + "----");
-        Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
-        mainIntent.putExtra("email", email);
-        mainIntent.putExtra("text", message);
-        ViewConfirm.this.startActivity(mainIntent);
+       if (email != null){
+           System.out.println(message + "====" + email + "----");
+           Intent mainIntent = new Intent(ViewConfirm.this, confirm_list.class);
+           mainIntent.putExtra("email", email);
+           mainIntent.putExtra("text", message);
+           ViewConfirm.this.startActivity(mainIntent);
+       }
     }
 }

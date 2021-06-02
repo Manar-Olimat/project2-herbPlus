@@ -436,7 +436,18 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
                                                                     herbalist=new Herbalist_Account();
                                                                     confirmplant=new ConfirmplantBD(plantnameValue,symptomsValue,descriptionValue,informationValue,userID,
                                                                             accountDB.getUsername(),date_plant, downloadUrl.toString(),used,locationValue);
-                                                                    herbalist.addplant(confirmplant);
+                                                                  //  herbalist.addplant(confirmplant);
+                                                                    DatabaseReference reference= FirebaseDatabase.getInstance().getReference("confirm_plants").child(plantnameValue);
+                                                                    reference.child("name").setValue(plantnameValue);
+                                                                    reference.child("symptoms").setValue(symptomsValue);
+                                                                    reference.child("description").setValue(descriptionValue);
+                                                                    reference.child("location").setValue(locationValue);
+                                                                    reference.child("information").setValue(informationValue);
+                                                                    reference.child("id").setValue(userID);
+                                                                    reference.child("added_by").setValue(accountDB.getUsername());
+                                                                    reference.child("plant_image").setValue(downloadUrl.toString());
+                                                                    reference.child("date").setValue(date_plant);
+                                                                    reference.child("used").setValue(used);
                                                                     Toast.makeText(getApplicationContext(), getString(R.string.plant_added), Toast.LENGTH_SHORT).show();
 
 
@@ -514,7 +525,8 @@ public class add_plant extends AppCompatActivity implements View.OnClickListener
     boolean isEmpty( TextView text) {
         CharSequence str = text.getText().toString();
         return TextUtils.isEmpty(str);
-    }boolean isEmpty( MultiAutoCompleteTextView text) {
+    }
+    boolean isEmpty( MultiAutoCompleteTextView text) {
         CharSequence str = text.getText().toString();
         return TextUtils.isEmpty(str);
     }

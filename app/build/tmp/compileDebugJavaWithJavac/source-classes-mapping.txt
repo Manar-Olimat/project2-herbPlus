@@ -169,8 +169,8 @@ com/example/project_2/search.java
  com.example.project_2.search$4$1$2
  com.example.project_2.search$4$1$3
  com.example.project_2.search$5
-com/example/project_2/Verification.java
- com.example.project_2.Verification
+com/example/project_2/Models/ConfirmplantBD.java
+ com.example.project_2.Models.ConfirmplantBD
 com/example/project_2/ViewConfirm.java
  com.example.project_2.ViewConfirm
  com.example.project_2.ViewConfirm$1
@@ -219,8 +219,3 @@ com/example/project_2/home.java
  com.example.project_2.home$1
  com.example.project_2.home$2
  com.example.project_2.home$3
-com/example/project_2/JSSEProvider.java
- com.example.project_2.JSSEProvider
- com.example.project_2.JSSEProvider$1
-com/example/project_2/Models/confirmplantBD.java
- com.example.project_2.Models.confirmplantBD

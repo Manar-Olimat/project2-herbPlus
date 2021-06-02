@@ -76,7 +76,7 @@ public class gallery_recycler extends AppCompatActivity {
             }
         });
 
-        if ("Fruits".equals(textView.getText()) || "فاكهة".equals(textView.getText())) {
+        if ("Fruit".equals(textView.getText()) || "فاكهة".equals(textView.getText())) {
             imageView.setImageResource(R.drawable.fruit);
         }
         else if ("Leaf".equals(textView.getText())|| "ورقة".equals(textView.getText())) {

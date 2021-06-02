@@ -2553,7 +2553,6 @@ int layout activity_splash_screen 0x7f0b002e
 int layout activity_terms__condition 0x7f0b002f
 int layout activity_update_plant 0x7f0b0030
 int layout activity_user_account 0x7f0b0031
-int layout activity_verification 0x7f0b0032
 int layout activity_view_confirm 0x7f0b0033
 int layout activity_view_plant 0x7f0b0034
 int layout confirm_item 0x7f0b0035

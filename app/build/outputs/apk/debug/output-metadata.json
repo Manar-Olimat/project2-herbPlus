@@ -5,7 +5,7 @@
     "kind": "Directory"
   },
   "applicationId": "com.example.project_2",
-  "variantName": "processDebugResources",
+  "variantName": "debug",
   "elements": [
     {
       "type": "SINGLE",
